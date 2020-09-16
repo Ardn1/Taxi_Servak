@@ -1,0 +1,22 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2019-03-15 12:18:01 --> 404 Page Not Found: Faviconico/index
+ERROR - 2019-03-15 12:22:48 --> 404 Page Not Found: Docs/89391821434935.png
+ERROR - 2019-03-15 12:22:48 --> 404 Page Not Found: Docs/12795669787683.png
+ERROR - 2019-03-15 12:22:49 --> 404 Page Not Found: Docs/87300421524092.jpg
+ERROR - 2019-03-15 12:22:49 --> 404 Page Not Found: Docs/81713224436547.jpg
+ERROR - 2019-03-15 12:22:49 --> 404 Page Not Found: Docs/26310751989153.jpg
+ERROR - 2019-03-15 12:22:49 --> 404 Page Not Found: Docs/59350293316102.png
+ERROR - 2019-03-15 12:22:49 --> 404 Page Not Found: Docs/24223343628059.jpg
+ERROR - 2019-03-15 12:22:49 --> 404 Page Not Found: Docs/89030640025335.jpg
+ERROR - 2019-03-15 12:22:49 --> 404 Page Not Found: Docs/81850995925762.jpg
+ERROR - 2019-03-15 12:22:49 --> 404 Page Not Found: Docs/94318795542269.jpg
+ERROR - 2019-03-15 12:23:03 --> 404 Page Not Found: Docs/89362340971692.jpg
+ERROR - 2019-03-15 12:23:03 --> 404 Page Not Found: Docs/24466066421941.jpg
+ERROR - 2019-03-15 12:23:03 --> 404 Page Not Found: Docs/43093091243712.jpg
+ERROR - 2019-03-15 12:23:03 --> 404 Page Not Found: Docs/31157239811649.jpg
+ERROR - 2019-03-15 12:23:03 --> 404 Page Not Found: Docs/66384121007000.jpg
+ERROR - 2019-03-15 12:23:03 --> 404 Page Not Found: Docs/74626058906194.jpg
+ERROR - 2019-03-15 12:23:03 --> 404 Page Not Found: Docs/39571844659192.jpg
+ERROR - 2019-03-15 12:23:03 --> 404 Page Not Found: Docs/21392884526113.jpg
+ERROR - 2019-03-15 12:23:03 --> 404 Page Not Found: Docs/91135351950890.jpg
