@@ -30,6 +30,7 @@
                 <a class="dropdown-item" href="<?php echo base_url('my/sms');?>"><span data-feather="radio" class="text-primary mr-3"></span> SMS шлюз</a>
                 <a class="dropdown-item" href="<?php echo base_url('my/templates');?>"><span data-feather="message-circle" class="text-primary mr-3"></span> Шаблоны оповещений</a>
                 <a class="dropdown-item" href="<?php echo base_url('my/profile');?>"><span data-feather="lock" class="text-primary mr-3"></span> Пароль и Email</a>
+                <a class="dropdown-item" href="<?php echo base_url('my/addmenager');?>"><span data-feather="user-plus" class="text-primary mr-3"></span> Менеджеры</a> 
             </div>
             <?php echo form_open(site_url("my/search"), array("class" => "w-100")) ?>
             <input class="form-control form-control-dark w-100" name="phone" type="text" placeholder="Поиск по телефону" aria-label="Search">
@@ -101,6 +102,12 @@
                                 <a class="nav-link <?php echo activate_menu('profile'); ?>" href="<?php echo base_url('my/profile');?>">
                                     <span data-feather="lock"></span>
                                     Пароль и Email
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link <?php echo activate_menu('addmenager'); ?>" href="<?php echo base_url('my/addmenager');?>">
+                                    <span data-feather="user-plus"></span>
+                                    Менеджеры
                                 </a>
                             </li>
                         </ul>
