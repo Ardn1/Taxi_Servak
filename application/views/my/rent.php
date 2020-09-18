@@ -59,7 +59,7 @@
 			    				<?php elseif ($data->citizenship == 4) : ?>
 			    				<img src="<?php echo base_url('themes/bootstrap/img/kazakhstan.png');?>" class="flag-img" data-toggle="tooltip" data-placement="right" title="Казахстан">
 								<?php elseif ($data->citizenship == 5) : ?>
-			    				<img src="<?php echo base_url('themes/bootstrap/img/other.png');?>" class="flag-img" data-toggle="tooltip" data-placement="right" title="Казахстан">
+			    				<img src="<?php echo base_url('themes/bootstrap/img/other.png');?>" class="flag-img" data-toggle="tooltip" data-placement="right" title="Другое">
 			    				<?php endif; ?>
 			    			</td>
 			    			<td><?php echo $data->first_name;?> <?php echo $data->last_name;?></td>
@@ -136,11 +136,11 @@
 			    				<?php endif; ?>
 			    			</td>
 			    			<td>+<?php echo $data->phone;?></td>
-							<td width="5%">
-								<?php if ($data->API == 1) : ?>
-			    					<th>API 1</th>
-			    				<?php elseif ($data->API == 2) : ?>
-									<th>API 2</th>
+							<td>
+								<?php if ($data->api == 0) : ?>
+			    					API 1
+			    				<?php elseif ($data->api == 1) : ?>
+									API 2
 			    				<?php endif; ?>
 							</td>
 			    			<td class="text-right">
@@ -182,10 +182,8 @@
 
 	
 <script>
-var main = document.querySelector("#all");//  document.querySelector('#shest legend [type="checkbox"]'),
+var main = document.querySelector("#all");
 var all = document.querySelectorAll("#one_ch");
-//var mainButton = document.querySelector("#dropdownMenuButton");
-//mainButton.style.display = "none";
 
 for(var i=0; i<all.length; i++) {  // 1 и 2 пункт задачи
     all[i].onclick = function() {
@@ -196,10 +194,6 @@ for(var i=0; i<all.length; i++) {  // 1 и 2 пункт задачи
 		}
 		main.checked = sum == all.length;
 		main.indeterminate = sum > 0 && sum < all.length;
-	/*	if (sum == 0)
-			mainButton.style.display = "block";
-		else
-			mainButton.style.display = "none";*/
 	}
 }
 

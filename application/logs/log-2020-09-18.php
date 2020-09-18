@@ -39,3 +39,9 @@ ERROR - 2020-09-18 18:22:08 --> Severity: Notice --> Undefined property: stdClas
 ERROR - 2020-09-18 18:22:08 --> Severity: Notice --> Undefined property: stdClass::$API C:\xampp\htdocs\crm\application\views\my\rent.php 142
 ERROR - 2020-09-18 18:22:08 --> Severity: Notice --> Undefined property: stdClass::$API C:\xampp\htdocs\crm\application\views\my\rent.php 140
 ERROR - 2020-09-18 18:22:08 --> Severity: Notice --> Undefined property: stdClass::$API C:\xampp\htdocs\crm\application\views\my\rent.php 142
+ERROR - 2020-09-18 18:37:52 --> Severity: Notice --> Undefined property: stdClass::$API C:\xampp\htdocs\crm\application\views\my\rent.php 140
+ERROR - 2020-09-18 18:37:52 --> Severity: Notice --> Undefined property: stdClass::$API C:\xampp\htdocs\crm\application\views\my\rent.php 142
+ERROR - 2020-09-18 18:37:52 --> Severity: Notice --> Undefined property: stdClass::$API C:\xampp\htdocs\crm\application\views\my\rent.php 140
+ERROR - 2020-09-18 18:37:52 --> Severity: Notice --> Undefined property: stdClass::$API C:\xampp\htdocs\crm\application\views\my\rent.php 142
+ERROR - 2020-09-18 18:37:52 --> Severity: Notice --> Undefined property: stdClass::$API C:\xampp\htdocs\crm\application\views\my\rent.php 140
+ERROR - 2020-09-18 18:37:52 --> Severity: Notice --> Undefined property: stdClass::$API C:\xampp\htdocs\crm\application\views\my\rent.php 142
