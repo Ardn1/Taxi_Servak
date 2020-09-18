@@ -97,6 +97,31 @@ class Rent extends Admin_Controller
 		$this->template->load('admin', 'contents' , 'my/rent_fail', $data);
 	}
 
+    public function edit($id)
+    {
+        if (is_null($id) OR ! is_numeric($id)) {
+
+            redirect(site_url('my/rent'));
+
+        }
+
+        $rent = $this->content_model->get_rent($id);
+
+        if (!$rent) {
+
+            redirect(site_url('my/orders'));
+
+        }
+
+        $data = array(
+            "rent" => $rent
+        );
+
+        $this->template->set('title', 'Заявка от '.$rent->name);
+        $this->template->load('admin', 'contents' , 'my/rent_edit', $data);
+
+    }
+
 	public function reject($id)
 	{
 		if (is_null($id) OR ! is_numeric($id)) {
