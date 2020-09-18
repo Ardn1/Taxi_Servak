@@ -453,7 +453,7 @@ $config['csrf_token_name'] = 'csrf_city';
 $config['csrf_cookie_name'] = 'csrf_city';
 $config['csrf_expire'] = 7200;
 $config['csrf_regenerate'] = TRUE;
-$config['csrf_exclude_uris'] = array('api/contact/feedback', 'api/contact/rent', 'api/contact/registeronestep', 'api/contact/upload_vu_one', 'api/contact/upload_vu_two', 'api/contact/upload_sts_one', 'api/contact/upload_sts_two', 'api/contact/upload_pass1', 'api/contact/upload_pass2', 'api/contact/upload_lic1', 'api/contact/upload_lic2', 'api/contact/upload_auto1', 'api/contact/upload_auto2', 'api/contact/upload_face', 'api/contact/upload_reg1', 'api/contact/upload_reg2');
+$config['csrf_exclude_uris'] = array('api/contact/feedback', 'api/contact/rent', 'api/contact/registeronestep', 'api/contact/upload_vu_one', 'api/contact/upload_vu_two', 'api/contact/upload_sts_one', 'api/contact/upload_sts_two', 'api/contact/upload_pass1', 'api/contact/upload_pass2', 'api/contact/upload_lic1', 'api/contact/upload_lic2', 'api/contact/upload_auto1', 'api/contact/upload_auto2', 'api/contact/upload_face', 'api/contact/upload_reg1', 'api/contact/upload_reg2','api/contact/upload_auto4','api/contact/upload_auto3');
 
 /*
 |--------------------------------------------------------------------------

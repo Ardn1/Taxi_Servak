@@ -127,7 +127,7 @@
 
 			<div class="card mb-3">
         		<div class="card-header">
-					Автомобиль (спереди с одного бока)
+					Автомобиль (спереди)
 				</div>
 			  	<div class="card-body p-0">
 			    	<img src="<?php echo base_url('docs/'.$order->doc_auto_1);?>" class="w-100">
@@ -136,12 +136,30 @@
 
 			<div class="card mb-3">
         		<div class="card-header">
-					Автомобиль (сзади с другого бока)
+					Автомобиль (левый бок)
 				</div>
 			  	<div class="card-body p-0">
 			    	<img src="<?php echo base_url('docs/'.$order->doc_auto_2);?>" class="w-100">
 			  	</div>
 			</div>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    Автомобиль (сзади)
+                </div>
+                <div class="card-body p-0">
+                    <img src="<?php echo base_url('docs/'.$order->doc_auto_3);?>" class="w-100">
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    Автомобиль (правый бок)
+                </div>
+                <div class="card-body p-0">
+                    <img src="<?php echo base_url('docs/'.$order->doc_auto_4);?>" class="w-100">
+                </div>
+            </div>
 
 			<div class="card mb-3">
         		<div class="card-header">

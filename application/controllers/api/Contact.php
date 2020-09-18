@@ -540,7 +540,6 @@ class Contact extends MY_Controller
 	public function upload_auto1()
 	{
 		header('Access-Control-Allow-Origin: *');
-
 		if (empty($_GET["order"])) {
 
             $response = array ('event' => 'fail', 'message' => 'Не получен ID заявки! Создайте новую заявку');
@@ -625,6 +624,92 @@ class Contact extends MY_Controller
 
 	}
 
+    public function upload_auto3()
+    {
+        header('Access-Control-Allow-Origin: *');
+
+        if (empty($_GET["order"])) {
+
+            $response = array ('event' => 'fail', 'message' => 'Не получен ID заявки! Создайте новую заявку');
+
+            echo json_encode($response);
+
+        } else {
+
+            if (!$_FILES['files']['name']) {
+
+                $response = array ('event' => 'fail', 'message' => 'Изображение не получено!');
+
+                echo json_encode($response);
+
+            } else {
+
+                $uid = rand(11111111111111,99999999999999);
+
+                $info = pathinfo($_FILES['files']['name']);
+                $ext = $info['extension'];
+                $newname = $uid.'.'.$ext;
+
+                $target = ''.$_SERVER['DOCUMENT_ROOT'].'/docs/'.$newname;
+                move_uploaded_file($_FILES['files']['tmp_name'], $target);
+
+                $this->content_model->update_order($_GET["order"], array(
+                        "doc_auto_3"	=> $newname
+                    )
+                );
+
+                $response = array ('event' => 'success');
+
+                echo json_encode($response);
+
+            }
+
+        }
+
+    }
+    public function upload_auto4()
+    {
+        header('Access-Control-Allow-Origin: *');
+
+        if (empty($_GET["order"])) {
+
+            $response = array ('event' => 'fail', 'message' => 'Не получен ID заявки! Создайте новую заявку');
+
+            echo json_encode($response);
+
+        } else {
+
+            if (!$_FILES['files']['name']) {
+
+                $response = array ('event' => 'fail', 'message' => 'Изображение не получено!');
+
+                echo json_encode($response);
+
+            } else {
+
+                $uid = rand(11111111111111,99999999999999);
+
+                $info = pathinfo($_FILES['files']['name']);
+                $ext = $info['extension'];
+                $newname = $uid.'.'.$ext;
+
+                $target = ''.$_SERVER['DOCUMENT_ROOT'].'/docs/'.$newname;
+                move_uploaded_file($_FILES['files']['tmp_name'], $target);
+
+                $this->content_model->update_order($_GET["order"], array(
+                        "doc_auto_4"	=> $newname
+                    )
+                );
+
+                $response = array ('event' => 'success');
+
+                echo json_encode($response);
+
+            }
+
+        }
+
+    }
 	public function upload_face()
 	{
 		header('Access-Control-Allow-Origin: *');
