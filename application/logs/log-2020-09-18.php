@@ -21,3 +21,17 @@ ERROR - 2020-09-18 14:01:12 --> 404 Page Not Found: Docs/105062546.jpg
 ERROR - 2020-09-18 14:01:12 --> 404 Page Not Found: Docs/114983870.jpg
 ERROR - 2020-09-18 14:16:38 --> 404 Page Not Found: api/Contact/upload_auto2
 ERROR - 2020-09-18 14:16:39 --> 404 Page Not Found: api/Contact/upload_auto2
+ERROR - 2020-09-18 16:38:17 --> 404 Page Not Found: Docs/59335653609630.jpg
+ERROR - 2020-09-18 16:38:17 --> 404 Page Not Found: Docs/43604150736990.jpg
+ERROR - 2020-09-18 16:38:17 --> 404 Page Not Found: Docs/58445975916189.jpg
+ERROR - 2020-09-18 16:38:17 --> 404 Page Not Found: Docs/80578487268644.jpg
+ERROR - 2020-09-18 16:38:17 --> 404 Page Not Found: Docs/17292982160443.jpg
+ERROR - 2020-09-18 16:38:17 --> 404 Page Not Found: Docs/57231074376440.jpg
+ERROR - 2020-09-18 16:38:17 --> 404 Page Not Found: Docs/34759809948679.jpg
+ERROR - 2020-09-18 16:38:17 --> 404 Page Not Found: Docs/64743049475243.jpg
+ERROR - 2020-09-18 16:38:17 --> 404 Page Not Found: Docs/77429582254944.jpg
+ERROR - 2020-09-18 16:38:17 --> 404 Page Not Found: Docs/75228828019445.jpg
+ERROR - 2020-09-18 16:38:17 --> 404 Page Not Found: Docs/53098307004959.jpg
+ERROR - 2020-09-18 16:38:17 --> 404 Page Not Found: Docs/84402000213792.jpg
+ERROR - 2020-09-18 17:29:56 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp\htdocs\crm\application\controllers\my\Rent.php 120
+ERROR - 2020-09-18 17:29:56 --> Severity: Notice --> Undefined property: stdClass::$doc_face C:\xampp\htdocs\crm\application\views\my\rent_edit.php 37
