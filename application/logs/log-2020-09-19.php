@@ -51,3 +51,24 @@ ERROR - 2020-09-19 17:34:27 --> Severity: Notice --> Undefined index: password C
 ERROR - 2020-09-19 17:34:27 --> Severity: Notice --> Undefined index: id C:\xampp\htdocs\crm\application\controllers\my\Addmenager.php 82
 ERROR - 2020-09-19 17:36:22 --> Severity: Notice --> Undefined index: password C:\xampp\htdocs\crm\application\controllers\my\Addmenager.php 81
 ERROR - 2020-09-19 17:36:22 --> Severity: Notice --> Undefined index: id C:\xampp\htdocs\crm\application\controllers\my\Addmenager.php 82
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
+ERROR - 2020-09-19 19:04:29 --> Severity: Parsing Error --> syntax error, unexpected '}' C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 54

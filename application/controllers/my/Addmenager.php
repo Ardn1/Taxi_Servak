@@ -90,7 +90,7 @@ class Addmenager extends Admin_Controller
 	{
 		if (is_null($id) OR !is_numeric($id) OR $id == 1) {
 
-            redirect(site_url('my/rent'));
+            redirect(site_url('my/addmenager'));
 
 	    }
 

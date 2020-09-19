@@ -78,22 +78,22 @@
 	    </div>
 	<?php endif; ?>
 
-	<script>
-				function setPasswordNew(obj)
-				{
-					let i = document.getElementById(obj.getAttribute("forPassword"));
-					$.get(
-					obj.getAttribute("baseURL"),
-					{
-						id: obj.getAttribute("forPasswordID"),
-						password: i.value,
-					},
-					onAjaxSuccess
-					);
-				}
+<script>
+	function setPasswordNew(obj)
+	{
+		let i = document.getElementById(obj.getAttribute("forPassword"));
+		$.get(
+		obj.getAttribute("baseURL"),
+		{
+			id: obj.getAttribute("forPasswordID"),
+			password: i.value,
+		},
+			onAjaxSuccess
+		);
+	}
 
-				function onAjaxSuccess(data)
-				{
-					alert(data);
-				}
+	function onAjaxSuccess(data)
+	{
+		alert(data);
+	}
 </script>

@@ -23,11 +23,12 @@
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a class="dropdown-item" href="<?php echo base_url('my/orders');?>"><span data-feather="users" class="text-primary mr-3"></span> Регистрация</a>
                 <a class="dropdown-item" href="<?php echo base_url('my/rent');?>"><span data-feather="clock" class="text-primary mr-3"></span> Аренда</a>
-                <a class="dropdown-item" href="<?php echo base_url('my/feedback');?>"><span data-feather="mail" class="text-primary mr-3"></span> Обратная связь</a>
+                <a class="dropdown-item" href="<?php echo base_url('my/feedback');?>"><span data-feather="fi-comment-square" class="text-primary mr-3"></span> Обратная связь</a>
                 <a class="dropdown-item" href="<?php echo base_url('my/pages');?>"><span data-feather="edit" class="text-primary mr-3"></span> Менеджер контента</a>
                 <div class="dropdown-divider"></div>
                 <h6 class="dropdown-header">Конфигурация</h6>
                 <a class="dropdown-item" href="<?php echo base_url('my/sms');?>"><span data-feather="radio" class="text-primary mr-3"></span> SMS шлюз</a>
+                <a class="dropdown-item" href="<?php echo base_url('my/mailing');?>"><span data-feather="mail" class="text-primary mr-3"></span> SMS рассылка</a>
                 <a class="dropdown-item" href="<?php echo base_url('my/templates');?>"><span data-feather="message-circle" class="text-primary mr-3"></span> Шаблоны оповещений</a>
                 <a class="dropdown-item" href="<?php echo base_url('my/profile');?>"><span data-feather="lock" class="text-primary mr-3"></span> Пароль и Email</a>
                 <a class="dropdown-item" href="<?php echo base_url('my/addmenager');?>"><span data-feather="user-plus" class="text-primary mr-3"></span> Менеджеры</a> 
@@ -61,7 +62,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link <?php echo activate_menu('feedback'); ?>" href="<?php echo base_url('my/feedback');?>">
-                                    <span data-feather="mail"></span>
+                                    <span data-feather="fi-comment-square"></span>
                                      Обратная связь
                                 </a>
                             </li>
@@ -84,6 +85,12 @@
                                 <a class="nav-link <?php echo activate_menu('sms'); ?>" href="<?php echo base_url('my/sms');?>">
                                     <span data-feather="radio"></span>
                                     SMS шлюз
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link <?php echo activate_menu('mailing'); ?>" href="<?php echo base_url('my/mailing');?>">
+                                    <span data-feather="mail"></span>
+                                    SMS рассылка
                                 </a>
                             </li>
                             <li class="nav-item">
