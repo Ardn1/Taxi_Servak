@@ -149,6 +149,30 @@ class Rent extends Admin_Controller
 		redirect(site_url('my/rent'));
 	}
 
+    public function successGet($id)
+	{
+        if (is_null($id) OR ! is_numeric($id)) {
+
+            redirect(site_url('my/rent'));
+
+	    }
+
+	    $rent = $this->content_model->get_rent($id);
+
+	    if (!$rent) {
+
+	    	redirect(site_url('my/rent'));
+
+	    }
+
+	    $this->content_model->update_rent($id, array(
+            	"status"  =>  1
+            )
+        );
+
+		$sms = $this->sms->send_sms($rent->phone, 5);
+    }
+
 	public function success($id)
 	{
 		if (is_null($id) OR ! is_numeric($id)) {

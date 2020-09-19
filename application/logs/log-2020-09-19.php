@@ -96,3 +96,37 @@ ERROR - 2020-09-19 19:40:54 --> Severity: Notice --> Undefined property: Mailing
 ERROR - 2020-09-19 19:40:54 --> Severity: Error --> Call to a member function send_sms_text() on null C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 48
 ERROR - 2020-09-19 19:43:29 --> Severity: Notice --> Undefined property: Mailing::$Sms C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 49
 ERROR - 2020-09-19 19:43:29 --> Severity: Error --> Call to a member function send_sms_text() on null C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 49
+ERROR - 2020-09-19 20:15:12 --> Severity: Warning --> Missing argument 1 for Rent::success() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 152
+ERROR - 2020-09-19 20:15:12 --> Severity: Notice --> Undefined variable: id C:\xampp\htdocs\crm\application\controllers\my\Rent.php 154
+ERROR - 2020-09-19 20:15:12 --> Severity: Warning --> Missing argument 1 for Rent::success() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 152
+ERROR - 2020-09-19 20:15:12 --> Severity: Notice --> Undefined variable: id C:\xampp\htdocs\crm\application\controllers\my\Rent.php 154
+ERROR - 2020-09-19 20:15:43 --> Severity: Warning --> Missing argument 1 for Rent::success() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 152
+ERROR - 2020-09-19 20:15:43 --> Severity: Notice --> Undefined variable: id C:\xampp\htdocs\crm\application\controllers\my\Rent.php 154
+ERROR - 2020-09-19 20:15:46 --> Severity: Warning --> Missing argument 1 for Rent::success() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 152
+ERROR - 2020-09-19 20:15:46 --> Severity: Notice --> Undefined variable: id C:\xampp\htdocs\crm\application\controllers\my\Rent.php 154
+ERROR - 2020-09-19 20:16:57 --> Severity: Warning --> Missing argument 1 for Rent::success() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 152
+ERROR - 2020-09-19 20:16:57 --> Severity: Notice --> Undefined variable: id C:\xampp\htdocs\crm\application\controllers\my\Rent.php 154
+ERROR - 2020-09-19 20:16:59 --> Severity: Warning --> Missing argument 1 for Rent::success() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 152
+ERROR - 2020-09-19 20:16:59 --> Severity: Notice --> Undefined variable: id C:\xampp\htdocs\crm\application\controllers\my\Rent.php 154
+ERROR - 2020-09-19 20:17:51 --> Severity: Warning --> Missing argument 1 for Rent::success() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 152
+ERROR - 2020-09-19 20:17:51 --> Severity: Notice --> Undefined variable: id C:\xampp\htdocs\crm\application\controllers\my\Rent.php 154
+ERROR - 2020-09-19 20:17:53 --> Severity: Warning --> Missing argument 1 for Rent::delete() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 179
+ERROR - 2020-09-19 20:17:53 --> Severity: Notice --> Undefined variable: id C:\xampp\htdocs\crm\application\controllers\my\Rent.php 181
+ERROR - 2020-09-19 20:17:54 --> Severity: Warning --> Missing argument 1 for Rent::reject() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 125
+ERROR - 2020-09-19 20:17:54 --> Severity: Notice --> Undefined variable: id C:\xampp\htdocs\crm\application\controllers\my\Rent.php 127
+ERROR - 2020-09-19 20:17:56 --> Severity: Warning --> Missing argument 1 for Rent::success() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 152
+ERROR - 2020-09-19 20:17:56 --> Severity: Notice --> Undefined variable: id C:\xampp\htdocs\crm\application\controllers\my\Rent.php 154
+ERROR - 2020-09-19 20:18:13 --> Severity: Warning --> Missing argument 1 for Rent::success() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 152
+ERROR - 2020-09-19 20:18:13 --> Severity: Notice --> Undefined variable: id C:\xampp\htdocs\crm\application\controllers\my\Rent.php 154
+ERROR - 2020-09-19 20:19:47 --> Severity: Parsing Error --> syntax error, unexpected ')', expecting ']' C:\xampp\htdocs\crm\application\controllers\my\Rent.php 154
+ERROR - 2020-09-19 20:19:59 --> Severity: Parsing Error --> syntax error, unexpected ')', expecting ']' C:\xampp\htdocs\crm\application\controllers\my\Rent.php 154
+ERROR - 2020-09-19 20:20:01 --> Severity: Parsing Error --> syntax error, unexpected ')', expecting ']' C:\xampp\htdocs\crm\application\controllers\my\Rent.php 154
+ERROR - 2020-09-19 20:20:14 --> Severity: Error --> Call to undefined function success() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 154
+ERROR - 2020-09-19 20:20:49 --> Severity: Error --> Call to undefined function success() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 154
+ERROR - 2020-09-19 20:24:16 --> Severity: Error --> Call to undefined function success() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 154
+ERROR - 2020-09-19 20:25:02 --> Severity: Notice --> Undefined property: Rent::$rent C:\xampp\htdocs\crm\application\controllers\my\Rent.php 154
+ERROR - 2020-09-19 20:25:02 --> Severity: Error --> Call to a member function success() on null C:\xampp\htdocs\crm\application\controllers\my\Rent.php 154
+ERROR - 2020-09-19 20:35:10 --> Severity: Warning --> Missing argument 1 for Rent::delete() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 203
+ERROR - 2020-09-19 20:35:10 --> Severity: Notice --> Undefined variable: id C:\xampp\htdocs\crm\application\controllers\my\Rent.php 205
+ERROR - 2020-09-19 20:35:10 --> Severity: Warning --> Missing argument 1 for Rent::delete() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 203
+ERROR - 2020-09-19 20:35:10 --> Severity: Notice --> Undefined variable: id C:\xampp\htdocs\crm\application\controllers\my\Rent.php 205
