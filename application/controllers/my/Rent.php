@@ -117,7 +117,7 @@ class Rent extends Admin_Controller
             "rent" => $rent
         );
 
-        $this->template->set('title', 'Заявка от '.$rent->name);
+        $this->template->set('title', 'Заявка от '.$rent->first_name);
         $this->template->load('admin', 'contents' , 'my/rent_edit', $data);
 
     }

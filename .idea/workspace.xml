@@ -20,11 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d80b845-4a99-4ade-8da9-b52b72002ffb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/views/my/rent_edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/my/Rent.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/my/Rent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/logs/log-2020-09-18.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2020-09-18.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/my/rent.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/rent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/my/Addmenager.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/my/Addmenager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/logs/log-2020-09-19.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2020-09-19.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/layouts/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/layouts/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/layouts/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/layouts/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/my/addmenager.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/addmenager.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +69,8 @@
       <updated>1600283145658</updated>
       <workItem from="1600283147892" duration="35000" />
       <workItem from="1600283198515" duration="1342000" />
-      <workItem from="1600418864264" duration="16286000" />
+      <workItem from="1600418864264" duration="22718000" />
+      <workItem from="1600522461646" duration="7257000" />
     </task>
     <servers />
   </component>
@@ -85,6 +87,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="845" y="382" key="#Notifications" timestamp="1600420876871">
@@ -99,9 +102,24 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1600421003381" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1600442007372">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1600453420744">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600442007372" />
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600453420744" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1600453124960">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600453124960" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/controllers/my/Orders.php</url>
+          <line>119</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
