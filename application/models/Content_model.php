@@ -131,6 +131,13 @@ class Content_model extends CI_model
         return $query->num_rows();
     }
 
+    public function get_total_uncorrect_rent()
+    {
+        $where = array('status' => 3);
+        $query = $this->db->where($where)->get("rent");
+        return $query->num_rows();
+    }
+
     public function get_total_fail_rent()
     {
         $where = array('status' => 2);
@@ -192,6 +199,23 @@ class Content_model extends CI_model
     {
         $this->db->limit($limit, $start);
         $where = array('status' => 1);
+        $query = $this->db->order_by('id', 'desc')->where($where)->get("rent");
+        if ($query->num_rows() > 0)
+        {
+            foreach ($query->result() as $row)
+            {
+                $data[] = $row;
+            }
+
+            return $data;
+        }
+        return false;
+    }
+
+    public function get_uncorrect_rent($limit, $start)
+    {
+        $this->db->limit($limit, $start);
+        $where = array('status' => 3);
         $query = $this->db->order_by('id', 'desc')->where($where)->get("rent");
         if ($query->num_rows() > 0)
         {

@@ -3,7 +3,8 @@
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group mr-2">
                 <a href="<?php echo base_url('my/rent');?>" class="btn btn-sm btn-success">Новые</a>
-                <a href="<?php echo base_url('my/rent/accept');?>" class="btn btn-sm btn-outline-success">Принятые</a>
+				<a href="<?php echo base_url('my/rent/accept');?>" class="btn btn-sm btn-outline-success">Принятые</a>
+				<a href="<?php echo base_url('my/rent/uncorrect');?>" class="btn btn-sm btn-outline-success">Исправить фото</a>
                 <a href="<?php echo base_url('my/rent/fail');?>" class="btn btn-sm btn-outline-success">Отказано</a>
             </div>
         </div>
@@ -26,8 +27,10 @@
 								  	</button>
 								  	<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
 								    	<a class="dropdown-item" onclick = "RentAll()">Направить на аренду</a>
-								    	<a class="dropdown-item" onclick = "DenyAll()">Отказать</a>
-								    	<a class="dropdown-item text-danger" onclick = "RemoveAll()">Удалить</a>
+										<a class="dropdown-item" onclick = "DenyAll()">Отказать</a>
+										<a class="dropdown-item" onclick = "UncorrectAll()">Исправить фото</a>
+										<a class="dropdown-item text-danger" onclick = "RemoveAll()">Удалить</a>
+										
 								</div>
 							</div>
 							</th>
@@ -149,10 +152,11 @@
 								  	<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
 								  		<?php if (!$data->status) : ?>
                                             <a class="dropdown-item" href="<?php echo base_url('my/rent/edit/'.$data->id);?>">Посмотреть заявку</a>
-								    		<a class="dropdown-item" href="<?php echo base_url('my/rent/success/'.$data->id);?>">Направить на аренду</a>
+											<a class="dropdown-item" href="<?php echo base_url('my/rent/success/'.$data->id);?>">Направить на аренду</a>
+											<a class="dropdown-item" href="<?php echo base_url('my/rent/uncorrectset/'.$data->id);?>">Исправить фото</a>
 								    		<a class="dropdown-item" href="<?php echo base_url('my/rent/reject/'.$data->id);?>">Отказать</a>
 								    	<?php endif; ?>
-								    	<a class="dropdown-item text-danger" href="<?php echo base_url('my/rent/delete/'.$data->id);?>">Удалить</a>
+								    	<a class="dropdown-item text-danger" href="<?php echo base_url('my/rent/delete/'.$data->id.'/1');?>">Удалить</a>
 								  	</div>
 								</div>
 			    			</td>
@@ -187,6 +191,7 @@
 	var urlSuccsess = "<?php echo base_url('my/rent/success/');?>"	
 	var urlReject = "<?php echo base_url('my/rent/reject/');?>"	
 	var urlDelete = "<?php echo base_url('my/rent/delete/');?>"	
+	var urlUncorrect = "<?php echo base_url('my/rent/uncorrectset/');?>"	
 
 	for(var i=0; i<all.length; i++) {  // 1 и 2 пункт задачи
 		all[i].onclick = function() {
@@ -206,44 +211,57 @@
 		}
 	}
 
-	function RentAll() {  
+	async function RentAll() {  
 		for(var i = 0; i < all.length; i++) 
 		{ 
 			if (all[i].checked == true)
-				rentOne(all[i].getAttribute("IDAPI"));
+				await rentOne(all[i].getAttribute("IDAPI"));
 		}
 		location.reload();
 	}
-	function DenyAll() {  
+	async function DenyAll() {  
 		for(var i = 0; i < all.length; i++) 
 		{ 
 			if (all[i].checked == true)
-				denyOne(all[i].getAttribute("IDAPI"));
+				await denyOne(all[i].getAttribute("IDAPI"));
 		}
 		location.reload();
 	}
-	function RemoveAll() {  
+	async function RemoveAll() {  
 		for(var i = 0; i < all.length; i++) 
 		{ 
 			if (all[i].checked == true)
-				removeOne(all[i].getAttribute("IDAPI"));
+				await removeOne(all[i].getAttribute("IDAPI"));
+		}
+		location.reload();
+	}
+	async function UncorrectAll() {  
+		for(var i = 0; i < all.length; i++) 
+		{ 
+			if (all[i].checked == true)
+				await uncorrectOne(all[i].getAttribute("IDAPI"));
 		}
 		location.reload();
 	}
 
-	function rentOne(id)
+	async function rentOne(id)
 	{
-		$.get(urlSuccsess + id, {
+		await $.get(urlSuccsess + id + '/1', {
 			}, onAjaxSuccess);
 	}
-	function denyOne(id)
+	async function denyOne(id)
 	{
-		$.get(urlReject + id, {
+		await $.get(urlReject + id + '/1', {
 			}, onAjaxSuccess);
 	}
-	function removeOne(id)
+	async function removeOne(id)
 	{
-		$.get(urlDelete + id, {
+		await $.get(urlDelete + id + '/0', {
+			}, onAjaxSuccess);
+	}
+	async function uncorrectOne(id)
+	{
+		await $.get(urlUncorrect + id + '/1', {
 			}, onAjaxSuccess);
 	}
 

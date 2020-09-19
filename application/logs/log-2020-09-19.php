@@ -130,3 +130,148 @@ ERROR - 2020-09-19 20:35:10 --> Severity: Warning --> Missing argument 1 for Ren
 ERROR - 2020-09-19 20:35:10 --> Severity: Notice --> Undefined variable: id C:\xampp\htdocs\crm\application\controllers\my\Rent.php 205
 ERROR - 2020-09-19 20:35:10 --> Severity: Warning --> Missing argument 1 for Rent::delete() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 203
 ERROR - 2020-09-19 20:35:10 --> Severity: Notice --> Undefined variable: id C:\xampp\htdocs\crm\application\controllers\my\Rent.php 205
+ERROR - 2020-09-19 20:48:23 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 224
+ERROR - 2020-09-19 20:48:28 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 224
+ERROR - 2020-09-19 20:48:41 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 224
+ERROR - 2020-09-19 20:49:13 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:13 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:13 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:13 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:13 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:13 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:13 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:13 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:13 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:13 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:13 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:13 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:13 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:14 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:14 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:14 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:14 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:14 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:14 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:14 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:14 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:14 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:14 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:14 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:14 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:14 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:14 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:15 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:15 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:15 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:15 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:15 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:15 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:15 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:15 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:15 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:15 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:15 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:15 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:15 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:15 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:15 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:15 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:16 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:16 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:16 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:16 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:16 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:16 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:16 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:16 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:16 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:16 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:16 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:16 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:16 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:16 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:16 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:16 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:16 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:16 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:17 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:17 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:17 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:17 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:17 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:17 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:17 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:17 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:17 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:17 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:17 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:17 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:17 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:17 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:17 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:17 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:18 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:18 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:18 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:18 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:49:18 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 217
+ERROR - 2020-09-19 20:49:18 --> Severity: Notice --> Undefined variable: location C:\xampp\htdocs\crm\application\controllers\my\Rent.php 225
+ERROR - 2020-09-19 20:54:12 --> Severity: Parsing Error --> syntax error, unexpected '.1' (T_DNUMBER) C:\xampp\htdocs\crm\application\views\my\rent_accept.php 61
+ERROR - 2020-09-19 20:54:18 --> Severity: Parsing Error --> syntax error, unexpected '.2' (T_DNUMBER) C:\xampp\htdocs\crm\application\views\my\rent_accept.php 61
+ERROR - 2020-09-19 20:55:35 --> Severity: Parsing Error --> syntax error, unexpected '.1' (T_DNUMBER) C:\xampp\htdocs\crm\application\views\my\rent.php 155
+ERROR - 2020-09-19 21:13:11 --> Severity: Compile Error --> Cannot redeclare Rent::uncorrect() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 258
+ERROR - 2020-09-19 21:14:10 --> Severity: Compile Error --> Cannot redeclare Rent::uncorrect() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 258
+ERROR - 2020-09-19 21:17:16 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:33:12 --> Severity: Notice --> Undefined variable: data C:\xampp\htdocs\crm\application\views\my\rent_fail.php 29
+ERROR - 2020-09-19 21:33:12 --> Severity: Notice --> Trying to get property of non-object C:\xampp\htdocs\crm\application\views\my\rent_fail.php 29
+ERROR - 2020-09-19 21:33:35 --> Severity: Notice --> Undefined variable: data C:\xampp\htdocs\crm\application\views\my\rent_fail.php 29
+ERROR - 2020-09-19 21:33:35 --> Severity: Notice --> Trying to get property of non-object C:\xampp\htdocs\crm\application\views\my\rent_fail.php 29
+ERROR - 2020-09-19 21:34:18 --> Severity: Notice --> Trying to get property of non-object C:\xampp\htdocs\crm\application\views\my\rent_fail.php 29
+ERROR - 2020-09-19 21:34:35 --> Severity: Notice --> Trying to get property of non-object C:\xampp\htdocs\crm\application\views\my\rent_fail.php 29
+ERROR - 2020-09-19 21:34:35 --> Severity: Notice --> Trying to get property of non-object C:\xampp\htdocs\crm\application\views\my\rent_fail.php 29
+ERROR - 2020-09-19 21:34:42 --> Severity: Notice --> Trying to get property of non-object C:\xampp\htdocs\crm\application\views\my\rent_fail.php 29
+ERROR - 2020-09-19 21:34:43 --> Severity: Notice --> Trying to get property of non-object C:\xampp\htdocs\crm\application\views\my\rent_fail.php 29
+ERROR - 2020-09-19 21:37:15 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:40:38 --> Severity: Notice --> Trying to get property of non-object C:\xampp\htdocs\crm\application\views\my\rent_uncorrect.php 29
+ERROR - 2020-09-19 21:40:38 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\crm\application\views\my\rent_uncorrect.php 50
+ERROR - 2020-09-19 21:40:38 --> Severity: Notice --> Trying to get property of non-object C:\xampp\htdocs\crm\application\views\my\rent_uncorrect.php 29
+ERROR - 2020-09-19 21:40:38 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\crm\application\views\my\rent_uncorrect.php 50
+ERROR - 2020-09-19 21:40:46 --> Severity: Notice --> Trying to get property of non-object C:\xampp\htdocs\crm\application\views\my\rent_uncorrect.php 29
+ERROR - 2020-09-19 21:40:46 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\crm\application\views\my\rent_uncorrect.php 50
+ERROR - 2020-09-19 21:40:46 --> Severity: Notice --> Trying to get property of non-object C:\xampp\htdocs\crm\application\views\my\rent_uncorrect.php 29
+ERROR - 2020-09-19 21:40:46 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\crm\application\views\my\rent_uncorrect.php 50
+ERROR - 2020-09-19 21:40:49 --> Severity: Notice --> Trying to get property of non-object C:\xampp\htdocs\crm\application\views\my\rent_uncorrect.php 29
+ERROR - 2020-09-19 21:40:49 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\crm\application\views\my\rent_uncorrect.php 50
+ERROR - 2020-09-19 21:40:58 --> Severity: Notice --> Trying to get property of non-object C:\xampp\htdocs\crm\application\views\my\rent_uncorrect.php 29
+ERROR - 2020-09-19 21:40:58 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\crm\application\views\my\rent_uncorrect.php 50
+ERROR - 2020-09-19 21:40:58 --> Severity: Notice --> Trying to get property of non-object C:\xampp\htdocs\crm\application\views\my\rent_uncorrect.php 29
+ERROR - 2020-09-19 21:40:58 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\crm\application\views\my\rent_uncorrect.php 50
+ERROR - 2020-09-19 21:40:58 --> Severity: Notice --> Trying to get property of non-object C:\xampp\htdocs\crm\application\views\my\rent_uncorrect.php 29
+ERROR - 2020-09-19 21:40:58 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\crm\application\views\my\rent_uncorrect.php 50
+ERROR - 2020-09-19 21:41:59 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:41:59 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:42:02 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:44:40 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:46:18 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:46:18 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:46:38 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:46:38 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:46:47 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:46:47 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:47:27 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:47:27 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:47:33 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:47:33 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:47:40 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:47:40 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:47:45 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:47:45 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:47:49 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:47:49 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-19 21:52:40 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 279
+ERROR - 2020-09-19 21:52:40 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 279
+ERROR - 2020-09-19 21:52:46 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 279
+ERROR - 2020-09-19 21:52:46 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 279
+ERROR - 2020-09-19 21:52:50 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 279
+ERROR - 2020-09-19 21:52:50 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 279
+ERROR - 2020-09-19 21:52:50 --> Severity: Notice --> Undefined variable: sms C:\xampp\htdocs\crm\application\controllers\my\Rent.php 279

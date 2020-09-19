@@ -1,10 +1,10 @@
 	<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h4">Заявки на аренду: <span class="text-success">принято</span></h1>
+        <h1 class="h4">Заявки на аренду: <span class="text-primary">исправить фото</span></h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group mr-2">
                 <a href="<?php echo base_url('my/rent');?>" class="btn btn-sm btn-outline-success">Новые</a>
-				<a href="<?php echo base_url('my/rent/accept');?>" class="btn btn-sm btn-success">Принятые</a>
-				<a href="<?php echo base_url('my/rent/uncorrect');?>" class="btn btn-sm btn-outline-success">Исправить фото</a>
+				<a href="<?php echo base_url('my/rent/accept');?>" class="btn btn-sm btn-outline-success">Принятые</a>
+				<a href="<?php echo base_url('my/rent/uncorrect');?>" class="btn btn-sm btn-success">Исправить фото</a>
                 <a href="<?php echo base_url('my/rent/fail');?>" class="btn btn-sm btn-outline-success">Отказано</a>
             </div>
         </div>
@@ -156,7 +156,7 @@
 								    	<a class="dropdown-item" href="<?php echo base_url('my/rent/success/'.$data->id);?>">Направить на аренду</a>
 								    	<a class="dropdown-item" href="<?php echo base_url('my/rent/reject/'.$data->id);?>">Отказать</a>
 								    	<?php endif; ?>
-								    	<a class="dropdown-item text-danger" href="<?php echo base_url('my/rent/delete/'.$data->id.'/2');?>">Удалить</a>
+								    	<a class="dropdown-item text-danger" href="<?php echo base_url('my/rent/delete/'.$data->id.'/4');?>">Удалить</a>
 								  	</div>
 								</div>
 			    			</td>
@@ -182,7 +182,6 @@
 	    </div>
 	<?php endif; ?>
 
-		
 <script>
 	var main = document.querySelector("#all");
 	var all = document.querySelectorAll("#one_ch");
