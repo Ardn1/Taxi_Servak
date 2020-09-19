@@ -1,3 +1,4 @@
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h4">Рассылка на выбранные номера</h1>
     </div>
@@ -120,15 +121,15 @@
 		for(var i = 0; i < all.length; i++) 
 		{ 
 			if (all[i].checked == true)
-				sendOne(obj.getAttribute("baseURL"), input.value, all.getAttribute("phoneForAPI"));
+				sendOne(obj.getAttribute("baseURL"), input.value, all[i].getAttribute("phoneForAPI"));
 		}
+		input.value = "";
 	}
 
 	function sendOne(url, text, phone)
 	{
 		let input = document.querySelector("#textSMS");
-		$.get(
-		url,
+		$.get(url,
 		{
 			phones: phone,
 			textSMS: text,
@@ -139,7 +140,11 @@
 
 	function onAjaxSuccess(data)
 	{
-		alert(data);
+		if(data==="Отправлено"){
+            swal ( "Уведомление" ,  "Успешно разослано" ,  "success" )
+        } else {
+            swal ( "Уведомление" ,  data ,  "error" )
+        }
 	}
-	
+
 </script>

@@ -23,7 +23,7 @@
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a class="dropdown-item" href="<?php echo base_url('my/orders');?>"><span data-feather="users" class="text-primary mr-3"></span> Регистрация</a>
                 <a class="dropdown-item" href="<?php echo base_url('my/rent');?>"><span data-feather="clock" class="text-primary mr-3"></span> Аренда</a>
-                <a class="dropdown-item" href="<?php echo base_url('my/feedback');?>"><span data-feather="fi-comment-square" class="text-primary mr-3"></span> Обратная связь</a>
+                <a class="dropdown-item" href="<?php echo base_url('my/feedback');?>"><span data-feather="message-square" class="text-primary mr-3"></span> Обратная связь</a>
                 <a class="dropdown-item" href="<?php echo base_url('my/pages');?>"><span data-feather="edit" class="text-primary mr-3"></span> Менеджер контента</a>
                 <div class="dropdown-divider"></div>
                 <h6 class="dropdown-header">Конфигурация</h6>
@@ -62,7 +62,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link <?php echo activate_menu('feedback'); ?>" href="<?php echo base_url('my/feedback');?>">
-                                    <span data-feather="fi-comment-square"></span>
+                                    <span data-feather="message-square"></span>
                                      Обратная связь
                                 </a>
                             </li>

@@ -11,6 +11,7 @@ class Mailing extends Admin_Controller
 		$this->load->model('content_model');
 		$this->load->library('pagination');
 		$this->load->library('protect');
+		$this->load->library('sms');
 	}
 
 	public function index()
@@ -42,15 +43,10 @@ class Mailing extends Admin_Controller
 		$this->template->load('admin', 'contents' , 'my/mailing', $data);
 	}
 
-	public function sendSMS($phones, $textSMS)
+	public function sendSMS()
 	{
-		$this->form_validation->set_rules('textSMS', 'Текст рассылки');//, 'trim|required|max_length[60]|valid_email');
-		$this->session->set_flashdata('success', "Сообщения отправленны");
-
-		$textSMS = $this->input->post("textSMS", true);
-
-		$this->Sms->send_sms_text($phones ,$textSMS); 
-
+		//$this->session->set_flashdata('success', "Сообщения отправленны");
+		$this->sms->send_sms_text($_GET["phones"], $_GET["textSMS"]); 
 	}
 
 	public function addphone()

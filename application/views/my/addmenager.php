@@ -97,6 +97,7 @@
             },
             onAjaxSuccess
         );
+		input.value = "";
     }
 
     function onAjaxSuccess(data) {

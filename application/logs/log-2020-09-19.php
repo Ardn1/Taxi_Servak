@@ -72,3 +72,27 @@ ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClas
 ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
 ERROR - 2020-09-19 18:15:55 --> Severity: Notice --> Undefined property: stdClass::$phone C:\xampp\htdocs\crm\application\views\my\mailing.php 61
 ERROR - 2020-09-19 19:04:29 --> Severity: Parsing Error --> syntax error, unexpected '}' C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 54
+ERROR - 2020-09-19 19:30:08 --> Severity: Warning --> Missing argument 1 for Mailing::sendSMS() C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 45
+ERROR - 2020-09-19 19:30:08 --> Severity: Warning --> Missing argument 2 for Mailing::sendSMS() C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 45
+ERROR - 2020-09-19 19:30:08 --> Severity: Notice --> Undefined property: Mailing::$Sms C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 52
+ERROR - 2020-09-19 19:30:08 --> Severity: Error --> Call to a member function send_sms_text() on null C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 52
+ERROR - 2020-09-19 19:31:04 --> Severity: Warning --> Missing argument 1 for Mailing::sendSMS() C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 45
+ERROR - 2020-09-19 19:31:04 --> Severity: Warning --> Missing argument 2 for Mailing::sendSMS() C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 45
+ERROR - 2020-09-19 19:31:04 --> Severity: Notice --> Undefined property: Mailing::$Sms C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 52
+ERROR - 2020-09-19 19:31:04 --> Severity: Error --> Call to a member function send_sms_text() on null C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 52
+ERROR - 2020-09-19 19:33:45 --> Severity: Warning --> Missing argument 1 for Mailing::sendSMS() C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 45
+ERROR - 2020-09-19 19:33:45 --> Severity: Warning --> Missing argument 2 for Mailing::sendSMS() C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 45
+ERROR - 2020-09-19 19:33:45 --> Severity: Notice --> Undefined property: Mailing::$Sms C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 51
+ERROR - 2020-09-19 19:33:45 --> Severity: Error --> Call to a member function send_sms_text() on null C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 51
+ERROR - 2020-09-19 19:35:58 --> Severity: Warning --> Missing argument 1 for Mailing::sendSMS() C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 45
+ERROR - 2020-09-19 19:35:58 --> Severity: Warning --> Missing argument 2 for Mailing::sendSMS() C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 45
+ERROR - 2020-09-19 19:35:58 --> Severity: Notice --> Undefined property: Mailing::$Sms C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 49
+ERROR - 2020-09-19 19:35:58 --> Severity: Error --> Call to a member function send_sms_text() on null C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 49
+ERROR - 2020-09-19 19:38:03 --> Severity: Warning --> Missing argument 1 for Mailing::sendSMS() C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 45
+ERROR - 2020-09-19 19:38:03 --> Severity: Warning --> Missing argument 2 for Mailing::sendSMS() C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 45
+ERROR - 2020-09-19 19:38:57 --> Severity: Notice --> Undefined property: Mailing::$Sms C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 47
+ERROR - 2020-09-19 19:38:57 --> Severity: Error --> Call to a member function send_sms_text() on null C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 47
+ERROR - 2020-09-19 19:40:54 --> Severity: Notice --> Undefined property: Mailing::$Sms C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 48
+ERROR - 2020-09-19 19:40:54 --> Severity: Error --> Call to a member function send_sms_text() on null C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 48
+ERROR - 2020-09-19 19:43:29 --> Severity: Notice --> Undefined property: Mailing::$Sms C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 49
+ERROR - 2020-09-19 19:43:29 --> Severity: Error --> Call to a member function send_sms_text() on null C:\xampp\htdocs\crm\application\controllers\my\Mailing.php 49
