@@ -45,40 +45,32 @@ ERROR - 2020-09-18 18:37:52 --> Severity: Notice --> Undefined property: stdClas
 ERROR - 2020-09-18 18:37:52 --> Severity: Notice --> Undefined property: stdClass::$API C:\xampp\htdocs\crm\application\views\my\rent.php 142
 ERROR - 2020-09-18 18:37:52 --> Severity: Notice --> Undefined property: stdClass::$API C:\xampp\htdocs\crm\application\views\my\rent.php 140
 ERROR - 2020-09-18 18:37:52 --> Severity: Notice --> Undefined property: stdClass::$API C:\xampp\htdocs\crm\application\views\my\rent.php 142
-ERROR - 2020-09-18 18:48:32 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp\htdocs\crm\application\controllers\my\Rent.php 120
-ERROR - 2020-09-18 18:48:32 --> Severity: Notice --> Undefined property: stdClass::$doc_face C:\xampp\htdocs\crm\application\views\my\rent_edit.php 34
-ERROR - 2020-09-18 20:00:10 --> 404 Page Not Found: my/Add_manager/index
-ERROR - 2020-09-18 20:01:14 --> 404 Page Not Found: my/Add_manager/index
-ERROR - 2020-09-18 20:01:26 --> 404 Page Not Found: my/Add_manager/index
-ERROR - 2020-09-18 20:01:35 --> 404 Page Not Found: my/Add_manager/index
-ERROR - 2020-09-18 20:05:41 --> 404 Page Not Found: my/Add_manager/index
-ERROR - 2020-09-18 20:06:19 --> 404 Page Not Found: my/Add_manager/index
-ERROR - 2020-09-18 20:07:27 --> 404 Page Not Found: my/Add_manager/index
-ERROR - 2020-09-18 20:11:11 --> 404 Page Not Found: my/Add_profile/index
-ERROR - 2020-09-18 20:11:45 --> 404 Page Not Found: my/Add_profile/index
-ERROR - 2020-09-18 20:11:50 --> 404 Page Not Found: my/Add/profile
-ERROR - 2020-09-18 20:12:41 --> 404 Page Not Found: my/Add/profile
-ERROR - 2020-09-18 20:13:21 --> 404 Page Not Found: my/Add/profile
-ERROR - 2020-09-18 20:13:28 --> 404 Page Not Found: my/Add/index
-ERROR - 2020-09-18 20:13:43 --> 404 Page Not Found: my/Add/index
-ERROR - 2020-09-18 20:14:11 --> 404 Page Not Found: Rent/add
-ERROR - 2020-09-18 20:14:20 --> 404 Page Not Found: my/Rent/add
-ERROR - 2020-09-18 20:14:29 --> Severity: Notice --> Undefined property: stdClass::$name C:\xampp\htdocs\crm\application\controllers\my\Rent.php 120
-ERROR - 2020-09-18 20:14:29 --> Severity: Notice --> Undefined property: stdClass::$doc_face C:\xampp\htdocs\crm\application\views\my\rent_edit.php 34
-ERROR - 2020-09-18 20:14:35 --> Severity: Warning --> Missing argument 1 for Rent::edit() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 100
-ERROR - 2020-09-18 20:14:35 --> Severity: Notice --> Undefined variable: id C:\xampp\htdocs\crm\application\controllers\my\Rent.php 102
-ERROR - 2020-09-18 20:14:45 --> Severity: Warning --> Missing argument 1 for Rent::edit() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 100
-ERROR - 2020-09-18 20:14:45 --> Severity: Notice --> Undefined variable: id C:\xampp\htdocs\crm\application\controllers\my\Rent.php 102
-ERROR - 2020-09-18 20:14:57 --> 404 Page Not Found: my/Add/index
-ERROR - 2020-09-18 20:16:05 --> 404 Page Not Found: my/Add/index
-ERROR - 2020-09-18 20:16:39 --> 404 Page Not Found: my/Add/index
-ERROR - 2020-09-18 20:17:27 --> 404 Page Not Found: my/Add/index
-ERROR - 2020-09-18 20:17:32 --> Severity: Warning --> Missing argument 1 for Rent::edit() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 100
-ERROR - 2020-09-18 20:17:32 --> Severity: Notice --> Undefined variable: id C:\xampp\htdocs\crm\application\controllers\my\Rent.php 102
-ERROR - 2020-09-18 20:17:43 --> 404 Page Not Found: my/Add/index
-ERROR - 2020-09-18 20:18:09 --> Severity: Warning --> Missing argument 1 for Rent::edit() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 100
-ERROR - 2020-09-18 20:18:09 --> Severity: Notice --> Undefined variable: id C:\xampp\htdocs\crm\application\controllers\my\Rent.php 102
-ERROR - 2020-09-18 20:18:21 --> 404 Page Not Found: my/Add/index
-ERROR - 2020-09-18 20:18:53 --> 404 Page Not Found: my/Rent/jopa
-ERROR - 2020-09-18 20:19:08 --> 404 Page Not Found: my/Rent/jopa
-ERROR - 2020-09-18 20:24:23 --> 404 Page Not Found: my/Rent/jopa
+ERROR - 2020-09-18 19:21:04 --> 404 Page Not Found: Docs/189172576.png
+ERROR - 2020-09-18 19:32:18 --> 404 Page Not Found: my/Add_meneger/index
+ERROR - 2020-09-18 19:32:19 --> 404 Page Not Found: my/Add_meneger/index
+ERROR - 2020-09-18 19:32:22 --> 404 Page Not Found: my/Add_meneger/index
+ERROR - 2020-09-18 19:41:07 --> 404 Page Not Found: my/Add_meneger/index
+ERROR - 2020-09-18 19:45:01 --> 404 Page Not Found: my/Add_meneger/index
+ERROR - 2020-09-18 19:45:03 --> 404 Page Not Found: my/Add_meneger/index
+ERROR - 2020-09-18 19:46:10 --> 404 Page Not Found: my/Add_meneger/index
+ERROR - 2020-09-18 19:49:11 --> 404 Page Not Found: my/Add_menager/index
+ERROR - 2020-09-18 19:49:14 --> 404 Page Not Found: my/Add_menager/index
+ERROR - 2020-09-18 19:51:21 --> 404 Page Not Found: my/Add_menager/index
+ERROR - 2020-09-18 19:51:59 --> 404 Page Not Found: my/Add_menager/index
+ERROR - 2020-09-18 19:52:01 --> 404 Page Not Found: my/Add_menager/index
+ERROR - 2020-09-18 19:56:07 --> 404 Page Not Found: my/Add_menager/index
+ERROR - 2020-09-18 19:57:12 --> 404 Page Not Found: my/Add_menager/index
+ERROR - 2020-09-18 19:58:12 --> 404 Page Not Found: my/Add_menager/index
+ERROR - 2020-09-18 19:58:48 --> 404 Page Not Found: my/Add_menager/index
+ERROR - 2020-09-18 19:59:11 --> 404 Page Not Found: my/Add_menager/index
+ERROR - 2020-09-18 19:59:39 --> 404 Page Not Found: my/Add_menager/index
+ERROR - 2020-09-18 20:00:08 --> 404 Page Not Found: my/Add_menager/index
+ERROR - 2020-09-18 20:00:19 --> 404 Page Not Found: my/Add_menager/index
+ERROR - 2020-09-18 20:13:33 --> 404 Page Not Found: my/Addmenager/index
+ERROR - 2020-09-18 20:26:52 --> 404 Page Not Found: my/Addmenager/index
+ERROR - 2020-09-18 20:27:10 --> 404 Page Not Found: my/Addmenager/index
+ERROR - 2020-09-18 20:27:37 --> 404 Page Not Found: my/Addmenager/index
+ERROR - 2020-09-18 20:27:58 --> 404 Page Not Found: my/Addmenager/index
+ERROR - 2020-09-18 21:17:42 --> 404 Page Not Found: my/AddManager/update_manager
+ERROR - 2020-09-18 21:25:53 --> Severity: Notice --> Undefined variable: total_records C:\xampp\htdocs\crm\application\views\my\addmenager.php 33
+ERROR - 2020-09-18 21:26:32 --> Severity: Notice --> Undefined variable: total_records C:\xampp\htdocs\crm\application\views\my\addmenager.php 33

@@ -111,6 +111,13 @@ class Content_model extends CI_model
         return $query->num_rows();
     }
 
+	public function get_total_manager()
+    {
+        $where = array('ismanager' => 1);
+        $query = $this->db->where($where)->get("users");
+        return $query->num_rows();
+    }
+
     public function get_total_success_rent()
     {
         $where = array('status' => 1);
@@ -130,6 +137,23 @@ class Content_model extends CI_model
         $this->db->limit($limit, $start);
         $where = array('status' => 0);
         $query = $this->db->order_by('id', 'desc')->where($where)->get("rent");
+        if ($query->num_rows() > 0)
+        {
+            foreach ($query->result() as $row)
+            {
+                $data[] = $row;
+            }
+
+            return $data;
+        }
+        return false;
+    }
+
+    public function get_manager($limit, $start)
+    {
+        $this->db->limit($limit, $start);
+        $where = array('ismanager' => 1);
+        $query = $this->db->order_by('id', 'desc')->where($where)->get("users");
         if ($query->num_rows() > 0)
         {
             foreach ($query->result() as $row)
@@ -181,6 +205,14 @@ class Content_model extends CI_model
 		$query = $this->db->where("id", $id)->get("rent");
 	    $row = $query->row();
 	    return $row;
+    }
+    
+    
+    public function get_onemanager($id) 
+	{
+		$query = $this->db->where("id", $id)->get("users");
+	    $row = $query->row();
+	    return $row;
 	}
 
     public function add_rent($data)
@@ -199,6 +231,12 @@ class Content_model extends CI_model
 	{
 		$where = array('id' => $id);
 		$this->db->where($where)->delete("rent");
+    }
+    
+	public function del_manager($id) 
+	{
+		$where = array('id' => $id);
+		$this->db->where($where)->delete("users");
 	}
 
 	public function get_total_new_orders()
