@@ -27,7 +27,6 @@ class Profile extends Admin_Controller
 		$this->form_validation->set_rules('email', 'Email адрес', 'trim|required|max_length[60]|valid_email');
 		$this->form_validation->set_rules('password', 'Пароль', 'trim|required|min_length[8]');
 		$this->form_validation->set_rules('repassword', 'Повтор пароля', 'trim|required|matches[password]');
-
 		if ($this->form_validation->run() == true) {
 
 			$email = $this->input->post("email", true);
@@ -39,7 +38,6 @@ class Profile extends Admin_Controller
                 "password"  =>  $stamp_pass
                 )
             );
-
             $this->session->set_flashdata('success', "Успешно обновлено!");
 			redirect(site_url('my/profile'));
 

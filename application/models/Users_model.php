@@ -13,6 +13,7 @@ class Users_model extends CI_model {
 	{
 		$query = $this->db->where("id", $id)->get("users");
 	    $row = $query->row();
+
 	    return $row;
 	}
 

@@ -8,12 +8,12 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                     <?php if (!$rent->status) : ?>
-                        <a class="dropdown-item" href="<?php echo base_url('my/orders/accept/'.$rent->id);?>">Направить на аренду</a>
+                        <a class="dropdown-item" href="<?php echo base_url('my/rent/success/'.$rent->id);?>">Направить на аренду</a>
                     <?php endif; ?>
-                    <?php if ($rent->status != 3) : ?>
-                        <a class="dropdown-item" href="<?php echo base_url('my/orders/reject/'.$rent->id);?>">Отказать</a>
+                    <?php if ($rent->status != 2) : ?>
+                        <a class="dropdown-item" href="<?php echo base_url('my/rent/reject/'.$rent->id);?>">Отказать</a>
                     <?php endif; ?>
-                    <a class="dropdown-item text-danger" href="<?php echo base_url('my/orders/delete_order/'.$rent->id);?>">Удалить</a>
+                    <a class="dropdown-item text-danger" href="<?php echo base_url('my/rent/delete/'.$rent->id);?>">Удалить</a>
                 </div>
             </div>
         <?php else : ?>
@@ -28,13 +28,36 @@
 
         <div class="card mb-3">
             <div class="card-header">
-                Личная фотография
+                Паспорт (основной разворот)
             </div>
             <div class="card-body p-0">
-               <!-- <img src="<?php echo base_url('docs/'.$rent->doc_face);?>" class="w-100"> --!>
+               <img src="<?php echo base_url('docs/'.$rent->pass1);?>" class="w-100">
             </div>
         </div>
-
+        <div class="card mb-3">
+            <div class="card-header">
+                Паспорт (страница с пропиской)
+            </div>
+            <div class="card-body p-0">
+                <img src="<?php echo base_url('docs/'.$rent->pass2);?>" class="w-100">
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-header">
+                Водительское удостоверение (внешняя сторона)
+            </div>
+            <div class="card-body p-0">
+                <img src="<?php echo base_url('docs/'.$rent->vu1);?>" class="w-100">
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-header">
+                Водительское удостоверение (обратная сторона)
+            </div>
+            <div class="card-body p-0">
+                <img src="<?php echo base_url('docs/'.$rent->vu2);?>" class="w-100">
+            </div>
+        </div>
 
     </div>
 
@@ -54,13 +77,9 @@
                     <?php if (!$rent->status) : ?>
                         <p class="text-primary">Новая</p>
                     <?php elseif($rent->status == 1) : ?>
-                        <p class="text-danger">Отказано</p>
+                        <p class="text-success">Принятая</p>
                     <?php elseif($rent->status == 2) : ?>
-                        <p class="text-success">Принята</p>
-                    <?php elseif($rent->status == 3) : ?>
-                        <p class="text-success">Создан аккаунт</p>
-                    <?php else : ?>
-                        <p class="text-muted">Неполная</p>
+                        <p class="text-danger">Отказаная</p>
                     <?php endif; ?>
                 </div>
             </div>
@@ -89,7 +108,7 @@
 
                 </div>
                 <div class="col-md-11">
-                    <p><?php echo $rent->first_name;?></p>
+                    <p><?php echo $rent->first_name.' '.$rent->last_name;?></p>
                 </div>
             </div>
             <div class="row">
