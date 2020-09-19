@@ -76,3 +76,4 @@ ERROR - 2020-09-19 17:34:27 --> Severity: Notice --> Undefined index: id C:\xamp
 ERROR - 2020-09-19 17:36:22 --> Severity: Notice --> Undefined index: password C:\xampp\htdocs\crm\application\controllers\my\Addmenager.php 81
 ERROR - 2020-09-19 17:36:22 --> Severity: Notice --> Undefined index: id C:\xampp\htdocs\crm\application\controllers\my\Addmenager.php 82
 >>>>>>> 4b9570a7eb0add31af3516df6968d3e48b5226dd
+ERROR - 2020-09-19 18:03:39 --> Severity: Parsing Error --> syntax error, unexpected '$lowercase' (T_VARIABLE) C:\xampp\htdocs\crm\application\controllers\my\Addmenager.php 83

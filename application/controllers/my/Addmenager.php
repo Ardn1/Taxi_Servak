@@ -78,12 +78,21 @@ class Addmenager extends Admin_Controller
 
 	public function update_password()
 	{
+	    $password=$_GET['password'];
+
+
+        if(strlen($password) < 6) {
+            echo 'Пароль должен состоять не менее чем из 6 символов';
+            return;
+        }
+
 		$stamp_pass = $this->protect->encrypt($_GET['password']);
 		$this->users_model->update_user($_GET['id'], array(
 			"password"  =>  $stamp_pass
 			)
 		);
 		$this->session->set_flashdata('success', "Пароль успешно изменен!");
+		echo "Успешно изменено";
 	}
 
 	public function delete($id)
