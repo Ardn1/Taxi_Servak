@@ -46,11 +46,15 @@ class Addmenager extends Admin_Controller
 	{
 		$this->form_validation->set_rules('email', 'Email адрес', 'trim|required|max_length[60]|valid_email');
 		$this->form_validation->set_rules('password', 'Пароль', 'trim|required|min_length[8]');
+	//	$this->form_validation->set_rules('ismessegesallow', 'Разрешить отправку сообщений');
 
 		if ($this->form_validation->run() == true) {
 
 			$email = $this->input->post("email", true);
 	      	$password = $this->input->post("password", true);
+		//	$check = $this->input->post("ismessegesallow", true);
+			$check = $_POST["ismessegesallow"]=="Yes"?1:2;
+
 
 			$stamp_pass = $this->protect->encrypt($password);
 			
@@ -61,8 +65,9 @@ class Addmenager extends Admin_Controller
                 )
 			);*/
 			
+
 			$this->db->query(
-				"INSERT into users(email,password,ismanager) VALUES('".$email."', '".$stamp_pass."',1)"
+				"INSERT into users(email,password,ismanager) VALUES('".$email."', '".$stamp_pass."',".$check.")"
 			);
 
             $this->session->set_flashdata('success', "Менеджер добавлен");
@@ -98,6 +103,23 @@ class Addmenager extends Admin_Controller
 		echo "Успешно изменено";
 	}
 
+
+	public function update_editing()
+	{
+	    $ismanager=$_GET['ismanager'];
+
+        if($_GET['id']==1){
+            echo 'НЕВОЗМОЖНО ИЗМЕНИТЬ ВОЗМОЖНОСТИ АДМИНИСТРАТОРА!';
+            return;
+        }
+
+		$this->users_model->update_user($_GET['id'], array(
+			"ismanager"  =>  $ismanager
+			)
+		);
+		echo "Успешно изменено";
+	}
+
 	public function delete($id)
 	{
 		if (is_null($id) OR !is_numeric($id) OR $id == 1) {
@@ -117,5 +139,4 @@ class Addmenager extends Admin_Controller
 		$this->session->set_flashdata('success', 'Менеджер успешно удален!');
 		redirect(site_url('my/addmenager'));
 	}
-
 }

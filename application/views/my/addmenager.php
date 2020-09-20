@@ -9,13 +9,17 @@
         <div class="card">
             <div class="card-body">
                 <div class="row">
-                    <div class="" style="width:42.5%; margin-left: 5%">
+                    <div class="" style="width:35%; margin-left: 3%">
                         <label>Email адрес</label>
                         <input type="email" class="form-control form-control-sm" name="email">
                     </div>
-                    <div class="" style="width:42.5%; margin-left: 5%">
+                    <div class="" style="width:35%; margin-left: 3%">
                         <label>Пароль</label>
                         <input type="" class="form-control form-control-sm" name="password">
+                    </div>
+                    <div class="column" style="width:20%; margin-left: 3%">
+                        <label>Разрешить отправку сообщений</label> <br>
+                        <input width="3%" type="checkbox" name = "ismessegesallow" style="width = 5%" unchecked value = "Yes"/>
                     </div>
                 </div>
             </div>
@@ -35,6 +39,7 @@
                     <thead>
                     <tr>
                         <th>Email</th>
+                        <th>Отправка сообщений</th>
                         <th>Новый пароль</th>
                         <th class="text-right text-success">Всего: <?php echo $total_records; ?></th>
                     </tr>
@@ -42,9 +47,13 @@
                     <tbody>
                     <?php foreach ($users as $data) : ?>
                         <tr>
-                            <td width="75%"><?php echo $data->email; ?></td>
-                            <td width="15%"><input type="password" class="form-control form-control-sm"
-                                                   id="newparol<?php echo $data->id; ?>"></td>
+                            <td width="60%"><?php echo $data->email; ?></td>
+                            <?php if ($data->ismanager == 1) : ?>
+                            <td width="15%"><input type="checkbox" id = "one_ch" IDAPI = "<?php echo $data->id;?>" onclick = "setEditingNew(this)" style="width =5%" checked/></td>
+                            <?php elseif ($data->ismanager == 2) : ?>
+                            <td width="15%"><input type="checkbox" id = "one_ch" IDAPI = "<?php echo $data->id;?>" onclick = "setEditingNew(this)" style="width =5%" unchecked/></td>
+                            <?php endif; ?>
+                            <td width="15%"><input type="password" class="form-control form-control-sm" id="newparol<?php echo $data->id; ?>"></td>
                             <td class="text-right">
                                 <div class="dropdown">
                                     <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
@@ -86,17 +95,39 @@
 
 <script>
     var baseurl = "<?php echo base_url('my/addmenager/update_password/');?>"
-    function setPasswordNew(obj) {
+    var baseurlediting = "<?php echo base_url('my/addmenager/update_editing/');?>"
+    async function setPasswordNew(obj) {
         let i = document.getElementById(obj.getAttribute("forPassword"));
-        $.get(
+        await $.get(
             baseurl,
             {
-                id: obj.getAttribute("forPasswordID"),
+                id: obj.getAttribute("IDAPI"),
                 password: i.value,
             },
             onAjaxSuccess
         );
-		input.value = "";
+		i.value = "";
+    }
+
+    async function setEditingNew(obj) {
+        let i = obj.checked?1:2;
+        await $.get(
+            baseurlediting,
+            {
+                id: obj.getAttribute("IDAPI"),
+                ismanager: i,
+            },
+            onAjaxSuccessCheck
+        );
+		i.value = "";
+    }
+
+    function onAjaxSuccessCheck(data) {
+     //   if(data==="Успешно изменено"){
+     //       swal ( "Уведомление" ,  "Успешно изменено!" ,  "success" )
+     //   } else{
+    //        swal ( "Уведомление" ,  data ,  "error" )
+      //  }
     }
 
     function onAjaxSuccess(data) {

@@ -113,7 +113,7 @@ class Content_model extends CI_model
 
 	public function get_total_manager()
     {
-        $where = array('ismanager' => 1);
+        $where = array('ismanager' > 0);
         $query = $this->db->where($where)->get("users");
         return $query->num_rows();
     }
@@ -165,7 +165,7 @@ class Content_model extends CI_model
     public function get_manager($limit, $start)
     {
         $this->db->limit($limit, $start);
-        $where = array('ismanager' => 1);
+        $where = array('ismanager' > 0);
         $query = $this->db->order_by('id', 'desc')->where($where)->get("users");
         if ($query->num_rows() > 0)
         {

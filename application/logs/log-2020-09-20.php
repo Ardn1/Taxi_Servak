@@ -456,3 +456,31 @@ ERROR - 2020-09-20 15:48:35 --> 404 Page Not Found: Docs/173401946.gif
 ERROR - 2020-09-20 15:48:35 --> 404 Page Not Found: Docs/91309176.gif
 ERROR - 2020-09-20 15:52:29 --> 404 Page Not Found: Docs/index
 ERROR - 2020-09-20 15:53:03 --> 404 Page Not Found: Docs/index
+ERROR - 2020-09-20 16:33:05 --> Severity: Notice --> Undefined variable: data C:\xampp\htdocs\crm\application\views\my\addmenager.php 22
+ERROR - 2020-09-20 16:33:05 --> Severity: Notice --> Trying to get property of non-object C:\xampp\htdocs\crm\application\views\my\addmenager.php 22
+ERROR - 2020-09-20 16:33:07 --> Severity: Notice --> Undefined variable: data C:\xampp\htdocs\crm\application\views\my\addmenager.php 22
+ERROR - 2020-09-20 16:33:07 --> Severity: Notice --> Trying to get property of non-object C:\xampp\htdocs\crm\application\views\my\addmenager.php 22
+ERROR - 2020-09-20 17:02:17 --> Severity: Parsing Error --> syntax error, unexpected '?>', expecting ':' C:\xampp\htdocs\crm\application\views\my\addmenager.php 53
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:02:23 --> Severity: Notice --> Undefined property: stdClass::$citizenship C:\xampp\htdocs\crm\application\views\my\addmenager.php 51
+ERROR - 2020-09-20 17:04:26 --> Severity: Notice --> Undefined index: update_editing C:\xampp\htdocs\crm\application\controllers\my\Addmenager.php 107
+ERROR - 2020-09-20 17:04:28 --> Severity: Notice --> Undefined index: update_editing C:\xampp\htdocs\crm\application\controllers\my\Addmenager.php 107
+ERROR - 2020-09-20 17:21:52 --> Severity: Notice --> Undefined index: ismessegesallow C:\xampp\htdocs\crm\application\controllers\my\Addmenager.php 56
