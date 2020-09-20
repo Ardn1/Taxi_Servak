@@ -31,7 +31,9 @@
 											<a class="dropdown-item" onclick = "DenyAll()">Отказать</a>
 											<a class="dropdown-item" onclick = "UncorrectAll()">Исправить фото</a>
 											<?php endif; ?>
-											<a class="dropdown-item text-danger" onclick = "RemoveAll()">Удалить</a>
+                                            <?php if ($this->user->ismanager==0): ?>
+                                                <a class="dropdown-item text-danger" onclick = "RemoveAll()">Удалить</a>
+                                            <?php endif;?>
 											
 									</div>
 								</div>
@@ -152,11 +154,14 @@
 								    	Обработать
 								  	</button>
 								  	<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="<?php echo base_url('my/rent/edit/'.$data->id);?>">Посмотреть заявку</a>
 								  		<?php if (!$data->status) : ?>
 								    	<a class="dropdown-item" href="<?php echo base_url('my/rent/success/'.$data->id);?>">Направить на аренду</a>
 								    	<a class="dropdown-item" href="<?php echo base_url('my/rent/reject/'.$data->id);?>">Отказать</a>
 								    	<?php endif; ?>
-								    	<a class="dropdown-item text-danger" href="<?php echo base_url('my/rent/delete/'.$data->id.'/4');?>">Удалить</a>
+                                        <?php if ($this->user->ismanager==0): ?>
+                                            <a class="dropdown-item text-danger" href="<?php echo base_url('my/rent/delete/'.$data->id.'/4');?>">Удалить</a>
+                                        <?php endif;?>
 								  	</div>
 								</div>
 			    			</td>

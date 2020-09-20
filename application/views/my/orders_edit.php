@@ -16,11 +16,15 @@
 			    	<?php if ($order->status == 2) : ?>
 			    	<a class="dropdown-item" href="<?php echo base_url('my/orders/created/'.$order->id);?>">Создан аккаунт</a>
 			    	<?php endif; ?>
-			    	<a class="dropdown-item text-danger" href="<?php echo base_url('my/orders/delete_order/'.$order->id);?>">Удалить</a>
+                    <?php if ($this->user->ismanager==0): ?>
+                        <a class="dropdown-item text-danger" href="<?php echo base_url('my/orders/delete_order/'.$order->id);?>">Удалить</a>
+                    <?php endif;?>
 			  	</div>
 			</div>
             <?php else : ?>
+            <?php if ($this->user->ismanager==0): ?>
             <a href="<?php echo base_url('my/orders/delete_order/'.$order->id);?>" class="btn btn-outline-danger btn-sm">Удалить</a>
+                <?php endif;?>
             <?php endif; ?>
         </div>
     </div>

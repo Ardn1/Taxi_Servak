@@ -13,7 +13,10 @@
                     <?php if ($rent->status != 2) : ?>
                         <a class="dropdown-item" href="<?php echo base_url('my/rent/reject/'.$rent->id);?>">Отказать</a>
                     <?php endif; ?>
-                    <a class="dropdown-item text-danger" href="<?php echo base_url('my/rent/delete/'.$rent->id);?>">Удалить</a>
+                    <?php if ($this->user->ismanager==0): ?>
+                        <a class="dropdown-item text-danger" href="<?php echo base_url('my/rent/delete/'.$rent->id);?>">Удалить</a>
+                    <?php endif;?>
+
                 </div>
             </div>
         <?php else : ?>
