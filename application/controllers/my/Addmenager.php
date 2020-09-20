@@ -80,9 +80,13 @@ class Addmenager extends Admin_Controller
 	{
 	    $password=$_GET['password'];
 
+        if($_GET['id']==1){
+            echo 'НЕВОЗМОЖНО ИЗМЕНИТЬ ПАРОЛЬ АДМИНИСТРАТОРА!';
+            return;
+        }
 
-        if(strlen($password) < 6) {
-            echo 'Пароль должен состоять не менее чем из 6 символов';
+        if(strlen($password) < 8) {
+            echo 'Пароль должен состоять не менее чем из 8 символов';
             return;
         }
 
@@ -91,7 +95,6 @@ class Addmenager extends Admin_Controller
 			"password"  =>  $stamp_pass
 			)
 		);
-		$this->session->set_flashdata('success', "Пароль успешно изменен!");
 		echo "Успешно изменено";
 	}
 

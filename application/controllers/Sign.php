@@ -41,10 +41,10 @@ class Sign extends MY_Controller
 	      	if ($user) {
 
 	      		$phpass = new PasswordHash(12, false);
-				
-				
-				//TODO НЕ ЗАБЫТЬ !!!!!!!!!!!!!!
-	      		if (1==1) {
+
+
+
+                if ($phpass->CheckPassword($password, $user->password)) {
 
 	      			// add login session
                     $data_session = array(
