@@ -20,12 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d80b845-4a99-4ade-8da9-b52b72002ffb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Sign.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Sign.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/api/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/api/Contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/my/Addmenager.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/my/Addmenager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/logs/log-2020-09-19.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2020-09-19.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/my/addmenager.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/addmenager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions6bkj9o3ri7531qi9s6gq3korrdehnm6g" beforeDir="false" afterPath="$PROJECT_DIR$/application/sessions/city_sessions6bkj9o3ri7531qi9s6gq3korrdehnm6g" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +67,7 @@
       <workItem from="1600283198515" duration="1342000" />
       <workItem from="1600418864264" duration="22718000" />
       <workItem from="1600522461646" duration="14129000" />
+      <workItem from="1600592979044" duration="19000" />
     </task>
     <servers />
   </component>
