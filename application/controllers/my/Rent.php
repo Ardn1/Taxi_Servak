@@ -274,7 +274,7 @@ class Rent extends Admin_Controller
             )
         );
 
-	//	$sms = $this->sms->send_sms($rent->phone, 5); ...................................................................
+		$sms = $this->sms->send_sms($rent->phone, 10); ...................................................................
 
         $this->session->set_flashdata('success', 'Статус исправить фото успешно установлен!<br>Статус SMS: '.$sms);
         if ($isRed == 0)
