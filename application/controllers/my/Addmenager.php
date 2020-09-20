@@ -51,10 +51,9 @@ class Addmenager extends Admin_Controller
 		if ($this->form_validation->run() == true) {
 
 			$email = $this->input->post("email", true);
-	      	$password = $this->input->post("password", true);
-		//	$check = $this->input->post("ismessegesallow", true);
+			  $password = $this->input->post("password", true);
+			  
 			$check = $_POST["ismessegesallow"]=="Yes"?1:2;
-
 
 			$stamp_pass = $this->protect->encrypt($password);
 			
