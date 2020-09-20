@@ -41,6 +41,33 @@ class Orders extends Admin_Controller
 		$this->template->load('admin', 'contents' , 'my/orders', $data);
 	}
 
+    private function redirecter($forId){
+        if($forId==1){
+            redirect(site_url('my/orders'));
+            return;
+        }
+        if($forId==2){
+            redirect(site_url('my/orders/short'));
+            return;
+        }
+        if($forId==3){
+            redirect(site_url('my/orders/accepting'));
+            return;
+        }
+        if($forId==4){
+            redirect(site_url('my/orders/success'));
+            return;
+        }
+        if($forId==5){
+            redirect(site_url('my/orders/uncorrect'));
+            return;
+        }
+        if($forId==6){
+            redirect(site_url('my/orders/fail'));
+            return;
+        }
+    }
+
     public function fail()
     {
         // init params
@@ -181,7 +208,8 @@ class Orders extends Admin_Controller
         $this->template->load('admin', 'contents' , 'my/orders_short', $data);
     }
 
-    public function edit($id)
+
+    public function edit($id,$from=0)
     {
         if (is_null($id) OR ! is_numeric($id)) {
 
@@ -198,7 +226,8 @@ class Orders extends Admin_Controller
         }
 
         $data = array(
-            "order" => $order
+            "order" => $order,
+            "from" => $from
         );
 
         $this->template->set('title', 'Заявка от '.$order->name);
@@ -234,7 +263,9 @@ class Orders extends Admin_Controller
             $this->session->set_flashdata('success', 'Статус заявки успешно изменен!<br>Статус SMS: '.$sms);
             if($isRed==0)
                 redirect(site_url('my/orders/edit/'.$id));
-
+            else{
+                $this->redirecter($isRed);
+            }
         } else {
             redirect(site_url('my/orders'));
 
@@ -270,6 +301,9 @@ class Orders extends Admin_Controller
             $this->session->set_flashdata('success', 'Статус заявки успешно изменен!<br>Статус SMS: '.$sms);
             if($isRed==0)
                 redirect(site_url('my/orders/edit/'.$id));
+            else{
+                $this->redirecter($isRed);
+            }
 
         } else {
             redirect(site_url('my/orders'));
@@ -278,7 +312,7 @@ class Orders extends Admin_Controller
 
     }
 
-    public function reject($id)
+    public function reject($id,$isRed=0)
     {
         if (is_null($id) OR ! is_numeric($id)) {
 
@@ -302,11 +336,15 @@ class Orders extends Admin_Controller
         );
 
         $this->session->set_flashdata('success', 'Статус заявки успешно изменен!<br>Статус SMS: '.$sms);
-        redirect(site_url('my/orders/edit/'.$id));
+        if($isRed==0)
+            redirect(site_url('my/orders/edit/'.$id));
+        else{
+            $this->redirecter($isRed);
+        }
 
     }
 
-    public function created($id)
+    public function created($id,$isRed=0)
     {
         if (is_null($id) OR ! is_numeric($id)) {
 
@@ -332,7 +370,11 @@ class Orders extends Admin_Controller
             );
 
             $this->session->set_flashdata('success', 'Статус заявки успешно изменен!<br>Статус SMS: '.$sms);
-            redirect(site_url('my/orders/edit/'.$id));
+            if($isRed==0)
+                redirect(site_url('my/orders/edit/'.$id));
+            else{
+                $this->redirecter($isRed);
+            }
 
         } else {
 
@@ -342,7 +384,7 @@ class Orders extends Admin_Controller
 
     }
 
-    public function delete_order($id)
+    public function delete_order($id,$isRed=0)
     {
         if (is_null($id) OR ! is_numeric($id)) {
 
@@ -361,7 +403,12 @@ class Orders extends Admin_Controller
         $this->content_model->del_order($id);
 
         $this->session->set_flashdata('success', 'Заявка удалена!');
-        redirect(site_url('my/orders'));
+        if($isRed==0)
+            redirect(site_url('my/orders'));
+        else{
+            $this->redirecter($isRed);
+        }
+
 
     }
 

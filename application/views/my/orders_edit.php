@@ -9,25 +9,25 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                     <?php if (!$order->status) : ?>
-                        <a class="dropdown-item" href="<?php echo base_url('my/orders/accept/' . $order->id); ?>">Принять</a>
-                        <a class="dropdown-item" href="<?php echo base_url('my/orders/uncorrectset/' . $order->id); ?>">Исправить фото</a>
+                        <a class="dropdown-item" href="<?php echo base_url('my/orders/accept/' . $order->id.'/'.$from); ?>">Принять</a>
+                        <a class="dropdown-item" href="<?php echo base_url('my/orders/uncorrectset/' . $order->id.'/'.$from); ?>">Исправить фото</a>
                     <?php endif; ?>
                     <?php if ($order->status != 3) : ?>
-                        <a class="dropdown-item" href="<?php echo base_url('my/orders/reject/' . $order->id); ?>">Отказать</a>
+                        <a class="dropdown-item" href="<?php echo base_url('my/orders/reject/' . $order->id.'/'.$from); ?>">Отказать</a>
                     <?php endif; ?>
                     <?php if ($order->status == 2) : ?>
-                        <a class="dropdown-item" href="<?php echo base_url('my/orders/created/' . $order->id); ?>">Создан
+                        <a class="dropdown-item" href="<?php echo base_url('my/orders/created/' . $order->id).'/'.$from; ?>">Создать
                             аккаунт</a>
                     <?php endif; ?>
                     <?php if ($this->user->ismanager == 0): ?>
                         <a class="dropdown-item text-danger"
-                           href="<?php echo base_url('my/orders/delete_order/' . $order->id); ?>">Удалить</a>
+                           href="<?php echo base_url('my/orders/delete_order/' . $order->id).'/'.$from; ?>">Удалить</a>
                     <?php endif; ?>
                 </div>
             </div>
         <?php else : ?>
             <?php if ($this->user->ismanager == 0): ?>
-                <a href="<?php echo base_url('my/orders/delete_order/' . $order->id); ?>"
+                <a href="<?php echo base_url('my/orders/delete_order/' . $order->id).'/'.$from;; ?>"
                    class="btn btn-outline-danger btn-sm">Удалить</a>
             <?php endif; ?>
         <?php endif; ?>

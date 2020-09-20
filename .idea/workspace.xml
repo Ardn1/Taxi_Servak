@@ -20,11 +20,210 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d80b845-4a99-4ade-8da9-b52b72002ffb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessions4jbobmuqquast34kksb6eg2735r5ae6i" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessions0asu8nbrprrvkt3gj4t9oddrpto5n9eb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsdqh78iv1g2idlstsl3bgkl49np7qo16j" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsed9bql4s5iermc2ha7hprbob6mq5nave" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionshncmpfl5o3i2uqhig0s8llnaq5fn2v8t" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsnae40hdr7p9dhu2s6lflncj25idht73u" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsp0sljicjtg16ncmo42rcesiac8fhh5h8" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/my/Orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/my/Orders.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/logs/log-2020-09-20.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2020-09-20.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions03ium75e5257q7le5ohvk5252pv84apv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions0e5qg350a9vrrn9qblisnj4ghjsmkgd0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions0gt43r19nump9p3rfjk8lidvujg7bkgj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions0p9g0m8pi9a11tpttgll61c5r9k5bi2p" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions10bqq1dki92upv1otemsolfarpmdn2m3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions1372cthb2r2mubqiio00r1ndubee25c7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions13jq5ov5ar5ptf6hjsktj0eok0inmm87" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions15mmd182kjj8i8t27m3d61qebichk5u5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions1b07qivkcfsm6g6n7m76tunuejp7kj1r" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions1kjvu1fg212s9vjevs64k5vgeggj1ani" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions1ldg0uh0jrtb20maa9eaao0bhvgj3dqd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions1mgol7rdqev2oc11rkvldkc4i39v67vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions1sc4cppdjb6n2b1m8fmtsqan2a7qmvl8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions1vf7o6n0rmpdps2hdkugksllck2ls0ug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions21dsjbg59goh6bunera7rro3ejmt8s8b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions2f9es2q8c1lnuj8ckalkdnm5d561fs5s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions2lnricntvob7bs3bqllaatrkdmat4ubq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions2see8lg22mia1an2c971kre77q9c1htr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions33re2tqc6reepns7r0vlhe95sba49c4a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions374e2ritnaup3gdah8bl559vmnd0cipv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions3k3qgfo1g8ni9lv0hfnejopt4hpsq8ef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions3k56b35l3vd80a1qmahlk1f88ul47ckj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions3pk7utgv1up78t181pbe7mq9u9lj8irs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions48p99j71acg8mp6r9v0v3rnu2tk0lc3v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions4ab78m3s2pm318aavofpb418gifhb4su" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions4eeiq499av27m2tpnuoe1pfpvcol6gsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions4pbl4n2us2v09nq0ljqjqaimehas0snk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions55klfiagi8pd80os92qalqk11hgrrg86" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions596tvfv7q38jr3m48u3pqi5jjgkkd6le" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions5crrqgmp7bnjpj2pmqptc64gr4uvelqr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions5n6fk7o8b87mdpfhfgs68k21f9j14555" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions5r1jsc8438erjp3fofn9vb7m14fhn11a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions5sds4kc7fkm5sbduups7qdkpju9i442b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions609cg9boh3tudgpn4ppfoipalbdbqi2t" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions65222tn032cn3dntg3n96es02lfdabrt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions65ibs9cr83asqnnmdnum2t3cr99kr42t" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions671urnidbtbln6qk1ehv9gav9mh8dcuh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions6bkj9o3ri7531qi9s6gq3korrdehnm6g" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions6c1c0i7jq7ib5ebmkaf564ood9ej82a0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions6c827ecp8jr1fj4uv452nh7msts4m7t7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions6crglpiaqlv4ujl808pmcm45k2fbk91d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions6cshra6oa29kvir60mthj77sh8gh2c5r" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions6jbkqec9od6p5tetmtafn6crsl1fm9f8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions6oskgui83t5p7t0vcbihavfmoooq0mi7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions6qph27m26mqplr3o8emm9fkanu2u8idk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions6rph340n7vdpr6e27ie97vo9s6iakgti" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions6uq06mcfr1ct37okl2qgmet1bii9efmc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions74fau94bd052duop50bu49mqpf9udk5c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions78l08jde8c0k9ejkc0ag320ao0fgkvl6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions7oh2a0dotvdif5i00g4rpchipeu2ql2o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions7pe533q47qsb0i9q2i41b66sk120m6qn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions86fige4l1ojt1pk8s7surffaajqeer3v" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions895vuekhf49h1du10d2jv4te24070470" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions8cshjrustmsbou5ibojj3v58cpfqbj3l" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions8ik27corsmb100g8vrdra092cnamm8dn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions8lv0mbl9h10p8kbn4572nngu0kv0eq38" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions8oa60v0v964e5h1n21fb4pn25im6s49u" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions9ap5pm91ffti93r72ifnp19vhjqs02gj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions9fcc1o17b1rgijaut3jppkdt77h0c7a7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions9ip5ve4r9opvik4e0dnnvl1okgdaf33f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions9r33d4n8gn9jq086nruooejvqlulhubo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions9rpmj14907tqoccdep2rmms4irn874bd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions9t71v5p8v9l0p1rbcocs262bvp01958f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions9vghi1rtq05178m7mek6mbbvfvpevi0r" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsa2dg4h2f90h5n0hqu66am50vg5fdq3f0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsa9rg0u9ijhc7houbd9fhapja34tj75dr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsacgif154076mmvq7kh73gs8nqsii80fj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsadlqss3i4qpmce3msfc3jlufe5he389s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsaqskg7s08k8mhtdhcc29fmdh8rn5db0h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsasj8j2pm3pt3p9b4u6sk3b081n2g8se0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsb0lk4ubfj0ltcu7rjkbiatf7lmv6ca0t" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsb3sjbnfsn8iskhhnno8dcs5qqt6mgd32" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsb4f3np9css9lr6aqufo03bbocbvf8m90" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsb4go4h0l7ocv2tjpsjqme7a7c1g1sngn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsbccdm46i8lo3c139od1n2pgf3eemjsa3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsbne49oj3ffla2ja7mikqlj3mlrq2e0s1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsboeugabijofos3soadg5fq09791k43cu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsbqd6727rl9u7kflnusiq4fqeukjp4a4e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsbrcrscc68e15no2qn00t0bsnhsp124mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsbsh289p7r9ka439r6s9au5g7r7v8qll5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsbtfv6dij94ll4ijr5h3si7uev6j128j0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsbvttqs4uob0i75ertcntoh82oajr2lga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsc88ine85aaldhl5pcea7lj6ksmamkbiq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsci23f9cmra2g8ppiv97vicmktum01a4t" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsco4or4ci2tcprf7f2obevb4p1p0jt1it" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsd3u5tntcvrjn81vhjtnj29ni63oiittl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsd4h3h0v414b5pi9tpr3ao3jlpcqqn06d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsd5g9n21a9l0b1tv8gutup96hg3p3en39" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsdqc3uf1hrh3m4sn5vd7em1rpdu14r24l" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsdr7s3825jj8ohgpoiqf8scsr1oati09c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionse2k29gsstcbunnamd8jmofauea5k99b4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionse6t0t7h1o5egcps7vdgvhne2bson49ri" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsf5d5eiicmgaev5u1sf84b8qkh0vu6ape" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsf9er0m39cndah9cupmqcovrjhiu4p4gb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsfel1i4uf86uodpht3r638g7hdpaql0i5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsfhj3o5qc5f0n555vn5obdmvt41tr9all" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsfmgd5ajk0u8191uvudv5i6tne39uv9ob" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsfrr45fbn9jjuvnnkd62u0i8vntd293ra" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsg15gdifr6a74gvqrjvnjknc1cgdtq3b5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsgkc4ep6h5n36bfd9evvvg6mpehh9bqop" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsgmjhu37mg0on9eqinuib4abh2krfrhoh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsh6h5vm6a2kgm8cdnbc61bvuugbfdqu62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsh7t6ju5gqt4hkqi4v300fk12r8eaaelv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionshsb5u2ql09dh2ukuqdkujmf5i82pkc76" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsi1cakb105unhlb5ldim9032o1m13g8gh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsi22u4ffldcqfcpgbbl442m4g73ec1kol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsidejtkstn3utdv9ule4ns9jhlqn6he0b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsidl6ulq26sn7cju1blcu9btge69e5vbe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsit8tno0c5foudhoasfp4aonql7mi1r4e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsj0mier80mrrl9p5agos6qn3jcbpb6mvq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsj12gfvun0gcmli8qogup7glekrh38uto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsj5eoh8lhos9fsfaf7488o43pnfb7e03g" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsj7ofncraj7s75prhe4mgn38dg7967nqp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsj7rjshb0qu7gn9o6t34b8t3prdjq9i1s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsje3a8h1nv5cavlm7nm2uatscknad9iib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsjid072kkp57q1j7qjrsq1h5glh558c4j" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsjo6b61nlb3k4br0f275i1ipj628e065e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsjt00dg4aujl0g2q6sde6l3fruf8s2jce" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsk8j3pnnqm1n01qdfgk0tl0r30um8gjsu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsk92ffsjp173lsh8l5os2l8jgu2vdllfm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionskirb6skckms2dvtngeq4mhso0lnorkgq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionskkqf027suasrb6qesj7870ac0o85gc6e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionskol46mu237lcucs7rr10bgsg5gq21cqd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsl0kifvb5na2278eg6aqdn92qp2lev39i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsl2i2ohguv17g4ol6epmu086ir12mpo7d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsl55osnpjskaamgj2arqr4dch3di00cr2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionslkaa85lrtputpim4a65c4otfnluovidp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsloar3r2hj5k9udavqup4lc2ap845q7do" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionslonku8bubfeb2jikm9rp6b5u6n58qc5t" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsls6a67npho89qq1ill0vgaqr2t7a78g1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionslt15t5rl68h5f6vnp567jhaovsc7bov6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsm2heudovphvm2lgv3hgskpqgujjtvql6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsm9m1skuo8gqt9n1gt826f6jkf0ihkgu0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsmcp6qodalcuu1pq16mnf4u6v7cloqq33" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsmm6ih15767ktnv7ds7sppll535as7ufm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsn607pjbnjnvrarmdbt2r5bpln5fk2ds9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsn8gevrusdjv68qgdqeupaup99a5c43jg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsn8j0jstskd7ume481v1obhcdom70aqe8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsnmjag9t3jbg5bbhtu6gto68trg1gnhmj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionso0des3h8vcdibh4c326uht3bhol1p6cl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionso5ufqk245qo2mk6cqg4sok4jqbaq2r84" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionso9qlu4aq8jkrr7ovts817vj2qg9nf17h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsokec5jm74uuc847un34jbugugdo91uf3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsomn2v2eg4lrs0qds2ttgj2r7ut7bponr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsops8d4qpe54ajr13cdb9buned45cakfr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsouf4ikmr01f0p9if1rh8pjcq1a9hopcj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsp6fee0p702df0ub0tifnuusij6le515g" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsp94ojb1om1lllc64eob4m0oqbi3klifd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsp9b91d513gme92v45k92q2j160cp0p4h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsptp3e0pbgvbv2jl4t15cv4eb7mrd7b50" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionspuf03cio9tk9q1sppsfjondhhft79747" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsq2bi8bp34n629t7smukn0op5j82mfmq0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsqd2t0cjmho5ag4lil73i8580kf316nff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsqm4mteu6c614ih4fg53rtc7np4r4um56" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsqn5l7o1m5f4ten6nfmk7ickoppstge96" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsqshkn0fd84luakuikhej01j37t7bu2g1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsr0tonfr2uevr7c7ovna13pnk5tog3299" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsr3jm887ek3ob0ohs085jbp921otamq5h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsrcmaa5j51mgu2crj3sqsa18bh56k67g0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsrgh2g47tfai26a4o0op9ctbuo04fkd8d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsro8cidqhidb21s48qej1o9qjpc9i1s4h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionss1kjeb117l2m8grraopv6eienkfu56rk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionss1t0tt2qfh0qji4sqaadsag4a3mef04g" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionss2r6niknhgk3lc0o3u61bplo6ajbtioa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionssamtf8vkidcapoou1am7n7rcdgb9boof" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionssdqfpnqb8eh6b0vju9r5d81k087f3rh7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionssf886c9ljatnph6n118bbdrbto4lcnbq" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionssfg6v8f81togqulrml67u1mjsqvbolmm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionssfobs4haunig3m6ehgcvsvcoftt52q8u" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionssg7nklqpnh8o2j1mn3q8o5demkrim4qb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsshl5j0mc8ufr3on0lj302rcglu65lh4r" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsslsanfkmkehlbnujno3flums9i5ru368" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionst6s59ck60vnhqengvqqvpqn3sd5unrmi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionstdcn97ke72m6l1tu92vhj5l86fucgfp5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionstfrqluesgvaam0106gr929do9ps5jkbg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionstj0sb6oadcpoojebbi5bqf3fe5i7luhc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionstrukjvqsp2omhq16thv75848lk3jotk9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionstum01opqkm7vvuiun7d1umbstfa3j50u" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsu06k3ugscpg9pkvua3qqb3b599vs4b4o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsu8cftjdh7hquoufcf16ga3fadokjs0is" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsuhd2okgjks8j6eiu8295litahstcmqgc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsukgrtmpp89gqntk20hhc4eqa43ub5pul" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsuktlfn6ohcnpqrv5uolaijnaffvaohr4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsuq0n25887p0rki66o0m2p6fafao69jpi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsv0qcfr3nl9c14r6jn5ovjher8msn6soc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsv5dgg38fuh6kc6790v2upspjh4hhrirt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsv8d65sk0moghchlibc5hpc2hqob7a3lj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessionsvs35cm7k1suf0rmj8ajit0fq9k8qaquc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/my/orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/orders.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/my/orders_accept.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/orders_accept.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/my/orders_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/orders_edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/my/orders_fail.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/orders_fail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/my/orders_short.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/orders_short.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/my/orders_success.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/orders_success.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/my/orders_uncorrect.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/orders_uncorrect.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +279,7 @@
       <workItem from="1600283198515" duration="1342000" />
       <workItem from="1600418864264" duration="22718000" />
       <workItem from="1600522461646" duration="14129000" />
-      <workItem from="1600592979044" duration="10705000" />
+      <workItem from="1600592979044" duration="14071000" />
     </task>
     <servers />
   </component>
