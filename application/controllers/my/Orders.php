@@ -260,7 +260,7 @@ class Orders extends Admin_Controller
 
         if (!$order->status) {
 
-            $sms = $this->sms->send_sms($order->phone, 2);
+            $sms = $this->sms->send_sms($order->phone, 9);
 
             $this->content_model->update_order($id, array(
                     "status" => 5
