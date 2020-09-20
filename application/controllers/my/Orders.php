@@ -125,6 +125,34 @@ class Orders extends Admin_Controller
         $this->template->load('admin', 'contents' , 'my/orders_success', $data);
     }
 
+    public function uncorrect()
+    {
+        // init params
+        $data = array();
+        $start_index = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
+        $total_records = $this->content_model->get_total_uncorrect_orders();
+
+        // load config file
+        $this->config->load('pagination', TRUE);
+        $settings_pagination = $this->config->item('pagination');
+        $settings_pagination['total_rows'] = $this->content_model->get_total_uncorrect_orders();
+        $settings_pagination['base_url'] = base_url() . 'my/orders/uncorrect';
+
+        if ($total_records > 0) {
+            // get current page records
+            $data["orders"] = $this->content_model->get_uncorrect_orders($settings_pagination['per_page'], $start_index);
+            // use the settings to initialize the library
+            $this->pagination->initialize($settings_pagination);
+            // build paging links
+            $data["links"] = $this->pagination->create_links();
+        }
+
+        $data["total_records"] = $total_records;
+
+        $this->template->set('title', "Исправить фото");
+        $this->template->load('admin', 'contents' , 'my/orders_uncorrect', $data);
+    }
+
     public function short()
     {
         // init params

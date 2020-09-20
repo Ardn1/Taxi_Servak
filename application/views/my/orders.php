@@ -6,6 +6,7 @@
                 <a href="<?php echo base_url('my/orders/short');?>" class="btn btn-sm btn-outline-success">Неполные</a>
                 <a href="<?php echo base_url('my/orders/accepting');?>" class="btn btn-sm btn-outline-success">Принятые</a>
                 <a href="<?php echo base_url('my/orders/success');?>" class="btn btn-sm btn-outline-success">Успешные</a>
+                <a href="<?php echo base_url('my/orders/uncorrect');?>" class="btn btn-sm btn-outline-success">Исправить фото</a>
                 <a href="<?php echo base_url('my/orders/fail');?>" class="btn btn-sm btn-outline-success">Отказано</a>
             </div>
         </div>

@@ -332,6 +332,13 @@ class Content_model extends CI_model
         return $query->num_rows();
     }
 
+    public function get_total_uncorrect_orders()
+    {
+        $where = array('status' => 5);
+        $query = $this->db->where($where)->get("orders");
+        return $query->num_rows();
+    }
+
     public function get_new_orders($limit, $start)
     {
         $this->db->limit($limit, $start);
@@ -416,6 +423,25 @@ class Content_model extends CI_model
         }
         return false;
     }
+
+
+    public function get_uncorrect_orders($limit, $start)
+    {
+        $this->db->limit($limit, $start);
+        $where = array('status' => 5);
+        $query = $this->db->order_by('id', 'desc')->where($where)->get("orders");
+        if ($query->num_rows() > 0)
+        {
+            foreach ($query->result() as $row)
+            {
+                $data[] = $row;
+            }
+
+            return $data;
+        }
+        return false;
+    }
+
 
     public function get_order($id) 
     {

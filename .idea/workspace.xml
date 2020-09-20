@@ -20,8 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d80b845-4a99-4ade-8da9-b52b72002ffb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/application/controllers/Sign.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Sign.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/sessions/city_sessions6bkj9o3ri7531qi9s6gq3korrdehnm6g" beforeDir="false" afterPath="$PROJECT_DIR$/application/sessions/city_sessions6bkj9o3ri7531qi9s6gq3korrdehnm6g" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/my/orders_uncorrect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/my/Orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/my/Orders.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Content_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Content_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/my/orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/orders.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/my/orders_accept.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/orders_accept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/my/orders_fail.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/orders_fail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/my/orders_short.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/orders_short.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/my/orders_success.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/orders_success.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +74,7 @@
       <workItem from="1600283198515" duration="1342000" />
       <workItem from="1600418864264" duration="22718000" />
       <workItem from="1600522461646" duration="14129000" />
-      <workItem from="1600592979044" duration="19000" />
+      <workItem from="1600592979044" duration="720000" />
     </task>
     <servers />
   </component>
@@ -99,10 +106,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1600421003381" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1600453420744">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1600593023716">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600453420744" />
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600593023716" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1600453124960">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
