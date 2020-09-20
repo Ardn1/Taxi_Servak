@@ -20,42 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d80b845-4a99-4ade-8da9-b52b72002ffb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessions0e5qg350a9vrrn9qblisnj4ghjsmkgd0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessions1mgol7rdqev2oc11rkvldkc4i39v67vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessions6crglpiaqlv4ujl808pmcm45k2fbk91d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessions7oh2a0dotvdif5i00g4rpchipeu2ql2o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessions895vuekhf49h1du10d2jv4te24070470" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsaqskg7s08k8mhtdhcc29fmdh8rn5db0h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsbtfv6dij94ll4ijr5h3si7uev6j128j0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsdr7s3825jj8ohgpoiqf8scsr1oati09c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsgkc4ep6h5n36bfd9evvvg6mpehh9bqop" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsidejtkstn3utdv9ule4ns9jhlqn6he0b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsit8tno0c5foudhoasfp4aonql7mi1r4e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsj5eoh8lhos9fsfaf7488o43pnfb7e03g" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsko4dnque6rbs9p5lrmu8047ngbmgusgt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsm9m1skuo8gqt9n1gt826f6jkf0ihkgu0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsqd2t0cjmho5ag4lil73i8580kf316nff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionssfg6v8f81togqulrml67u1mjsqvbolmm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsshl5j0mc8ufr3on0lj302rcglu65lh4r" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsslsanfkmkehlbnujno3flums9i5ru368" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsuq0n25887p0rki66o0m2p6fafao69jpi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessions4jbobmuqquast34kksb6eg2735r5ae6i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/my/Orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/my/Orders.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/logs/log-2020-09-20.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/logs/log-2020-09-20.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/layouts/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/layouts/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/my/feedback_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/feedback_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/my/orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/orders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/my/orders_accept.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/orders_accept.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/my/orders_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/orders_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/my/orders_fail.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/orders_fail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/my/orders_short.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/orders_short.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/my/orders_success.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/orders_success.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/my/orders_uncorrect.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/orders_uncorrect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/my/rent.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/rent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/my/rent_accept.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/rent_accept.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/my/rent_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/rent_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/my/rent_fail.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/rent_fail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/my/rent_uncorrect.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/my/rent_uncorrect.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +80,7 @@
       <workItem from="1600283198515" duration="1342000" />
       <workItem from="1600418864264" duration="22718000" />
       <workItem from="1600522461646" duration="14129000" />
-      <workItem from="1600592979044" duration="10312000" />
+      <workItem from="1600592979044" duration="10705000" />
     </task>
     <servers />
   </component>
