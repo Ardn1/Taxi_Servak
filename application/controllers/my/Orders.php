@@ -206,7 +206,7 @@ class Orders extends Admin_Controller
 
     }
 
-    public function accept($id)
+    public function accept($id, $isRed = 0)
     {
         if (is_null($id) OR ! is_numeric($id)) {
 
@@ -232,10 +232,46 @@ class Orders extends Admin_Controller
             );
 
             $this->session->set_flashdata('success', 'Статус заявки успешно изменен!<br>Статус SMS: '.$sms);
-            redirect(site_url('my/orders/edit/'.$id));
+            if($isRed==0)
+                redirect(site_url('my/orders/edit/'.$id));
 
         } else {
+            redirect(site_url('my/orders'));
 
+        }
+
+    }
+
+    public function uncorrectset($id, $isRed = 0)
+    {
+        if (is_null($id) OR ! is_numeric($id)) {
+
+            redirect(site_url('my/orders'));
+
+        }
+
+        $order = $this->content_model->get_order($id);
+
+        if (!$order) {
+
+            redirect(site_url('my/orders'));
+
+        }
+
+        if (!$order->status) {
+
+            $sms = $this->sms->send_sms($order->phone, 2);
+
+            $this->content_model->update_order($id, array(
+                    "status" => 5
+                )
+            );
+
+            $this->session->set_flashdata('success', 'Статус заявки успешно изменен!<br>Статус SMS: '.$sms);
+            if($isRed==0)
+                redirect(site_url('my/orders/edit/'.$id));
+
+        } else {
             redirect(site_url('my/orders'));
 
         }

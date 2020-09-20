@@ -9,7 +9,9 @@
 			  		<?php if (!$message->status) : ?>
 			    	<a class="dropdown-item" href="<?php echo base_url('my/feedback/in_archive/'.$message->id);?>">Переместить в архив</a>
 			    	<?php endif; ?>
+                    <?php if ($this->user->ismanager==0): ?>
 			    	<a class="dropdown-item text-danger" href="<?php echo base_url('my/feedback/delete_message/'.$message->id);?>">Удалить</a>
+                    <?php endif;?>
 			  	</div>
 			</div>
         </div>

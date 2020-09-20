@@ -29,7 +29,9 @@
 								    	<a class="dropdown-item" onclick = "RentAll()">Направить на аренду</a>
 										<a class="dropdown-item" onclick = "DenyAll()">Отказать</a>
 										<a class="dropdown-item" onclick = "UncorrectAll()">Исправить фото</a>
-										<a class="dropdown-item text-danger" onclick = "RemoveAll()">Удалить</a>
+                                        <?php if ($this->user->ismanager==0): ?>
+                                            <a class="dropdown-item text-danger" onclick = "RemoveAll()">Удалить</a>
+                                        <?php endif;?>
 										
 								</div>
 							</div>
@@ -156,7 +158,9 @@
 											<a class="dropdown-item" href="<?php echo base_url('my/rent/uncorrectset/'.$data->id);?>">Исправить фото</a>
 								    		<a class="dropdown-item" href="<?php echo base_url('my/rent/reject/'.$data->id);?>">Отказать</a>
 								    	<?php endif; ?>
-								    	<a class="dropdown-item text-danger" href="<?php echo base_url('my/rent/delete/'.$data->id.'/1');?>">Удалить</a>
+                                        <?php if ($this->user->ismanager==0): ?>
+                                            <a class="dropdown-item text-danger" href="<?php echo base_url('my/rent/delete/'.$data->id.'/1');?>">Удалить</a>
+                                        <?php endif;?>
 								  	</div>
 								</div>
 			    			</td>
