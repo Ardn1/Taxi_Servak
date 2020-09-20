@@ -57,7 +57,7 @@
 			    			</td>
 			    			<td><?php echo $data->phone;?></td>
 			    			<td class="text-right">
-			    				<a href="<?php echo base_url('my/orders/edit/'.$data->id);?>" class="btn btn-outline-secondary btn-sm">Смотреть</a>
+			    				<a href="<?php echo base_url('my/orders/edit/'.$data->id).'/4'?>" class="btn btn-outline-secondary btn-sm">Смотреть</a>
 			    			</td>
 			    		</tr>
 			    		<?php endforeach; ?>
