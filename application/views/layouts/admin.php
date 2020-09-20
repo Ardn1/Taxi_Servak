@@ -75,26 +75,32 @@
                             </li>
                             <?php endif; ?>
                         </ul>
-                        <?php if ($this->user->ismanager==0): ?>
+                        <?php if ($this->user->ismanager==0  || $this->user->ismanager==1): ?>
                         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
                             <span>Конфигурация</span>
                             <a class="d-flex align-items-center text-muted" href="#">
                                 <span data-feather="settings"></span>
                             </a>
                         </h6>
+                        <?php endif; ?>
                         <ul class="nav flex-column">
+                            <?php if ($this->user->ismanager==0): ?>
                             <li class="nav-item">
                                 <a class="nav-link <?php echo activate_menu('sms'); ?>" href="<?php echo base_url('my/sms');?>">
                                     <span data-feather="radio"></span>
                                     SMS шлюз
                                 </a>
                             </li>
+                            <?php endif; ?>
+                            <?php if ($this->user->ismanager==0 || $this->user->ismanager==1): ?>
                             <li class="nav-item">
                                 <a class="nav-link <?php echo activate_menu('mailing'); ?>" href="<?php echo base_url('my/mailing');?>">
                                     <span data-feather="mail"></span>
                                     SMS рассылка
                                 </a>
                             </li>
+                            <?php endif; ?>
+                            <?php if ($this->user->ismanager==0): ?>
                             <li class="nav-item">
                                 <a class="nav-link <?php echo activate_menu('emails'); ?>" href="<?php echo base_url('my/emails');?>">
                                     <span data-feather="at-sign"></span>
@@ -119,8 +125,8 @@
                                     Менеджеры
                                 </a>
                             </li>
+                            <?php endif; ?>
                         </ul>
-                        <?php endif; ?>
                     </div>
                 </nav>
 

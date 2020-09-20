@@ -1,21 +1,21 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 class Rent extends Admin_Controller
 {
-	public function __construct()
+    public function __construct()
     {
-		parent::__construct();
+        parent::__construct();
 
-		$this->load->model('users_model');
-		$this->load->model('content_model');
-		$this->load->library('pagination');
-		$this->load->library('sms');
-	}
+        $this->load->model('users_model');
+        $this->load->model('content_model');
+        $this->load->library('pagination');
+        $this->load->library('sms');
+    }
 
-	public function index()
-	{
-		// init params
+    public function index()
+    {
+        // init params
         $data = array();
         $start_index = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
         $total_records = $this->content_model->get_total_new_rent();
@@ -37,13 +37,13 @@ class Rent extends Admin_Controller
 
         $data["total_records"] = $total_records;
 
-    	$this->template->set('title', "Аренда");
-		$this->template->load('admin', 'contents' , 'my/rent', $data);
-	}
+        $this->template->set('title', "Аренда");
+        $this->template->load('admin', 'contents', 'my/rent', $data);
+    }
 
-	public function accept()
-	{
-		// init params
+    public function accept()
+    {
+        // init params
         $data = array();
         $start_index = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
         $total_records = $this->content_model->get_total_success_rent();
@@ -65,13 +65,13 @@ class Rent extends Admin_Controller
 
         $data["total_records"] = $total_records;
 
-    	$this->template->set('title', "Аренда");
-		$this->template->load('admin', 'contents' , 'my/rent_accept', $data);
+        $this->template->set('title', "Аренда");
+        $this->template->load('admin', 'contents', 'my/rent_accept', $data);
     }
-    
-	public function uncorrect()
-	{
-		// init params
+
+    public function uncorrect()
+    {
+        // init params
         $data = array();
         $start_index = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
         $total_records = $this->content_model->get_total_uncorrect_rent();
@@ -93,13 +93,13 @@ class Rent extends Admin_Controller
 
         $data["total_records"] = $total_records;
 
-    	$this->template->set('title', "Аренда");
-		$this->template->load('admin', 'contents' , 'my/rent_uncorrect', $data);
-	}
+        $this->template->set('title', "Аренда");
+        $this->template->load('admin', 'contents', 'my/rent_uncorrect', $data);
+    }
 
-	public function fail()
-	{
-		// init params
+    public function fail()
+    {
+        // init params
         $data = array();
         $start_index = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
         $total_records = $this->content_model->get_total_fail_rent();
@@ -121,13 +121,34 @@ class Rent extends Admin_Controller
 
         $data["total_records"] = $total_records;
 
-    	$this->template->set('title', "Аренда");
-		$this->template->load('admin', 'contents' , 'my/rent_fail', $data);
-	}
+        $this->template->set('title', "Аренда");
+        $this->template->load('admin', 'contents', 'my/rent_fail', $data);
+    }
 
-    public function edit($id)
+    private function redirecter($forId)
     {
-        if (is_null($id) OR ! is_numeric($id)) {
+        if ($forId == 1) {
+            redirect(site_url('my/rent'));
+            return;
+        }
+        if ($forId == 2) {
+            redirect(site_url('my/rent/accept'));
+            return;
+        }
+        if ($forId == 3) {
+            redirect(site_url('my/rent/uncorrect'));
+            return;
+        }
+        if ($forId == 4) {
+            redirect(site_url('my/rent/fail'));
+            return;
+        }
+
+    }
+
+    public function edit($id, $from=0)
+    {
+        if (is_null($id) or !is_numeric($id)) {
 
             redirect(site_url('my/rent'));
 
@@ -137,147 +158,149 @@ class Rent extends Admin_Controller
 
         if (!$rent) {
 
-            redirect(site_url('my/orders'));
+            redirect(site_url('my/rent'));
 
         }
 
         $data = array(
-            "rent" => $rent
+            "rent" => $rent,
+            "from" => $from
         );
 
-        $this->template->set('title', 'Заявка от '.$rent->first_name);
-        $this->template->load('admin', 'contents' , 'my/rent_edit', $data);
+        $this->template->set('title', 'Заявка от ' . $rent->first_name);
+        $this->template->load('admin', 'contents', 'my/rent_edit', $data);
 
     }
 
-	public function reject($id, $isRed = 0)
-	{
-		if (is_null($id) OR ! is_numeric($id)) {
+    public function reject($id, $isRed = 0)
+    {
+        if (is_null($id) or !is_numeric($id)) {
 
             redirect(site_url('my/rent'));
 
-	    }
+        }
 
-	    $rent = $this->content_model->get_rent($id);
+        $rent = $this->content_model->get_rent($id);
 
-	    if (!$rent) {
+        if (!$rent) {
 
-	    	redirect(site_url('my/rent'));
+            redirect(site_url('my/rent'));
 
-	    }
+        }
 
-	    $this->content_model->update_rent($id, array(
-            	"status"  =>  2
+        $this->content_model->update_rent($id, array(
+                "status" => 2
             )
         );
 
-		$sms = $this->sms->send_sms($rent->phone, 4);
+        $sms = $this->sms->send_sms($rent->phone, 4);
 
-        $this->session->set_flashdata('success', 'Статус запрос успешно изменен!<br>Статус SMS: '.$sms);
+        $this->session->set_flashdata('success', 'Статус запрос успешно изменен!<br>Статус SMS: ' . $sms);
         if ($isRed == 0)
-		    redirect(site_url('my/rent'));
-	}
+            redirect(site_url('my/rent'));
+        else{
+            $this->redirecter($isRed);
+        }
+    }
 
     public function successGet($id, $isRed = 0)
-	{
-        if (is_null($id) OR ! is_numeric($id)) {
+    {
+        if (is_null($id) or !is_numeric($id)) {
 
             redirect(site_url('my/rent'));
 
-	    }
+        }
 
-	    $rent = $this->content_model->get_rent($id);
+        $rent = $this->content_model->get_rent($id);
 
-	    if (!$rent) {
+        if (!$rent) {
 
-	    	redirect(site_url('my/rent'));
+            redirect(site_url('my/rent'));
 
-	    }
+        }
 
-	    $this->content_model->update_rent($id, array(
-            	"status"  =>  1
+        $this->content_model->update_rent($id, array(
+                "status" => 1
             )
         );
 
-		$sms = $this->sms->send_sms($rent->phone, 5);
+        $sms = $this->sms->send_sms($rent->phone, 5);
     }
 
-	public function success($id, $isRed = 0)
-	{
-		if (is_null($id) OR ! is_numeric($id)) {
+    public function success($id, $isRed = 0)
+    {
+        if (is_null($id) or !is_numeric($id)) {
 
             redirect(site_url('my/rent'));
-           // header("Refresh:0");
-	    }
+            // header("Refresh:0");
+        }
 
-	    $rent = $this->content_model->get_rent($id);
+        $rent = $this->content_model->get_rent($id);
 
-	    if (!$rent) {
+        if (!$rent) {
 
-	    	redirect(site_url('my/rent'));
-           // header("Refresh:0");
-	    }
+            redirect(site_url('my/rent'));
+            // header("Refresh:0");
+        }
 
-	    $this->content_model->update_rent($id, array(
-            	"status"  =>  1
+        $this->content_model->update_rent($id, array(
+                "status" => 1
             )
         );
 
-		$sms = $this->sms->send_sms($rent->phone, 5);
+        $sms = $this->sms->send_sms($rent->phone, 5);
 
-        $this->session->set_flashdata('success', 'Статус запрос успешно изменен!<br>Статус SMS: '.$sms);
+        $this->session->set_flashdata('success', 'Статус запрос успешно изменен!<br>Статус SMS: ' . $sms);
         if ($isRed == 0)
-    	    redirect(site_url('my/rent'));
-      //  header("Refresh:0");
-	}
+            redirect(site_url('my/rent'));
+        else{
+            $this->redirecter($isRed);
+        }
+    }
 
-	public function delete($id, $from)
-	{
-		if (is_null($id) OR ! is_numeric($id)) {
-           header('Location: '.$_SERVER['REQUEST_URI']);
-	    }
+    public function delete($id, $isRed=0)
+    {
+        if (is_null($id) or !is_numeric($id)) {
+            header('Location: ' . $_SERVER['REQUEST_URI']);
+        }
 
-	    $rent = $this->content_model->get_rent($id);
+        $rent = $this->content_model->get_rent($id);
 
-	    if (!$rent) {
-	    	redirect(site_url('my/rent'));
-	    }
+        if (!$rent) {
+            redirect(site_url('my/rent'));
+        }
 
-	    $this->content_model->del_rent($id);
+        $this->content_model->del_rent($id);
 
         $this->session->set_flashdata('success', 'Заявка успешно удалена!');
-        if ($from == 1)  
-            redirect(site_url('my/rent'));
-        if ($from == 2)  
-            redirect(site_url('my/rent/accept'));
-        if ($from == 3)  
-            redirect(site_url('my/rent/uncorrect'));
-        if ($from == 4)  
-            redirect(site_url('my/rent/fail'));
+        $this->redirecter($isRed);
     }
-    
-    
-	public function uncorrectset($id, $isRed = 0)
-	{
-        if (is_null($id) OR ! is_numeric($id)) {
+
+
+    public function uncorrectset($id, $isRed = 0)
+    {
+        if (is_null($id) or !is_numeric($id)) {
             redirect(site_url('my/rent'));
-	    }
+        }
 
-	    $rent = $this->content_model->get_rent($id);
+        $rent = $this->content_model->get_rent($id);
 
-	    if (!$rent) {
-	    	redirect(site_url('my/rent'));
-	    }
+        if (!$rent) {
+            redirect(site_url('my/rent'));
+        }
 
-	    $this->content_model->update_rent($id, array(
-            	"status"  =>  3
+        $this->content_model->update_rent($id, array(
+                "status" => 3
             )
         );
 
-		$sms = $this->sms->send_sms($rent->phone, 10); ...................................................................
+        $sms = $this->sms->send_sms($rent->phone, 10);
 
-        $this->session->set_flashdata('success', 'Статус исправить фото успешно установлен!<br>Статус SMS: '.$sms);
+        $this->session->set_flashdata('success', 'Статус исправить фото успешно установлен!<br>Статус SMS: ' . $sms);
         if ($isRed == 0)
-    	    redirect(site_url('my/rent'));
-	}
+            redirect(site_url('my/rent'));
+        else{
+            $this->redirecter($isRed);
+        }
+    }
 }

@@ -8,19 +8,22 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                     <?php if (!$rent->status) : ?>
-                        <a class="dropdown-item" href="<?php echo base_url('my/rent/success/'.$rent->id);?>">Направить на аренду</a>
+                        <a class="dropdown-item" href="<?php echo base_url('my/rent/success/'.$rent->id.'/'.$from);?>">Направить на аренду</a>
+                    <?php endif; ?>
+                    <?php if (!$rent->status) : ?>
+                        <a class="dropdown-item" href="<?php echo base_url('my/rent/uncorrectset/'.$rent->id.'/'.$from);?>">Дополнить фото</a>
                     <?php endif; ?>
                     <?php if ($rent->status != 2) : ?>
-                        <a class="dropdown-item" href="<?php echo base_url('my/rent/reject/'.$rent->id);?>">Отказать</a>
+                        <a class="dropdown-item" href="<?php echo base_url('my/rent/reject/'.$rent->id.'/'.$from);?>">Отказать</a>
                     <?php endif; ?>
                     <?php if ($this->user->ismanager==0): ?>
-                        <a class="dropdown-item text-danger" href="<?php echo base_url('my/rent/delete/'.$rent->id);?>">Удалить</a>
+                        <a class="dropdown-item text-danger" href="<?php echo base_url('my/rent/delete/'.$rent->id.'/'.$from);?>">Удалить</a>
                     <?php endif;?>
 
                 </div>
             </div>
         <?php else : ?>
-            <a href="<?php echo base_url('my/orders/delete_rent/'.$rent->id);?>" class="btn btn-outline-danger btn-sm">Удалить</a>
+            <a href="<?php echo base_url('my/orders/delete_rent/'.$rent->id.'/'.$from);?>" class="btn btn-outline-danger btn-sm">Удалить</a>
         <?php endif; ?>
     </div>
 </div>

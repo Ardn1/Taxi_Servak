@@ -782,3 +782,18 @@ ERROR - 2020-09-20 17:03:12 --> 404 Page Not Found: Docs/195111872.gif
 ERROR - 2020-09-20 17:03:12 --> 404 Page Not Found: Docs/111226815.gif
 ERROR - 2020-09-20 17:03:12 --> 404 Page Not Found: Docs/114053980.gif
 ERROR - 2020-09-20 17:03:12 --> 404 Page Not Found: Docs/111211817.gif
+ERROR - 2020-09-20 17:06:35 --> Severity: Parsing Error --> syntax error, unexpected '...' (T_ELLIPSIS) C:\xampp\htdocs\crm\application\controllers\my\Rent.php 277
+ERROR - 2020-09-20 17:07:40 --> 404 Page Not Found: Docs/265760998.jpg
+ERROR - 2020-09-20 17:07:40 --> 404 Page Not Found: Docs/202161037.jpg
+ERROR - 2020-09-20 17:07:40 --> 404 Page Not Found: Docs/69149303.jpg
+ERROR - 2020-09-20 17:07:40 --> 404 Page Not Found: Docs/98838284.jpg
+ERROR - 2020-09-20 17:07:40 --> 404 Page Not Found: Docs/237099395.jpg
+ERROR - 2020-09-20 17:07:40 --> 404 Page Not Found: Docs/267628277.jpg
+ERROR - 2020-09-20 17:07:40 --> 404 Page Not Found: Docs/181500986.jpg
+ERROR - 2020-09-20 17:24:24 --> Severity: Parsing Error --> syntax error, unexpected end of file C:\xampp\htdocs\crm\application\views\layouts\admin.php 177
+ERROR - 2020-09-20 17:25:03 --> Severity: Parsing Error --> syntax error, unexpected end of file C:\xampp\htdocs\crm\application\views\layouts\admin.php 177
+ERROR - 2020-09-20 17:25:29 --> Severity: Parsing Error --> syntax error, unexpected end of file C:\xampp\htdocs\crm\application\views\layouts\admin.php 174
+ERROR - 2020-09-20 18:10:51 --> Severity: Warning --> Missing argument 2 for Rent::edit() C:\xampp\htdocs\crm\application\controllers\my\Rent.php 148
+ERROR - 2020-09-20 18:10:51 --> Severity: Notice --> Undefined variable: from C:\xampp\htdocs\crm\application\controllers\my\Rent.php 167
+ERROR - 2020-09-20 19:12:45 --> Severity: Parsing Error --> syntax error, unexpected 'else' (T_ELSE) C:\xampp\htdocs\crm\application\controllers\my\Rent.php 276
+ERROR - 2020-09-20 19:14:12 --> Severity: Notice --> Trying to get property of non-object C:\xampp\htdocs\crm\application\libraries\Sms.php 19

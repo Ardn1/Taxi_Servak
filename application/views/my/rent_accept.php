@@ -154,7 +154,7 @@
 								    	Обработать
 								  	</button>
 								  	<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="<?php echo base_url('my/rent/edit/'.$data->id);?>">Посмотреть заявку</a>
+                                        <a class="dropdown-item" href="<?php echo base_url('my/rent/edit/'.$data->id.'/2');?>">Посмотреть заявку</a>
 								  		<?php if (!$data->status) : ?>
 								    	<a class="dropdown-item" href="<?php echo base_url('my/rent/success/'.$data->id);?>">Направить на аренду</a>
 								    	<a class="dropdown-item" href="<?php echo base_url('my/rent/reject/'.$data->id);?>">Отказать</a>
