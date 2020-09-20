@@ -116,5 +116,54 @@ class Sms
 		    $CI->email->send();
 
 		}
+	}
+	
+
+
+	public function send_sms_text($phone, $message)
+    {
+    	$settings = $this->CI->settings_model->get_settings();
+
+		$ch = curl_init("https://sms.ru/sms/send");
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(array(
+			"api_id" 	=> $settings->sms_api,
+			"to" 		=> $phone,
+			"msg" 		=> $message,
+			"json" 		=> 1
+		)));
+		$body = curl_exec($ch);
+		curl_close($ch);
+
+		$json = json_decode($body);
+			if ($json) {
+
+				if ($json->status == "OK") { 
+
+					foreach ($json->sms as $phone => $data) {
+
+						if ($data->status == "OK") {
+
+							echo 'Отправлено';
+							return;
+						} else {
+							
+							echo 'Ошибка при отправке';
+							return;
+						}
+					}
+
+				} else {
+					
+					echo 'Запрос не выполнился (возможно ошибка авторизации, параметрах, итд...)';
+					return;
+				}
+			} else {
+
+				echo 'Запрос не выполнился. Не удалось установить связь с сервером. ';
+				return;
+			}
+
     }
 }

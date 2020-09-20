@@ -118,9 +118,22 @@ class Content_model extends CI_model
         return $query->num_rows();
     }
 
+    public function get_total_mailingphones()
+    {
+        $query = $this->db->get("phones");
+        return $query->num_rows();
+    }
+
     public function get_total_success_rent()
     {
         $where = array('status' => 1);
+        $query = $this->db->where($where)->get("rent");
+        return $query->num_rows();
+    }
+
+    public function get_total_uncorrect_rent()
+    {
+        $where = array('status' => 3);
         $query = $this->db->where($where)->get("rent");
         return $query->num_rows();
     }
@@ -166,10 +179,43 @@ class Content_model extends CI_model
         return false;
     }
 
+    public function get_phones($limit, $start)
+    {
+        $this->db->limit($limit, $start);
+        $query = $this->db->order_by('id', 'desc')->get("phones");
+        if ($query->num_rows() > 0)
+        {
+            foreach ($query->result() as $row)
+            {
+                $data[] = $row;
+            }
+
+            return $data;
+        }
+        return false;
+    }
+
     public function get_success_rent($limit, $start)
     {
         $this->db->limit($limit, $start);
         $where = array('status' => 1);
+        $query = $this->db->order_by('id', 'desc')->where($where)->get("rent");
+        if ($query->num_rows() > 0)
+        {
+            foreach ($query->result() as $row)
+            {
+                $data[] = $row;
+            }
+
+            return $data;
+        }
+        return false;
+    }
+
+    public function get_uncorrect_rent($limit, $start)
+    {
+        $this->db->limit($limit, $start);
+        $where = array('status' => 3);
         $query = $this->db->order_by('id', 'desc')->where($where)->get("rent");
         if ($query->num_rows() > 0)
         {
@@ -207,10 +253,16 @@ class Content_model extends CI_model
 	    return $row;
     }
     
-    
     public function get_onemanager($id) 
 	{
 		$query = $this->db->where("id", $id)->get("users");
+	    $row = $query->row();
+	    return $row;
+    }
+    
+    public function get_phone($id) 
+	{
+		$query = $this->db->where("id", $id)->get("phones");
 	    $row = $query->row();
 	    return $row;
 	}
@@ -238,7 +290,13 @@ class Content_model extends CI_model
 		$where = array('id' => $id);
 		$this->db->where($where)->delete("users");
 	}
-
+    
+	public function del_phone($id) 
+	{
+		$where = array('id' => $id);
+		$this->db->where($where)->delete("phones");
+    }
+    
 	public function get_total_new_orders()
     {
         $where = array('status' => 0);

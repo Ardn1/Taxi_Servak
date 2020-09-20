@@ -54,8 +54,7 @@
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                                         <a class="dropdown-item" forPassword="newparol<?php echo $data->id; ?>"
-                                           forPasswordID="<?php echo $data->id; ?>" onclick="setPasswordNew(this)">Сохранить
-                                            пароль</a>
+                                           forPasswordID="<?php echo $data->id; ?>" onclick="setPasswordNew(this)">Сохранить пароль</a>
                                         <a class="dropdown-item text-danger"
                                            href="<?php echo base_url('my/addmenager/delete/' . $data->id); ?>">Удалить</a>
                                     </div>
@@ -97,6 +96,7 @@
             },
             onAjaxSuccess
         );
+		input.value = "";
     }
 
     function onAjaxSuccess(data) {

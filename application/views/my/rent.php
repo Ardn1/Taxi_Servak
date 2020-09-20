@@ -3,7 +3,8 @@
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group mr-2">
                 <a href="<?php echo base_url('my/rent');?>" class="btn btn-sm btn-success">Новые</a>
-                <a href="<?php echo base_url('my/rent/accept');?>" class="btn btn-sm btn-outline-success">Принятые</a>
+				<a href="<?php echo base_url('my/rent/accept');?>" class="btn btn-sm btn-outline-success">Принятые</a>
+				<a href="<?php echo base_url('my/rent/uncorrect');?>" class="btn btn-sm btn-outline-success">Исправить фото</a>
                 <a href="<?php echo base_url('my/rent/fail');?>" class="btn btn-sm btn-outline-success">Отказано</a>
             </div>
         </div>
@@ -25,11 +26,11 @@
 								    	Обработать
 								  	</button>
 								  	<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-								  		
 								    	<a class="dropdown-item" onclick = "RentAll()">Направить на аренду</a>
-								    	<a class="dropdown-item" onclick = "DenyAll()">Отказать</a>
-								    	
-								    	<a class="dropdown-item text-danger" onclick = "RemoveAll()">Удалить</a>
+										<a class="dropdown-item" onclick = "DenyAll()">Отказать</a>
+										<a class="dropdown-item" onclick = "UncorrectAll()">Исправить фото</a>
+										<a class="dropdown-item text-danger" onclick = "RemoveAll()">Удалить</a>
+										
 								</div>
 							</div>
 							</th>
@@ -46,7 +47,7 @@
 			    	<tbody>
 			    		<?php foreach ($rent as $data) : ?>
 			    		<tr>
-							<td width="3%"><input type="checkbox" id = "one_ch" style="width =5%" unchecked/></td>
+							<td width="3%"><input type="checkbox" id = "one_ch" IDAPI = "<?php echo $data->id;?>" style="width =5%" unchecked/></td>
 							<td width="7%"></td>
 			    			<td width="15%"><?php echo $data->created;?></td>
 			    			<td width="5%">
@@ -151,10 +152,11 @@
 								  	<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
 								  		<?php if (!$data->status) : ?>
                                             <a class="dropdown-item" href="<?php echo base_url('my/rent/edit/'.$data->id);?>">Посмотреть заявку</a>
-								    	<a class="dropdown-item" href="<?php echo base_url('my/rent/success/'.$data->id);?>">Направить на аренду</a>
-								    	<a class="dropdown-item" href="<?php echo base_url('my/rent/reject/'.$data->id);?>">Отказать</a>
+											<a class="dropdown-item" href="<?php echo base_url('my/rent/success/'.$data->id);?>">Направить на аренду</a>
+											<a class="dropdown-item" href="<?php echo base_url('my/rent/uncorrectset/'.$data->id);?>">Исправить фото</a>
+								    		<a class="dropdown-item" href="<?php echo base_url('my/rent/reject/'.$data->id);?>">Отказать</a>
 								    	<?php endif; ?>
-								    	<a class="dropdown-item text-danger" href="<?php echo base_url('my/rent/delete/'.$data->id);?>">Удалить</a>
+								    	<a class="dropdown-item text-danger" href="<?php echo base_url('my/rent/delete/'.$data->id.'/1');?>">Удалить</a>
 								  	</div>
 								</div>
 			    			</td>
@@ -183,35 +185,93 @@
 
 	
 <script>
-var main = document.querySelector("#all");
-var all = document.querySelectorAll("#one_ch");
+	var main = document.querySelector("#all");
+	var all = document.querySelectorAll("#one_ch");
 
-for(var i=0; i<all.length; i++) {  // 1 и 2 пункт задачи
-    all[i].onclick = function() {
-		var sum = 0;
-		for(var i = 0; i < all.length; i++) { 
-			if (all[i].checked == true)
-				sum++;
+	var urlSuccsess = "<?php echo base_url('my/rent/success/');?>"	
+	var urlReject = "<?php echo base_url('my/rent/reject/');?>"	
+	var urlDelete = "<?php echo base_url('my/rent/delete/');?>"	
+	var urlUncorrect = "<?php echo base_url('my/rent/uncorrectset/');?>"	
+
+	for(var i=0; i<all.length; i++) {  // 1 и 2 пункт задачи
+		all[i].onclick = function() {
+			var sum = 0;
+			for(var i = 0; i < all.length; i++) { 
+				if (all[i].checked == true)
+					sum++;
+			}
+			main.checked = sum == all.length;
+			main.indeterminate = sum > 0 && sum < all.length;
 		}
-		main.checked = sum == all.length;
-		main.indeterminate = sum > 0 && sum < all.length;
 	}
-}
 
-main.onclick = function() {  // 3
-    for(var i=0; i<all.length; i++) {
-        all[i].checked = this.checked;
-    }
-}
+	main.onclick = function() {  // 3
+		for(var i=0; i<all.length; i++) {
+			all[i].checked = this.checked;
+		}
+	}
 
-function RentAll() {  
+	async function RentAll() {  
+		for(var i = 0; i < all.length; i++) 
+		{ 
+			if (all[i].checked == true)
+				await rentOne(all[i].getAttribute("IDAPI"));
+		}
+		location.reload();
+	}
+	async function DenyAll() {  
+		for(var i = 0; i < all.length; i++) 
+		{ 
+			if (all[i].checked == true)
+				await denyOne(all[i].getAttribute("IDAPI"));
+		}
+		location.reload();
+	}
+	async function RemoveAll() {  
+		for(var i = 0; i < all.length; i++) 
+		{ 
+			if (all[i].checked == true)
+				await removeOne(all[i].getAttribute("IDAPI"));
+		}
+		location.reload();
+	}
+	async function UncorrectAll() {  
+		for(var i = 0; i < all.length; i++) 
+		{ 
+			if (all[i].checked == true)
+				await uncorrectOne(all[i].getAttribute("IDAPI"));
+		}
+		location.reload();
+	}
 
-}
-function DenyAll() {  
+	async function rentOne(id)
+	{
+		await $.get(urlSuccsess + id + '/1', {
+			}, onAjaxSuccess);
+	}
+	async function denyOne(id)
+	{
+		await $.get(urlReject + id + '/1', {
+			}, onAjaxSuccess);
+	}
+	async function removeOne(id)
+	{
+		await $.get(urlDelete + id + '/0', {
+			}, onAjaxSuccess);
+	}
+	async function uncorrectOne(id)
+	{
+		await $.get(urlUncorrect + id + '/1', {
+			}, onAjaxSuccess);
+	}
 
-}
-function RemoveAll() {  
-
-}
+	function onAjaxSuccess(data)
+	{
+		/*if(data==="Отправлено"){
+            swal ( "Уведомление" ,  "Успешно применено" ,  "success" )
+        } else {
+            swal ( "Уведомление" ,  data ,  "error" )
+        }*/
+	}
 
 </script>
