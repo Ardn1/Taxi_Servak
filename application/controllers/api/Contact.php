@@ -10,6 +10,7 @@ class Contact extends MY_Controller
         $this->load->model('users_model');
         $this->load->model('content_model');
         $this->load->library('sms');
+        $this->load->library('aws');
     }
 
     public function feedback()
@@ -185,9 +186,22 @@ class Contact extends MY_Controller
         }
     }
 
+
     public function upload_vu_one()
     {
         header('Access-Control-Allow-Origin: *');
+        if(!empty($_POST['imagebase'])){
+            $uid = rand(11111111111111, 99999999999999);
+            $newname = $uid . '.jpg';
+
+            $this->aws->sendFile($newname,$_POST['imagebase']);
+            $this->content_model->update_order($_GET["order"], array(
+                    "doc_vu_1" => 'm:'.$newname
+                )
+            );
+            echo  (int)(strlen(rtrim($_POST['imagebase'], '=')) * 0.75);
+            return;
+        }
 
         if (empty($_GET["order"])) {
 

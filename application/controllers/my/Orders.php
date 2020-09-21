@@ -11,6 +11,7 @@ class Orders extends Admin_Controller
 		$this->load->model('content_model');
 		$this->load->library('pagination');
 		$this->load->library('sms');
+		$this->load->library('aws');
 	}
 
 	public function index()
@@ -208,6 +209,11 @@ class Orders extends Admin_Controller
         $this->template->load('admin', 'contents' , 'my/orders_short', $data);
     }
 
+    //
+    public function zamena(&$order,$what){
+        $order->{$what}=$this->aws->getFile(substr($order->{$what},2));
+    }
+    //
 
     public function edit($id,$from=0)
     {
@@ -224,6 +230,17 @@ class Orders extends Admin_Controller
             redirect(site_url('my/orders'));
 
         }
+
+        ///
+        $propertyes = array("doc_vu_1", "doc_vu_2", "doc_sts_1",
+            "doc_sts_2","doc_pass_1","doc_pass_2","doc_auto_1","doc_auto_2","doc_auto_3","doc_auto_4",
+            "doc_face");
+        foreach ($propertyes as &$value) {
+            if(strpos($order->{$value},"m:")!==false)
+                $this->zamena($order,$value);
+        }
+        ///
+
 
         $data = array(
             "order" => $order,
