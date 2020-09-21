@@ -24,16 +24,24 @@
                 <a class="dropdown-item" href="<?php echo base_url('my/orders');?>"><span data-feather="users" class="text-primary mr-3"></span> Регистрация</a>
                 <a class="dropdown-item" href="<?php echo base_url('my/rent');?>"><span data-feather="clock" class="text-primary mr-3"></span> Аренда</a>
                 <a class="dropdown-item" href="<?php echo base_url('my/feedback');?>"><span data-feather="message-square" class="text-primary mr-3"></span> Обратная связь</a>
+                <?php if ($this->user->ismanager==0): ?>
                 <a class="dropdown-item" href="<?php echo base_url('my/pages');?>"><span data-feather="edit" class="text-primary mr-3"></span> Менеджер контента</a>
+                <?php endif; ?>
                 <div class="dropdown-divider"></div>
                 <h6 class="dropdown-header">Конфигурация</h6>
+                <?php if ($this->user->ismanager==0): ?>
                 <a class="dropdown-item" href="<?php echo base_url('my/sms');?>"><span data-feather="radio" class="text-primary mr-3"></span> SMS шлюз</a>
+                <?php endif; ?>
+                <?php if ($this->user->ismanager==0 || $this->user->ismanager==1): ?>
                 <a class="dropdown-item" href="<?php echo base_url('my/mailing');?>"><span data-feather="mail" class="text-primary mr-3"></span> SMS рассылка</a>
+                <?php endif; ?>
+                <?php if ($this->user->ismanager==0): ?>
                 <a class="dropdown-item" href="<?php echo base_url('my/templates');?>"><span data-feather="message-circle" class="text-primary mr-3"></span> Шаблоны оповещений</a>
                 <a class="dropdown-item" href="<?php echo base_url('my/addmenager');?>"><span data-feather="user-plus" class="text-primary mr-3"></span> Менеджеры</a> 
                 
                 <a class="dropdown-item" href="<?php echo base_url('my/taxopark');?>"><span data-feather="clipboard" class="text-primary mr-3"></span> Таксопарки</a> 
                 <a class="dropdown-item" href="<?php echo base_url('my/profile');?>"><span data-feather="lock" class="text-primary mr-3"></span> Пароль и Email</a>
+                <?php endif; ?>
             </div>
             <?php echo form_open(site_url("my/search"), array("class" => "w-100")) ?>
             <input class="form-control form-control-dark w-100" name="phone" type="text" placeholder="Поиск по телефону" aria-label="Search">
@@ -77,7 +85,7 @@
                             </li>
                             <?php endif; ?>
                         </ul>
-                        <?php if ($this->user->ismanager==0  || $this->user->ismanager==1): ?>
+                        <?php if ($this->user->ismanager==0  || $this->user->ismanager==0): ?>
                         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
                             <span>Конфигурация</span>
                             <a class="d-flex align-items-center text-muted" href="#">
