@@ -46,12 +46,17 @@ class Addmenager extends Admin_Controller
 	{
 		$this->form_validation->set_rules('email', 'Email адрес', 'trim|required|max_length[60]|valid_email');
 		$this->form_validation->set_rules('password', 'Пароль', 'trim|required|min_length[8]');
+		$this->form_validation->set_rules('name', 'Имя', 'trim|required');
+		$this->form_validation->set_rules('phone', 'Номер телефона', 'trim|required');
+
 	//	$this->form_validation->set_rules('ismessegesallow', 'Разрешить отправку сообщений');
 
 		if ($this->form_validation->run() == true) {
 
 			$email = $this->input->post("email", true);
-			  $password = $this->input->post("password", true);
+			$password = $this->input->post("password", true);
+			$name = $this->input->post("name", true);
+			$phone = $this->input->post("phone", true);
 			  
 			$check = $_POST["ismessegesallow"]=="Yes"?1:2;
 
@@ -66,7 +71,7 @@ class Addmenager extends Admin_Controller
 			
 
 			$this->db->query(
-				"INSERT into users(email,password,ismanager) VALUES('".$email."', '".$stamp_pass."',".$check.")"
+				"INSERT into users(email,password,ismanager,name,phone) VALUES('".$email."', '".$stamp_pass."',".$check.",'".$name."', '".$phone."')"
 			);
 
             $this->session->set_flashdata('success', "Менеджер добавлен");
@@ -118,6 +123,49 @@ class Addmenager extends Admin_Controller
 		);
 		echo "Успешно изменено";
 	}
+
+
+	public function update_all()
+	{
+		$password=$_GET['password'];
+		$name=$_GET['name'];
+		$phone=$_GET['phone'];
+		//$ismanager=$_GET['ismanager'];
+
+
+        if($_GET['id']==1){
+            echo 'НЕВОЗМОЖНО ИЗМЕНИТЬ ПАРОЛЬ АДМИНИСТРАТОРА!';
+            return;
+        }
+
+        if(strlen($password) < 8 && strlen($password) != 0) {
+            echo 'Пароль должен состоять не менее чем из 8 символов ' + $password;
+            return;
+        }
+
+		if (strlen($password) == 0)
+		{
+			$this->users_model->update_user($_GET['id'], array(
+				"name"  =>  $name,
+				"phone"  =>  $phone,
+				//"ismanager"  =>  $ismanager
+				)
+			);
+		}
+		else
+		{
+			$stamp_pass = $this->protect->encrypt($_GET['password']);
+			$this->users_model->update_user($_GET['id'], array(
+				"password"  =>  $stamp_pass,
+				"name"  =>  $name,
+				"phone"  =>  $phone,
+				//"ismanager"  =>  $ismanager
+				)
+			);
+		}
+		echo "Успешно изменено";
+	}
+
 
 	public function delete($id)
 	{

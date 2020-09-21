@@ -118,6 +118,12 @@ class Content_model extends CI_model
         return $query->num_rows();
     }
 
+    public function get_total_workcity()
+    {
+        $query = $this->db->get("taxopark");
+        return $query->num_rows();
+    }
+
     public function get_total_mailingphones()
     {
         $query = $this->db->get("phones");
@@ -167,6 +173,22 @@ class Content_model extends CI_model
         $this->db->limit($limit, $start);
         $where = array('ismanager' > 0);
         $query = $this->db->order_by('id', 'desc')->where($where)->get("users");
+        if ($query->num_rows() > 0)
+        {
+            foreach ($query->result() as $row)
+            {
+                $data[] = $row;
+            }
+
+            return $data;
+        }
+        return false;
+    }
+    
+    public function get_taxopark($limit, $start)
+    {
+        $this->db->limit($limit, $start);
+        $query = $this->db->order_by('id', 'asc')->get("taxopark");
         if ($query->num_rows() > 0)
         {
             foreach ($query->result() as $row)
@@ -252,6 +274,14 @@ class Content_model extends CI_model
 	    $row = $query->row();
 	    return $row;
     }
+    public function get_taxoparkOne($id) 
+	{
+		$query = $this->db->where("id", $id)->get("taxopark");
+	    $row = $query->row();
+	    return $row;
+    }
+
+    
     
     public function get_onemanager($id) 
 	{

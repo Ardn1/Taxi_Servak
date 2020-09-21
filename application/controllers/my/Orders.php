@@ -354,15 +354,27 @@ class Orders extends Admin_Controller
 
         $order = $this->content_model->get_order($id);
 
+        $manager = $this->content_model->get_onemanager($this->user->id);
+
         if (!$order) {
-
             redirect(site_url('my/orders'));
-
         }
 
         if ($order->status == 2) {
 
-            $sms = $this->sms->send_sms($order->phone, 3);
+            $sms_template = $this->settings_model->get_template(3);
+
+            if ($sms_template->status) {
+                $messages = $sms_template->message;
+                $sms_variables = array('[NAME]', '[PARKNAME]', '[PHONE]');
+                
+                $parkname = ($this->content_model->get_taxoparkOne($order->cityjob))->name;
+
+                $code_variable = array($manager->name, $parkname, $manager->phone);
+                $replace = str_replace($sms_variables, $code_variable, $messages);
+
+                $this->sms->send_sms_text($order->phone, $replace);
+            }
 
             $this->content_model->update_order($id, array(
                 "status" => 3

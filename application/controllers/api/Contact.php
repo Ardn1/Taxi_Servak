@@ -107,13 +107,11 @@ class Contact extends MY_Controller
             $email_template = $this->settings_model->get_template(6);
 
             if ($email_template->status) {
-
                 $messages = $email_template->message;
                 $email_variables = array('[NAME]', '[AGE]', '[CITY]', '[PHONE]',);
                 $code_variable = array($first_name, $age, $city, $phone);
                 $replace = str_replace($email_variables, $code_variable, $messages);
                 $this->sms->send_email($this->settings->email, $email_template->name, $replace);
-
             }
 
         }
