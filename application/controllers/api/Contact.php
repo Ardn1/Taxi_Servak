@@ -210,7 +210,7 @@ class Contact extends MY_Controller
     {
         header('Access-Control-Allow-Origin: *');
 
-        if(!empty($_POST['imagebase'])){
+        if (!empty($_POST['imagebase'])) {
             $this->uploaderS3($_POST['imagebase'],"doc_vu_1");
             return;
         }
@@ -259,6 +259,11 @@ class Contact extends MY_Controller
     {
         header('Access-Control-Allow-Origin: *');
 
+        if(!empty($_POST['imagebase'])) {
+            $this->uploaderS3($_POST['imagebase'],"doc_vu_2");
+            return;
+        }
+
         if (empty($_GET["order"])) {
 
             $response = array('event' => 'fail', 'message' => 'Не получен ID заявки! Создайте новую заявку');
@@ -302,6 +307,11 @@ class Contact extends MY_Controller
     public function upload_sts_one()
     {
         header('Access-Control-Allow-Origin: *');
+
+        if (!empty($_POST['imagebase'])) {
+            $this->uploaderS3($_POST['imagebase'],"doc_sts_1");
+            return;
+        }
 
         if (empty($_GET["order"])) {
 
@@ -347,6 +357,11 @@ class Contact extends MY_Controller
     {
         header('Access-Control-Allow-Origin: *');
 
+        if (!empty($_POST['imagebase'])) {
+            $this->uploaderS3($_POST['imagebase'],"doc_sts_2");
+            return;
+        }
+
         if (empty($_GET["order"])) {
 
             $response = array('event' => 'fail', 'message' => 'Не получен ID заявки! Создайте новую заявку');
@@ -390,6 +405,11 @@ class Contact extends MY_Controller
     public function upload_pass1()
     {
         header('Access-Control-Allow-Origin: *');
+
+        if (!empty($_POST['imagebase'])) {
+            $this->uploaderS3($_POST['imagebase'],"doc_pass_1");
+            return;
+        }
 
         if (empty($_GET["order"])) {
 
@@ -435,6 +455,11 @@ class Contact extends MY_Controller
     {
         header('Access-Control-Allow-Origin: *');
 
+        if (!empty($_POST['imagebase'])) {
+            $this->uploaderS3($_POST['imagebase'],"doc_pass_2");
+            return;
+        }
+
         if (empty($_GET["order"])) {
 
             $response = array('event' => 'fail', 'message' => 'Не получен ID заявки! Создайте новую заявку');
@@ -478,6 +503,11 @@ class Contact extends MY_Controller
     public function upload_lic1()
     {
         header('Access-Control-Allow-Origin: *');
+
+        if (!empty($_POST['imagebase'])) {
+            $this->uploaderS3($_POST['imagebase'],"doc_license_1");
+            return;
+        }
 
         if (empty($_GET["order"])) {
 
@@ -523,6 +553,11 @@ class Contact extends MY_Controller
     {
         header('Access-Control-Allow-Origin: *');
 
+        if (!empty($_POST['imagebase'])) {
+            $this->uploaderS3($_POST['imagebase'],"doc_license_2");
+            return;
+        }
+
         if (empty($_GET["order"])) {
 
             $response = array('event' => 'fail', 'message' => 'Не получен ID заявки! Создайте новую заявку');
@@ -566,6 +601,12 @@ class Contact extends MY_Controller
     public function upload_auto1()
     {
         header('Access-Control-Allow-Origin: *');
+
+        if (!empty($_POST['imagebase'])) {
+            $this->uploaderS3($_POST['imagebase'],"doc_auto_1");
+            return;
+        }
+
         if (empty($_GET["order"])) {
 
             $response = array('event' => 'fail', 'message' => 'Не получен ID заявки! Создайте новую заявку');
@@ -609,6 +650,11 @@ class Contact extends MY_Controller
     public function upload_auto2()
     {
         header('Access-Control-Allow-Origin: *');
+
+        if (!empty($_POST['imagebase'])) {
+            $this->uploaderS3($_POST['imagebase'],"doc_auto_2");
+            return;
+        }
 
         if (empty($_GET["order"])) {
 
@@ -654,6 +700,11 @@ class Contact extends MY_Controller
     {
         header('Access-Control-Allow-Origin: *');
 
+        if (!empty($_POST['imagebase'])) {
+            $this->uploaderS3($_POST['imagebase'],"doc_auto_3");
+            return;
+        }
+
         if (empty($_GET["order"])) {
 
             $response = array('event' => 'fail', 'message' => 'Не получен ID заявки! Создайте новую заявку');
@@ -698,6 +749,11 @@ class Contact extends MY_Controller
     {
         header('Access-Control-Allow-Origin: *');
 
+        if (!empty($_POST['imagebase'])) {
+            $this->uploaderS3($_POST['imagebase'],"doc_auto_4");
+            return;
+        }
+
         if (empty($_GET["order"])) {
 
             $response = array('event' => 'fail', 'message' => 'Не получен ID заявки! Создайте новую заявку');
@@ -733,7 +789,6 @@ class Contact extends MY_Controller
                 echo json_encode($response);
 
             }
-
         }
 
     }
@@ -741,6 +796,11 @@ class Contact extends MY_Controller
     public function upload_face()
     {
         header('Access-Control-Allow-Origin: *');
+
+        if (!empty($_POST['imagebase'])) {
+            $this->uploaderS3($_POST['imagebase'],"doc_face");
+            return;
+        }
 
         if (empty($_GET["order"])) {
 
@@ -786,6 +846,11 @@ class Contact extends MY_Controller
     {
         header('Access-Control-Allow-Origin: *');
 
+        if (!empty($_POST['imagebase'])) {
+            $this->uploaderS3($_POST['imagebase'],"doc_reg_1");
+            return;
+        }
+
         if (empty($_GET["order"])) {
 
             $response = array('event' => 'fail', 'message' => 'Не получен ID заявки! Создайте новую заявку');
@@ -830,6 +895,11 @@ class Contact extends MY_Controller
     {
         header('Access-Control-Allow-Origin: *');
 
+        if (!empty($_POST['imagebase'])) {
+            $this->uploaderS3($_POST['imagebase'],"doc_reg_2");
+            return;
+        }
+
         if (empty($_GET["order"])) {
 
             $response = array('event' => 'fail', 'message' => 'Не получен ID заявки! Создайте новую заявку');
@@ -869,169 +939,113 @@ class Contact extends MY_Controller
         }
 
     }
-
-
     private function checker($param, $message)
-    {
-
-    }
+    {}
 
     public function check_order()
     {
         header('Access-Control-Allow-Origin: *');
 
         if (empty($_GET["order"])) {
-
             $response = array('event' => 'fail', 'message' => 'Не получен ID заявки! Создайте новую заявку');
+            echo json_encode($response);
+            return ;
+        } else {
+            $order = $this->content_model->get_order($_GET["order"]);
+        }
+
+        if (!$order->doc_vu_1) {
+
+            $response = array ('event' => 'fail', 'message' => 'Добавьте фотографию водительского удостоверения (внешняя сторона)');
 
             echo json_encode($response);
+            return false;
+        }
 
-        } else {
+        if (!$order->doc_vu_2) {
 
-            $order = $this->content_model->get_order($_GET["order"]);
+            $response = array ('event' => 'fail', 'message' => 'Добавьте фотографию водительского удостоверения (обратная сторона)');
 
-            if ($order->cityjob == 1) {
+            echo json_encode($response);
+            return false;
+        }
+        if (!$order->doc_sts_1) {
 
-                if ($order->registration == 1) {
+            $response = array ('event' => 'fail', 'message' => 'Добавьте фотографию Свидетельства о регистрации ТС (сторона 1)');
 
-                    $type = 1;
+            echo json_encode($response);
+            return false;
+        }
+        if (!$order->doc_sts_2) {
 
-                } else {
+            $response = array ('event' => 'fail', 'message' => 'Добавьте фотографию Свидетельства о регистрации ТС (сторона 2)');
 
-                    $type = 2;
+            echo json_encode($response);
+            return false;
+        }
+        if (!$order->doc_auto_1) {
 
-                }
+            $response = array ('event' => 'fail', 'message' => 'Добавьте фотографию автомобиля (спереди)');
 
-            } else {
+            echo json_encode($response);
+            return false;
+        }
+        if (!$order->doc_auto_2) {
 
-                if ($order->registration == 1) {
+            $response = array ('event' => 'fail', 'message' => 'Добавьте фотографию автомобиля (левый бок)');
 
-                    $type = 3;
+            echo json_encode($response);
+            return false;
+        }
+        if (!$order->doc_auto_3) {
 
-                } else {
+            $response = array ('event' => 'fail', 'message' => 'Добавьте фотографию автомобиля (сзади)');
 
-                    $type = 4;
+            echo json_encode($response);
+            return false;
+        }
+        
+        if (!$order->doc_auto_4) {
 
-                }
+            $response = array ('event' => 'fail', 'message' => 'Добавьте фотографию автомобиля (правый бок)');
 
-            }
+            echo json_encode($response);
+            return false;
+        }
+        
+        if (!$order->doc_face) {
 
-            //Москва Российский паспорт!
-            if ($type == 1) {
+            $response = array ('event' => 'fail', 'message' => 'Добавьте личную фотографию');
 
-                if ($order->doc_license_2) {
+            echo json_encode($response);
+            return false;
+        }
+        if (!$order->doc_pass_1) {
 
-                    $this->content_model->update_order($_GET["order"], array(
-                            "status" => 0
-                        )
-                    );
+            $response = array ('event' => 'fail', 'message' => 'Добавьте фотографию паспорта (основной разворот)');
 
-                    $response = array('event' => 'success');
+            echo json_encode($response);
+            return false;
+        }
 
-                    echo json_encode($response);
+        
+        $this->content_model->update_order($_GET["order"], array(
+            "status" => 0
+        ));
 
-                    $email_template = $this->settings_model->get_template(7);
+        $response = array('event' => 'success');
 
-                    if ($email_template->status) {
+        echo json_encode($response);
 
-                        $messages = $email_template->message;
-                        $email_variables = array('[NAME]');
-                        $code_variable = array($order->name);
-                        $replace = str_replace($email_variables, $code_variable, $messages);
-                        $this->sms->send_email($this->settings->email, $email_template->name, $replace);
+        $email_template = $this->settings_model->get_template(7);
 
-                    }
+        if ($email_template->status) {
 
-                }
-
-                //Москва СНГ паспорт!
-            } elseif ($type == 2) {
-
-
-                if ($order->doc_license_2) {
-
-                    $this->content_model->update_order($_GET["order"], array(
-                            "status" => 0
-                        )
-                    );
-
-                    $response = array('event' => 'success');
-
-                    echo json_encode($response);
-
-                    $email_template = $this->settings_model->get_template(7);
-
-                    if ($email_template->status) {
-
-                        $messages = $email_template->message;
-                        $email_variables = array('[NAME]');
-                        $code_variable = array($order->name);
-                        $replace = str_replace($email_variables, $code_variable, $messages);
-                        $this->sms->send_email($this->settings->email, $email_template->name, $replace);
-
-                    }
-
-                }
-
-                //не Москва р паспорт!
-            } elseif ($type == 3) {
-
-
-                if ($order->doc_pass_2) {
-
-                    $this->content_model->update_order($_GET["order"], array(
-                            "status" => 0
-                        )
-                    );
-
-                    $response = array('event' => 'success');
-
-                    echo json_encode($response);
-
-                    $email_template = $this->settings_model->get_template(7);
-
-                    if ($email_template->status) {
-
-                        $messages = $email_template->message;
-                        $email_variables = array('[NAME]');
-                        $code_variable = array($order->name);
-                        $replace = str_replace($email_variables, $code_variable, $messages);
-                        $this->sms->send_email($this->settings->email, $email_template->name, $replace);
-
-                    }
-
-                    //не Москва снг паспорт!
-                } elseif ($type == 4) {
-
-
-                    if ($order->doc_reg_2) {
-
-                        $this->content_model->update_order($_GET["order"], array(
-                                "status" => 0
-                            )
-                        );
-
-                        $response = array('event' => 'success');
-
-                        echo json_encode($response);
-
-                        $email_template = $this->settings_model->get_template(7);
-
-                        if ($email_template->status) {
-
-                            $messages = $email_template->message;
-                            $email_variables = array('[NAME]');
-                            $code_variable = array($order->name);
-                            $replace = str_replace($email_variables, $code_variable, $messages);
-                            $this->sms->send_email($this->settings->email, $email_template->name, $replace);
-
-                        }
-
-                    }
-
-                }
-
-            }
+            $messages = $email_template->message;
+            $email_variables = array('[NAME]');
+            $code_variable = array($order->name);
+            $replace = str_replace($email_variables, $code_variable, $messages);
+            $this->sms->send_email($this->settings->email, $email_template->name, $replace);
 
         }
 

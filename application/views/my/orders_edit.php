@@ -20,8 +20,7 @@
                         <a class="dropdown-item"
                            href="<?php echo base_url('my/orders/accept/' . $order->id . '/' . $from); ?>">Принять</a>
                         <a class="dropdown-item"
-                           href="<?php echo base_url('my/orders/uncorrectset/' . $order->id . '/' . $from); ?>">Исправить
-                            фото</a>
+                           href="<?php echo base_url('my/orders/uncorrectset/' . $order->id . '/' . $from); ?>">Исправить фото</a>
                     <?php endif; ?>
                     <?php if ($order->status != 3) : ?>
                         <a class="dropdown-item"
@@ -36,11 +35,10 @@
                         <a class="dropdown-item text-danger"
                            href="<?php echo base_url('my/orders/delete_order/' . $order->id) . '/' . $from; ?>">Удалить</a>
                     <?php endif; ?>
-                    <a class="dropdown-item">Скачать архив</a>
+                    <a class="dropdown-item" onclick="onClickDownload()">Скачать архив</a>
                 </div>
             </div>
         <?php else : ?>
-            <?php if ($this->user->ismanager == 0): ?>
                 <div class="dropdown">
                     <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
                             id="dropdownMenuButton"
@@ -48,12 +46,12 @@
                         Обработать
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                        <a href="<?php echo base_url('my/orders/delete_order/' . $order->id) . '/' . $from;; ?>"
-                           class="dropdown-item text-danger">Удалить</a>
+                    <?php if ($this->user->ismanager == 0): ?>
+                        <a href="<?php echo base_url('my/orders/delete_order/' . $order->id) . '/' . $from; ?>" class="dropdown-item text-danger">Удалить</a>
+                    <?php endif; ?>
                         <a class="dropdown-item" onclick="onClickDownload()">Скачать архив</a>
                     </div>
                 </div>
-            <?php endif; ?>
         <?php endif; ?>
     </div>
 </div>
@@ -72,7 +70,6 @@
                 ?>" class="w-100" id="rotater" onclick="rotate(this)">
             </div>
         </div>
-
         <div class="card mb-3">
             <div class="card-header">
                 Водительское удостоверение (обратная сторона)
@@ -109,18 +106,20 @@
             </div>
         </div>
 
-        <?php if ($order->registration == 1) : ?>
-            <div class="card mb-3">
-                <div class="card-header">
-                    Паспорт (прописка)
+        <?php if ($order->registration != 1) : ?>
+            <?php if ($order->doc_pass_2) : ?>
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Паспорт с обратной стороны (если пластик)
+                    </div>
+                    <div class="card-body p-0">
+                        <img src="<?php echo base_url('docs/' . $order->doc_pass_2); ?>" class="w-100">
+                    </div>
                 </div>
-                <div class="card-body p-0">
-                    <img src="<?php echo base_url('docs/' . $order->doc_pass_2); ?>" class="w-100">
-                </div>
-            </div>
+            <?php endif; ?>
         <?php endif; ?>
 
-        <?php if ($order->registration == 2) : ?>
+        <?php if ($order->registration == 2 || false) : ?>
             <div class="card mb-3">
                 <div class="card-header">
                     Регистрация (бланк 1)
@@ -139,28 +138,29 @@
                 </div>
             </div>
         <?php endif; ?>
+        <?php if ($order->cityjob == 1) : ?>
+            <?php if ($order->doc_license_1) : ?>
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Лицензия (сторона 1)
+                    </div>
+                    <div class="card-body p-0">
+                        <img src="<?php echo base_url('docs/' . $order->doc_license_1); ?>" class="w-100">
+                    </div>
+                </div>
+            <?php endif; ?>
 
-        <?php if ($order->doc_license_1) : ?>
-            <div class="card mb-3">
-                <div class="card-header">
-                    Лицензия (сторона 1)
+            <?php if ($order->doc_license_2) : ?>
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Лицензия (сторона 2)
+                    </div>
+                    <div class="card-body p-0">
+                        <img src="<?php echo base_url('docs/' . $order->doc_license_2); ?>" class="w-100">
+                    </div>
                 </div>
-                <div class="card-body p-0">
-                    <img src="<?php echo base_url('docs/' . $order->doc_license_1); ?>" class="w-100">
-                </div>
-            </div>
-        <?php endif; ?>
-
-        <?php if ($order->doc_license_2) : ?>
-            <div class="card mb-3">
-                <div class="card-header">
-                    Лицензия (сторона 2)
-                </div>
-                <div class="card-body p-0">
-                    <img src="<?php echo base_url('docs/' . $order->doc_license_2); ?>" class="w-100">
-                </div>
-            </div>
-        <?php endif; ?>
+            <?php endif; ?>
+        <?php if ($order->registration != 1) : ?>
 
         <div class="card mb-3">
             <div class="card-header">
@@ -291,11 +291,51 @@
 
                 </div>
                 <div class="col-md-11">
-                    <?php if ($order->cityjob == 1) : ?>
-                        <p>Москва и МО</p>
-                    <?php else : ?>
-                        <p>Московская область</p>
-                    <?php endif; ?>
+                                <?php if ($data->cityjob == 1) : ?>
+			    					Москва и МО
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 2) : ?>
+			    					Московская область
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 3) : ?>
+			    					Санкт-Петербург
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 4) : ?>
+			    					Екатеринбург
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 5) : ?>
+			    					Казань
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 6) : ?>
+			    					Краснодар
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 7) : ?>
+			    					Красноярск
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 8) : ?>
+			    					Новосибирск
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 9) : ?>
+			    					Омск
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 10) : ?>
+			    					Пермь
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 11) : ?>
+			    					Самара
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 12) : ?>
+			    					Саратов
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 13) : ?>
+			    					Ульяновск
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 14) : ?>
+			    					Ярославль
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 15) : ?>
+			    					Другой
+			    				<?php endif; ?>
                 </div>
             </div>
             <div class="row">
@@ -303,17 +343,21 @@
                     <span data-feather="map-pin" class="text-success"></span>
                 </div>
                 <div class="col-md-11">
-                    <p class="mb-1"><strong>Прописка</strong></p>
+                    <p class="mb-1"><strong>Гражданство</strong></p>
                 </div>
                 <div class="col-md-1">
 
                 </div>
                 <div class="col-md-11">
                     <?php if ($order->registration == 1) : ?>
-                        <p>Российская Федерация</p>
+                        <p>Россия</p>
                     <?php else : ?>
+                    <?php if ($order->registration == 2) : ?>
                         <p>СНГ</p>
-                    <?php endif; ?>
+                    <?php else : ?>
+                    <?php if ($order->registration == 3) : ?>
+                        <p>Другое</p>
+                    <?php else : ?>
                 </div>
             </div>
         </div>
