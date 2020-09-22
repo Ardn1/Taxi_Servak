@@ -1,6 +1,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.5.0/jszip.min.js"
         integrity="sha512-y3o0Z5TJF1UsKjs/jS2CDkeHN538bWsftxO9nctODL5W40nyXIbs0Pgyu7//icrQY9m6475gLaVr39i/uh/nLA=="
         crossorigin="anonymous"></script>
+<style>
+    #rotater {
+        
+    }
+</style>
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h4">Детали заявки ID <?php echo $order->id; ?></h1>
     <div class="btn-toolbar mb-2 mb-md-0">
@@ -61,10 +66,10 @@
             </div>
             <div class="card-body p-0">
                 <img src="<?php
-                if (strpos($order->doc_vu_1, 'base64') == false)
+                if (strpos($order->doc_vu_1, '.') !== false)
                     echo base_url('docs/' . $order->doc_vu_1);
-                else echo $order->doc_vu_1
-                ?>" class="w-100">
+                else echo 'data:image/jpg;base64,'.$order->doc_vu_1
+                ?>" class="w-100" id="rotater" onclick="rotate(this)">
             </div>
         </div>
 
@@ -317,6 +322,13 @@
 </div>
 
 <script>
+    let rotateAngle = 90;
+
+    function rotate(image) {
+        image.setAttribute("style", "transform: rotate(" + rotateAngle + "deg)");
+        rotateAngle = rotateAngle + 90;
+    }
+
     function onClickDownload() {
         var zip = new JSZip();
         for (var i = 0; i < 5; i++) {
@@ -330,25 +342,5 @@
         });
     }
 
-    function base64toBlob(base64Data, contentType) {
-        contentType = contentType || '';
-        var sliceSize = 1024;
-        var byteCharacters = atob(base64Data);
-        var bytesLength = byteCharacters.length;
-        var slicesCount = Math.ceil(bytesLength / sliceSize);
-        var byteArrays = new Array(slicesCount);
-
-        for (var sliceIndex = 0; sliceIndex < slicesCount; ++sliceIndex) {
-            var begin = sliceIndex * sliceSize;
-            var end = Math.min(begin + sliceSize, bytesLength);
-
-            var bytes = new Array(end - begin);
-            for (var offset = begin, i = 0; offset < end; ++i, ++offset) {
-                bytes[i] = byteCharacters[offset].charCodeAt(0);
-            }
-            byteArrays[sliceIndex] = new Uint8Array(bytes);
-        }
-        return new Blob(byteArrays, { type: contentType });
-    }
 
 </script>

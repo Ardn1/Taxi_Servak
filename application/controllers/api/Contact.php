@@ -185,19 +185,33 @@ class Contact extends MY_Controller
     }
 
 
+    public function uploaderS3($base64,$field){
+
+        if (empty($_GET["order"])) {
+            $response = array('event' => 'fail', 'message' => 'Не получен ID заявки! Создайте новую заявку');
+            echo json_encode($response);
+            return;
+        }
+
+        $uid = rand(11111111111111, 99999999999999);
+        $newname = $uid . '.jpg';
+        $this->aws->sendFile($newname,$base64);
+        $this->content_model->update_order($_GET["order"], array(
+                $field => 'm:'.$newname
+            )
+        );
+        $response = array('event' => 'success');
+
+        echo json_encode($response);
+        return;
+    }
+
     public function upload_vu_one()
     {
         header('Access-Control-Allow-Origin: *');
-        if(!empty($_POST['imagebase'])){
-            $uid = rand(11111111111111, 99999999999999);
-            $newname = $uid . '.jpg';
 
-            $this->aws->sendFile($newname,$_POST['imagebase']);
-            $this->content_model->update_order($_GET["order"], array(
-                    "doc_vu_1" => 'm:'.$newname
-                )
-            );
-            echo  (int)(strlen(rtrim($_POST['imagebase'], '=')) * 0.75);
+        if(!empty($_POST['imagebase'])){
+            $this->uploaderS3($_POST['imagebase'],"doc_vu_1");
             return;
         }
 

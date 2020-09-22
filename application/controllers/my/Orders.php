@@ -385,7 +385,7 @@ class Orders extends Admin_Controller
                 $messages = $sms_template->message;
                 $sms_variables = array('[NAME]', '[PARKNAME]', '[PHONE]');
                 
-                $parkname = ($this->content_model->get_taxoparkOne($order->cityjob))->name;
+                $parkname = $this->content_model->get_taxoparkOne($order->cityjob)->name;
 
                 $code_variable = array($manager->name, $parkname, $manager->phone);
                 $replace = str_replace($sms_variables, $code_variable, $messages);
