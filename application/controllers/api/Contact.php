@@ -56,15 +56,60 @@ class Contact extends MY_Controller
                 $code_variable = array($name, $message);
                 $replace = str_replace($email_variables, $code_variable, $messages);
                 $this->sms->send_email($this->settings->email, $email_template->name, $replace);
-
             }
-
         }
     }
 
     public function rent()
     {
         header('Access-Control-Allow-Origin: *');
+
+        if (empty($_POST['imagebase1'])) {
+            $response = array ('event' => 'fail', 'message' => 'Добавьте фотографию паспорта (основной разворот)');
+            echo json_encode($response);
+            return false;
+        }
+        else
+        {
+            $this->uploaderS3($_POST['imagebase1'],"pass1");
+        }
+        if ($this->input->post("citizenship", true) == 1)
+        {
+            if (empty($_POST['imagebase2'])) {
+                $response = array ('event' => 'fail', 'message' => 'Добавьте фотографию паспорта (страница с пропиской)');
+                echo json_encode($response);
+                return false;
+            }
+            else
+            {
+                $this->uploaderS3($_POST['imagebase2'],"pass2");
+            }
+        }
+        else
+        {
+            if (!empty($_POST['imagebase2'])) {
+                $this->uploaderS3($_POST['imagebase2'],"pass2");
+        }
+
+        if (empty($_POST['imagebase3'])) {
+            $response = array ('event' => 'fail', 'message' => 'Добавьте фотографию водительского удостоверения (внешняя сторона)');
+            echo json_encode($response);
+            return false;
+        }
+        else
+        {
+            $this->uploaderS3($_POST['imagebase3'],"vu1");
+        }
+
+        if (empty($_POST['imagebase4'])) {
+            $response = array ('event' => 'fail', 'message' => 'Добавьте фотографию водительского удостоверения (обратная сторона)');
+            echo json_encode($response);
+            return false;
+        }
+        else
+        {
+            $this->uploaderS3($_POST['imagebase4'],"vu2");
+        }
 
         $this->form_validation->set_rules('citizenship', "Гражданство", 'trim|required|numeric|greater_than[0]');
         $this->form_validation->set_rules('city', "Город", 'trim|required|numeric|greater_than[0]');
@@ -80,8 +125,6 @@ class Contact extends MY_Controller
             echo json_encode($response);
 
         } else {
-
-            // Set variables for input data
             $citizenship = $this->input->post("citizenship", true);
             $city = $this->input->post("city", true);
             $age = $this->input->post("age", true);
@@ -949,7 +992,7 @@ class Contact extends MY_Controller
         if (empty($_GET["order"])) {
             $response = array('event' => 'fail', 'message' => 'Не получен ID заявки! Создайте новую заявку');
             echo json_encode($response);
-            return ;
+            return;
         } else {
             $order = $this->content_model->get_order($_GET["order"]);
         }
@@ -961,7 +1004,6 @@ class Contact extends MY_Controller
             echo json_encode($response);
             return false;
         }
-
         if (!$order->doc_vu_2) {
 
             $response = array ('event' => 'fail', 'message' => 'Добавьте фотографию водительского удостоверения (обратная сторона)');
@@ -1004,7 +1046,6 @@ class Contact extends MY_Controller
             echo json_encode($response);
             return false;
         }
-        
         if (!$order->doc_auto_4) {
 
             $response = array ('event' => 'fail', 'message' => 'Добавьте фотографию автомобиля (правый бок)');
@@ -1012,7 +1053,6 @@ class Contact extends MY_Controller
             echo json_encode($response);
             return false;
         }
-        
         if (!$order->doc_face) {
 
             $response = array ('event' => 'fail', 'message' => 'Добавьте личную фотографию');
@@ -1027,7 +1067,6 @@ class Contact extends MY_Controller
             echo json_encode($response);
             return false;
         }
-
         
         $this->content_model->update_order($_GET["order"], array(
             "status" => 0

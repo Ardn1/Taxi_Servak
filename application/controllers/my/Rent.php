@@ -11,6 +11,7 @@ class Rent extends Admin_Controller
         $this->load->model('content_model');
         $this->load->library('pagination');
         $this->load->library('sms');
+        $this->load->library('aws');
     }
 
     public function index()
@@ -146,6 +147,11 @@ class Rent extends Admin_Controller
 
     }
 
+    public function zamena(&$order,$what)
+    {
+        $order->{$what}=$this->aws->getFile(substr($order->{$what},2));
+    }
+
     public function edit($id, $from=0)
     {
         if (is_null($id) or !is_numeric($id)) {
@@ -161,6 +167,14 @@ class Rent extends Admin_Controller
             redirect(site_url('my/rent'));
 
         }
+        
+        ///
+        $propertyes = array("vu1", "vu2", "pass1", "pass2");
+        foreach ($propertyes as &$value) {
+            if(strpos($order->{$value},"m:")!==false)
+                $this->zamena($order,$value);
+        }
+        ///
 
         $data = array(
             "rent" => $rent,
