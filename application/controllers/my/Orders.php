@@ -233,7 +233,7 @@ class Orders extends Admin_Controller
 
         ///
         $propertyes = array("doc_vu_1", "doc_vu_2", "doc_sts_1",
-            "doc_sts_2","doc_pass_1","doc_pass_2","doc_auto_1","doc_auto_2","doc_auto_3","doc_auto_4",
+            "doc_sts_2","doc_pass_1","doc_pass_2","doc_auto_1","doc_auto_2","doc_auto_3","doc_auto_4","doc_license_1","doc_license_2",
             "doc_face");
         foreach ($propertyes as &$value) {
             if(strpos($order->{$value},"m:")!==false)

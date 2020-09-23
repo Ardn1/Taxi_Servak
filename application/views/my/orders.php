@@ -55,8 +55,48 @@
 			    			<td>
 			    				<?php if ($data->cityjob == 1) : ?>
 			    					Москва и МО
-			    				<?php else : ?>
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 2) : ?>
 			    					Московская область
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 3) : ?>
+			    					Санкт-Петербург
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 4) : ?>
+			    					Екатеринбург
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 5) : ?>
+			    					Казань
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 6) : ?>
+			    					Краснодар
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 7) : ?>
+			    					Красноярск
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 8) : ?>
+			    					Новосибирск
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 9) : ?>
+			    					Омск
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 10) : ?>
+			    					Пермь
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 11) : ?>
+			    					Самара
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 12) : ?>
+			    					Саратов
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 13) : ?>
+			    					Ульяновск
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 14) : ?>
+			    					Ярославль
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 15) : ?>
+			    					Другой
 			    				<?php endif; ?>
 			    			</td>
 			    			<td><?php echo $data->phone;?></td>

@@ -30,8 +30,6 @@
 
 <div class="row">
     <div class="col-md-8">
-
-
         <div class="card mb-3">
             <div class="card-header">
                 Паспорт (основной разворот)
@@ -40,14 +38,28 @@
                <img src="<?php echo base_url('docs/'.$rent->pass1);?>" class="w-100">
             </div>
         </div>
-        <div class="card mb-3">
-            <div class="card-header">
-                Паспорт (страница с пропиской)
+        <?php if ($rent->citizenship == 1) : ?>
+            <div class="card mb-3">
+                <div class="card-header">
+                    Паспорт (страница с пропиской)
+                </div>
+                <div class="card-body p-0">
+                    <img src="<?php echo base_url('docs/'.$rent->pass2);?>" class="w-100">
+                </div>
             </div>
-            <div class="card-body p-0">
-                <img src="<?php echo base_url('docs/'.$rent->pass2);?>" class="w-100">
-            </div>
-        </div>
+        <?php endif; ?>
+        <?php if ($rent->citizenship != 1) : ?>
+            <?php if ($rent->pass2) : ?>
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Паспорт с обратной стороны (если пластик)
+                    </div>
+                    <div class="card-body p-0">
+                        <img src="<?php echo base_url('docs/'.$rent->pass2);?>" class="w-100">
+                    </div>
+                </div>
+            <?php endif; ?>
+        <?php endif; ?>
         <div class="card mb-3">
             <div class="card-header">
                 Водительское удостоверение (внешняя сторона)

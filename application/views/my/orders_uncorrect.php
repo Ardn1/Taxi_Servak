@@ -50,12 +50,52 @@
                             <td><?php echo $data->created;?></td>
                             <td><?php echo $data->name;?></td>
                             <td>
-                                <?php if ($data->cityjob == 1) : ?>
-                                    Москва и МО
-                                <?php else : ?>
-                                    Московская область
-                                <?php endif; ?>
-                            </td>
+			    				<?php if ($data->cityjob == 1) : ?>
+			    					Москва и МО
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 2) : ?>
+			    					Московская область
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 3) : ?>
+			    					Санкт-Петербург
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 4) : ?>
+			    					Екатеринбург
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 5) : ?>
+			    					Казань
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 6) : ?>
+			    					Краснодар
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 7) : ?>
+			    					Красноярск
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 8) : ?>
+			    					Новосибирск
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 9) : ?>
+			    					Омск
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 10) : ?>
+			    					Пермь
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 11) : ?>
+			    					Самара
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 12) : ?>
+			    					Саратов
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 13) : ?>
+			    					Ульяновск
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 14) : ?>
+			    					Ярославль
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 15) : ?>
+			    					Другой
+			    				<?php endif; ?>
+			    			</td>
                             <td><?php echo $data->phone;?></td>
                             <td class="text-right">
                                 <a href="<?php echo base_url('my/orders/edit/'.$data->id).'/5';?>" class="btn btn-outline-secondary btn-sm">Смотреть</a>
