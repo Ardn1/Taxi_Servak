@@ -33,3 +33,6 @@ ERROR - 2020-09-23 18:29:58 --> Severity: Notice --> Trying to get property of n
 ERROR - 2020-09-23 18:29:58 --> Severity: Notice --> Undefined variable: data C:\xampp\htdocs\crm\application\views\my\orders_edit.php 336
 ERROR - 2020-09-23 18:29:58 --> Severity: Notice --> Trying to get property of non-object C:\xampp\htdocs\crm\application\views\my\orders_edit.php 336
 ERROR - 2020-09-23 18:29:58 --> 404 Page Not Found: Docs/index
+ERROR - 2020-09-23 18:30:55 --> 404 Page Not Found: Docs/index
+ERROR - 2020-09-23 18:31:29 --> 404 Page Not Found: Docs/index
+ERROR - 2020-09-23 18:31:42 --> 404 Page Not Found: Docs/index

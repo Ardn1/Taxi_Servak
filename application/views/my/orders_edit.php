@@ -339,11 +339,13 @@
 			    				<?php endif; ?>
                 </div>
             </div>
+            <br>
             <div class="row">
                 <div class="col-md-1">
                     <span data-feather="map-pin" class="text-success"></span>
                 </div>
                 <div class="col-md-11">
+                                 
                     <p class="mb-1"><strong>Гражданство</strong></p>
                 </div>
                 <div class="col-md-1">
