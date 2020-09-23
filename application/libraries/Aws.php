@@ -4,7 +4,7 @@ include("./vendor/autoload.php");
 
 use Aws\S3\S3Client;
 
-class Aws
+class aws
 {
 
     public $S3;
