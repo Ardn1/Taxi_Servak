@@ -160,7 +160,7 @@
                     </div>
                 </div>
             <?php endif; ?>
-        <?php if ($order->registration != 1) : ?>
+        <?php endif; ?>
 
         <div class="card mb-3">
             <div class="card-header">
@@ -291,49 +291,49 @@
 
                 </div>
                 <div class="col-md-11">
-                                <?php if ($data->cityjob == 1) : ?>
+                                <?php if ($order->cityjob == 1) : ?>
 			    					Москва и МО
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 2) : ?>
+                                <?php if ($order->cityjob == 2) : ?>
 			    					Московская область
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 3) : ?>
+                                <?php if ($order->cityjob == 3) : ?>
 			    					Санкт-Петербург
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 4) : ?>
+                                <?php if ($order->cityjob == 4) : ?>
 			    					Екатеринбург
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 5) : ?>
+                                <?php if ($order->cityjob == 5) : ?>
 			    					Казань
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 6) : ?>
+                                <?php if ($order->cityjob == 6) : ?>
 			    					Краснодар
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 7) : ?>
+                                <?php if ($order->cityjob == 7) : ?>
 			    					Красноярск
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 8) : ?>
+                                <?php if ($order->cityjob == 8) : ?>
 			    					Новосибирск
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 9) : ?>
+                                <?php if ($order->cityjob == 9) : ?>
 			    					Омск
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 10) : ?>
+                                <?php if ($order->cityjob == 10) : ?>
 			    					Пермь
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 11) : ?>
+                                <?php if ($order->cityjob == 11) : ?>
 			    					Самара
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 12) : ?>
+                                <?php if ($order->cityjob == 12) : ?>
 			    					Саратов
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 13) : ?>
+                                <?php if ($order->cityjob == 13) : ?>
 			    					Ульяновск
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 14) : ?>
+                                <?php if ($order->cityjob == 14) : ?>
 			    					Ярославль
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 15) : ?>
+                                <?php if ($order->cityjob == 15) : ?>
 			    					Другой
 			    				<?php endif; ?>
                 </div>
@@ -351,13 +351,13 @@
                 <div class="col-md-11">
                     <?php if ($order->registration == 1) : ?>
                         <p>Россия</p>
-                    <?php else : ?>
+                    <?php endif ; ?>
                     <?php if ($order->registration == 2) : ?>
                         <p>СНГ</p>
-                    <?php else : ?>
+                    <?php endif ; ?>
                     <?php if ($order->registration == 3) : ?>
                         <p>Другое</p>
-                    <?php else : ?>
+                    <?php endif ; ?>
                 </div>
             </div>
         </div>
