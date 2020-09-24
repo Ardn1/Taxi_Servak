@@ -171,8 +171,8 @@ class Rent extends Admin_Controller
         ///
         $propertyes = array("vu1", "vu2", "pass1", "pass2");
         foreach ($propertyes as &$value) {
-            if(strpos($order->{$value},"m:")!==false)
-                $this->zamena($order,$value);
+            if(strpos($rent->{$value},"m:")!==false)
+                $this->zamena($rent,$value);
         }
         ///
 

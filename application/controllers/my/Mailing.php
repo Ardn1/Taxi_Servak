@@ -23,8 +23,8 @@ class Mailing extends Admin_Controller
         $total_records = $this->content_model->get_total_mailingphones();
 
         // load config file
-        $this->config->load('pagination', TRUE);
-        $settings_pagination = $this->config->item('pagination');
+        $this->config->load('pagination2', TRUE);
+        $settings_pagination = $this->config->item('pagination2');
         $settings_pagination['total_rows'] = $this->content_model->get_total_mailingphones();
         $settings_pagination['base_url'] = base_url() . 'my/mailing/index';
 

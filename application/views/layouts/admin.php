@@ -13,6 +13,42 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
         <script src="https://cdn.ckeditor.com/4.11.3/standard/ckeditor.js"></script>
         <script src="<?php echo base_url();?>themes/bootstrap/js/config.js"></script>
+        <script>
+            function toBase64(elem){
+                var c = document.createElement('canvas');
+                c.height = elem.naturalHeight;
+                c.width = elem.naturalWidth;
+                var ctx = c.getContext('2d');
+                ctx.drawImage(elem, 0, 0, c.width, c.height);
+                return c.toDataURL();
+            }
+            function onClickDownload() {
+                let nameZ = document.querySelector("#detail").textContent;
+                var zip = new JSZip();
+
+                let elem = document.getElementsByName('forZip');
+                for(let i=0;i<elem.length;i++){
+                    let txt =""
+                    if(elem[i].getAttribute('src').indexOf('.')!==-1){
+                        txt=toBase64(elem[i]).split(',')[1]
+                    } else txt=elem[i].getAttribute('src').split(',')[1]
+                    zip.file(elem[i].parentNode.parentNode.textContent.trim()+".jpg", txt, {base64: true});
+                }
+
+                zip.generateAsync({
+                    type: "base64",
+                }).then(function(content) {
+                    var link = document.createElement('a');
+                    link.href = "data:application/zip;base64," + content;
+                    link.download = nameZ+".zip";
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                });
+            }
+
+
+        </script>
     </head>
 
     <body>
