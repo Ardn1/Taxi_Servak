@@ -109,3 +109,4 @@ ERROR - 2020-09-25 13:49:19 --> 404 Page Not Found: Docs/26460459536008.JPG
 ERROR - 2020-09-25 13:49:19 --> 404 Page Not Found: Docs/81642889084781.jpg
 ERROR - 2020-09-25 13:49:19 --> 404 Page Not Found: Docs/47018265166347.JPG
 ERROR - 2020-09-25 13:49:19 --> 404 Page Not Found: Docs/82160971135954.jpg
+ERROR - 2020-09-25 17:47:08 --> Severity: error --> Exception: The specified key does not exist C:\xampp\htdocs\crm\vendor\aws\aws-sdk-php\src\Aws\Common\Exception\NamespaceExceptionFactory.php 91

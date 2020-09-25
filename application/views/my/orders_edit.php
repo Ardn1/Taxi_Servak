@@ -31,7 +31,7 @@
                     <?php if ($this->user->ismanager == 0): ?>
                         <a class="dropdown-item text-danger" href="<?php echo base_url('my/orders/delete_order/' . $order->id) . '/' . $from; ?>">Удалить</a>
                     <?php endif; ?>
-                    <a class="dropdown-item" onclick="onClickDownload()">Скачать архив</a>
+                    <a class="dropdown-item" style="cursor: pointer; " onclick="onClickDownload()">Скачать архив</a>
                 </div>
             </div>
         <?php else : ?>
@@ -45,7 +45,7 @@
                     <?php if ($this->user->ismanager == 0): ?>
                         <a href="<?php echo base_url('my/orders/delete_order/' . $order->id) . '/' . $from; ?>" class="dropdown-item text-danger">Удалить</a>
                     <?php endif; ?>
-                    <a class="dropdown-item" onclick="onClickDownload()">Скачать архив</a>
+                    <a class="dropdown-item movelink" onclick="onClickDownload()">Скачать архив</a>
                 </div>
             </div>
         <?php endif; ?>
