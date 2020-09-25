@@ -16,24 +16,20 @@
                     Обработать
                 </button>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                    <?php if ($order->status == 0 || $order->status == 5) : ?>
+                        <a class="dropdown-item" href="<?php echo base_url('my/orders/accept/' . $order->id . '/' . $from); ?>">Принять</a>
+                    <?php endif; ?>
                     <?php if (!$order->status) : ?>
-                        <a class="dropdown-item"
-                           href="<?php echo base_url('my/orders/accept/' . $order->id . '/' . $from); ?>">Принять</a>
-                        <a class="dropdown-item"
-                           href="<?php echo base_url('my/orders/uncorrectset/' . $order->id . '/' . $from); ?>">Исправить фото</a>
+                        <a class="dropdown-item" href="<?php echo base_url('my/orders/uncorrectset/' . $order->id . '/' . $from); ?>">Исправить фото</a>
                     <?php endif; ?>
                     <?php if ($order->status != 3) : ?>
-                        <a class="dropdown-item"
-                           href="<?php echo base_url('my/orders/reject/' . $order->id . '/' . $from); ?>">Отказать</a>
+                        <a class="dropdown-item" href="<?php echo base_url('my/orders/reject/' . $order->id . '/' . $from); ?>">Отказать</a>
                     <?php endif; ?>
                     <?php if ($order->status == 2) : ?>
-                        <a class="dropdown-item"
-                           href="<?php echo base_url('my/orders/created/' . $order->id) . '/' . $from; ?>">Создать
-                            аккаунт</a>
+                        <a class="dropdown-item" href="<?php echo base_url('my/orders/created/' . $order->id) . '/' . $from; ?>">Создать аккаунт</a>
                     <?php endif; ?>
                     <?php if ($this->user->ismanager == 0): ?>
-                        <a class="dropdown-item text-danger"
-                           href="<?php echo base_url('my/orders/delete_order/' . $order->id) . '/' . $from; ?>">Удалить</a>
+                        <a class="dropdown-item text-danger" href="<?php echo base_url('my/orders/delete_order/' . $order->id) . '/' . $from; ?>">Удалить</a>
                     <?php endif; ?>
                     <a class="dropdown-item" onclick="onClickDownload()">Скачать архив</a>
                 </div>

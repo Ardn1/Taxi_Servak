@@ -13,17 +13,15 @@
                     Обработать
                 </button>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                    <?php if (!$rent->status) : ?>
+                    <?php if ($rent->status == 0 || $rent->status == 3) : ?>
                         <a class="dropdown-item"
-                           href="<?php echo base_url('my/rent/success/' . $rent->id . '/' . $from); ?>">Направить на
-                            аренду</a>
+                           href="<?php echo base_url('my/rent/success/' . $rent->id . '/' . $from); ?>">Направить на аренду</a>
                     <?php endif; ?>
-                    <?php if (!$rent->status) : ?>
+                    <?php if ($rent->status == 0 || $rent->status == 2): ?>
                         <a class="dropdown-item"
-                           href="<?php echo base_url('my/rent/uncorrectset/' . $rent->id . '/' . $from); ?>">Дополнить
-                            фото</a>
+                           href="<?php echo base_url('my/rent/uncorrectset/' . $rent->id . '/' . $from); ?>">Исправить фото</a>
                     <?php endif; ?>
-                    <?php if ($rent->status != 2) : ?>
+                    <?php if ($rent->status == 0): ?>
                         <a class="dropdown-item"
                            href="<?php echo base_url('my/rent/reject/' . $rent->id . '/' . $from); ?>">Отказать</a>
                     <?php endif; ?>
@@ -141,6 +139,8 @@
                         <p class="text-success">Принятая</p>
                     <?php elseif ($rent->status == 2) : ?>
                         <p class="text-danger">Отказаная</p>
+                    <?php elseif ($rent->status == 3) : ?>
+                        <p class="text-danger">Исправить фото</p>
                     <?php endif; ?>
                 </div>
             </div>
@@ -184,6 +184,24 @@
                 </div>
                 <div class="col-md-11">
                     <p>+<?php echo $rent->phone; ?></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <span data-feather="smartphone" class="text-success"></span>
+                </div>
+                <div class="col-md-11">
+                    <p class="mb-1"><strong>Источник</strong></p>
+                </div>
+                <div class="col-md-1">
+
+                </div>
+                <div class="col-md-11">
+                                <?php if ($rent->api == 0) : ?>
+			    					APP 1
+			    				<?php elseif ($rent->api == 1) : ?>
+									APP 2
+			    				<?php endif; ?>
                 </div>
             </div>
         </div>

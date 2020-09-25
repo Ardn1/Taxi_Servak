@@ -141,28 +141,13 @@
 			    			<td>+<?php echo $data->phone;?></td>
 							<td>
 								<?php if ($data->api == 0) : ?>
-			    					API 1
+			    					APP 1
 			    				<?php elseif ($data->api == 1) : ?>
-									API 2
+									APP 2
 			    				<?php endif; ?>
 							</td>
-			    			<td class="text-right">
-			    				<div class="dropdown">
-								  	<button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								    	Обработать
-								  	</button>
-								  	<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-								  		<?php if (!$data->status) : ?>
-                                            <a class="dropdown-item" href="<?php echo base_url('my/rent/edit/'.$data->id).'/1';?>">Посмотреть заявку</a>
-											<a class="dropdown-item" href="<?php echo base_url('my/rent/success/'.$data->id);?>">Направить на аренду</a>
-											<a class="dropdown-item" href="<?php echo base_url('my/rent/uncorrectset/'.$data->id);?>">Исправить фото</a>
-								    		<a class="dropdown-item" href="<?php echo base_url('my/rent/reject/'.$data->id);?>">Отказать</a>
-								    	<?php endif; ?>
-                                        <?php if ($this->user->ismanager==0): ?>
-                                            <a class="dropdown-item text-danger" href="<?php echo base_url('my/rent/delete/'.$data->id.'/1');?>">Удалить</a>
-                                        <?php endif;?>
-								  	</div>
-								</div>
+							<td class="text-right">
+			    				<a href="<?php echo base_url('my/rent/edit/'.$data->id).'/1';?>" class="btn btn-outline-secondary btn-sm">Смотреть</a>
 			    			</td>
 			    		</tr>
 			    		<?php endforeach; ?>

@@ -72,8 +72,8 @@ class Contact extends MY_Controller
     {
         header('Access-Control-Allow-Origin: *');
 
-        $this->form_validation->set_rules('citizenship', "Гражданство", 'trim|required|numeric');
-        $this->form_validation->set_rules('city', "Город", 'trim|required|numeric');
+        $this->form_validation->set_rules('citizenship', "Гражданство", 'trim|required|numeric|greater_than[0]');
+        $this->form_validation->set_rules('city', "Город", 'trim|required|numeric|greater_than[0]');
         $this->form_validation->set_rules('age', "Возраст", 'trim|required|numeric|greater_than[20]');
         $this->form_validation->set_rules('first_name', "Имя", 'trim|required|max_length[150]|min_length[3]');
         $this->form_validation->set_rules('last_name', "Фамилия", 'trim|required|max_length[150]|min_length[3]');
@@ -146,10 +146,10 @@ class Contact extends MY_Controller
     {
         header('Access-Control-Allow-Origin: *');
 
-        $this->form_validation->set_rules('jobcity', "Город работы", 'trim|required|in_list[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]');
+        $this->form_validation->set_rules('jobcity', "Город работы", 'trim|required|greater_than[0]'); //in_list[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
         $this->form_validation->set_rules('name', "Имя", 'trim|required|max_length[150]|min_length[3]');
         $this->form_validation->set_rules('phone', "Номер телефона", 'trim|required|numeric|max_length[11]|min_length[11]');
-        $this->form_validation->set_rules('registration', "Гражданство", 'trim|required|in_list[1,2,3]');
+        $this->form_validation->set_rules('registration', "Гражданство", 'trim|required|greater_than[0]');
 
         if ($this->form_validation->run() == false) {
 

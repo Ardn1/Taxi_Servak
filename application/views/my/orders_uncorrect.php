@@ -28,6 +28,7 @@
                                     Обработать
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" onclick = "AcceptAll()">Принять</a>
                                     <a class="dropdown-item" onclick = "DenyAll()">Отказать</a>
                                     <?php if ($this->user->ismanager==0): ?>
                                         <a class="dropdown-item text-danger" onclick = "RemoveAll()">Удалить</a>
