@@ -268,26 +268,19 @@ class Orders extends Admin_Controller
 
         }
 
-        if (!$order->status) {
+        $sms = $this->sms->send_sms($order->phone, 2);
 
-            $sms = $this->sms->send_sms($order->phone, 2);
+        $this->content_model->update_order($id, array(
+            "status" => 2
+            )
+        );
 
-            $this->content_model->update_order($id, array(
-                "status" => 2
-                )
-            );
-
-            $this->session->set_flashdata('success', 'Статус заявки успешно изменен!<br>Статус SMS: '.$sms);
-            if($isRed==0)
-                redirect(site_url('my/orders/edit/'.$id));
-            else{
-                $this->redirecter($isRed);
-            }
-        } else {
-            redirect(site_url('my/orders'));
-
+        $this->session->set_flashdata('success', 'Статус заявки успешно изменен!<br>Статус SMS: '.$sms);
+        if($isRed==0)
+            redirect(site_url('my/orders/edit/'.$id));
+        else{
+            $this->redirecter($isRed);
         }
-
     }
 
     public function uncorrectset($id, $isRed = 0)
@@ -306,27 +299,20 @@ class Orders extends Admin_Controller
 
         }
 
-        if (!$order->status) {
+        $sms = $this->sms->send_sms($order->phone, 9);
 
-            $sms = $this->sms->send_sms($order->phone, 9);
+        $this->content_model->update_order($id, array(
+                "status" => 5
+            )
+        );
 
-            $this->content_model->update_order($id, array(
-                    "status" => 5
-                )
-            );
+        $this->session->set_flashdata('success', 'Статус заявки успешно изменен!<br>Статус SMS: '.$sms);
 
-            $this->session->set_flashdata('success', 'Статус заявки успешно изменен!<br>Статус SMS: '.$sms);
-            if($isRed==0)
-                redirect(site_url('my/orders/edit/'.$id));
-            else{
-                $this->redirecter($isRed);
-            }
-
-        } else {
-            redirect(site_url('my/orders'));
-
+        if($isRed==0)
+            redirect(site_url('my/orders/edit/'.$id));
+        else{
+            $this->redirecter($isRed);
         }
-
     }
 
     public function reject($id,$isRed=0)
@@ -377,38 +363,30 @@ class Orders extends Admin_Controller
             redirect(site_url('my/orders'));
         }
 
-        if ($order->status == 2) {
+        $sms_template = $this->settings_model->get_template(3);
 
-            $sms_template = $this->settings_model->get_template(3);
+        if ($sms_template->status) {
+            $messages = $sms_template->message;
+            $sms_variables = array('[NAME]', '[PARKNAME]', '[PHONE]');
+            
+            $parkname = $this->content_model->get_taxoparkOne($order->cityjob)->name;
 
-            if ($sms_template->status) {
-                $messages = $sms_template->message;
-                $sms_variables = array('[NAME]', '[PARKNAME]', '[PHONE]');
-                
-                $parkname = $this->content_model->get_taxoparkOne($order->cityjob)->name;
+            $code_variable = array($manager->name, $parkname, $manager->phone);
+            $replace = str_replace($sms_variables, $code_variable, $messages);
 
-                $code_variable = array($manager->name, $parkname, $manager->phone);
-                $replace = str_replace($sms_variables, $code_variable, $messages);
+            $this->sms->send_sms_text($order->phone, $replace);
+        }
 
-                $this->sms->send_sms_text($order->phone, $replace);
-            }
+        $this->content_model->update_order($id, array(
+            "status" => 3
+            )
+        );
 
-            $this->content_model->update_order($id, array(
-                "status" => 3
-                )
-            );
-
-            $this->session->set_flashdata('success', 'Статус заявки успешно изменен!<br>Статус SMS: '.$sms);
-            if($isRed==0)
-                redirect(site_url('my/orders/edit/'.$id));
-            else{
-                $this->redirecter($isRed);
-            }
-
-        } else {
-
-            redirect(site_url('my/orders'));
-
+        $this->session->set_flashdata('success', 'Статус заявки успешно изменен!<br>Статус SMS: '.$sms);
+        if($isRed==0)
+            redirect(site_url('my/orders/edit/'.$id));
+        else{
+            $this->redirecter($isRed);
         }
 
     }

@@ -29,7 +29,7 @@
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                                         <?php if ($this->user->ismanager==0): ?>
-                                            <a class="dropdown-item text-danger" onclick = "RemoveAll()">Удалить</a>
+                                            <a class="dropdown-item text-danger" onclick = "RemoveAll()" style="cursor: pointer">Удалить</a>
                                         <?php endif;?>
                                     </div>
                                 </div>

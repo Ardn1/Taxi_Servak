@@ -31,7 +31,7 @@
                     <?php if ($this->user->ismanager == 0): ?>
                         <a class="dropdown-item text-danger" href="<?php echo base_url('my/orders/delete_order/' . $order->id) . '/' . $from; ?>">Удалить</a>
                     <?php endif; ?>
-                    <a class="dropdown-item" onclick="onClickDownload()">Скачать архив</a>
+                    <a class="dropdown-item" onclick="onClickDownload()" style="cursor: pointer">Скачать архив</a>
                 </div>
             </div>
         <?php else : ?>
@@ -45,7 +45,7 @@
                     <?php if ($this->user->ismanager == 0): ?>
                         <a href="<?php echo base_url('my/orders/delete_order/' . $order->id) . '/' . $from; ?>" class="dropdown-item text-danger">Удалить</a>
                     <?php endif; ?>
-                    <a class="dropdown-item" onclick="onClickDownload()">Скачать архив</a>
+                    <a class="dropdown-item" onclick="onClickDownload()" style="cursor: pointer">Скачать архив</a>
                 </div>
             </div>
         <?php endif; ?>
@@ -136,33 +136,6 @@
             <?php endif; ?>
         <?php endif; ?>
 
-        <?php if ($order->registration == 2 || false) : ?>
-            <div class="card mb-3">
-                <div class="card-header">
-                    Регистрация (бланк 1)
-                </div>
-                <div class="card-body p-0">
-                    <img  src="<?php
-                    if (strpos($order->doc_reg_1, '.') !== false)
-                        echo base_url('docs/' . $order->doc_reg_1);
-                    else echo 'data:image/jpg;base64,'.$order->doc_reg_1
-                    ?>" class="w-100" name="forZip">
-                </div>
-            </div>
-
-            <div class="card mb-3">
-                <div class="card-header">
-                    Регистрация (бланк 2)
-                </div>
-                <div class="card-body p-0">
-                    <img  src="<?php
-                    if (strpos($order->doc_reg_2, '.') !== false)
-                        echo base_url('docs/' . $order->doc_reg_2);
-                    else echo 'data:image/jpg;base64,'.$order->doc_reg_2
-                    ?>" class="w-100" name="forZip">
-                </div>
-            </div>
-        <?php endif; ?>
         <?php if ($order->cityjob == 1) : ?>
             <?php if ($order->doc_license_1) : ?>
                 <div class="card mb-3">
