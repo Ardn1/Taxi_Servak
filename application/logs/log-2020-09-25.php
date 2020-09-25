@@ -109,4 +109,22 @@ ERROR - 2020-09-25 13:49:19 --> 404 Page Not Found: Docs/26460459536008.JPG
 ERROR - 2020-09-25 13:49:19 --> 404 Page Not Found: Docs/81642889084781.jpg
 ERROR - 2020-09-25 13:49:19 --> 404 Page Not Found: Docs/47018265166347.JPG
 ERROR - 2020-09-25 13:49:19 --> 404 Page Not Found: Docs/82160971135954.jpg
-ERROR - 2020-09-25 17:47:08 --> Severity: error --> Exception: The specified key does not exist C:\xampp\htdocs\crm\vendor\aws\aws-sdk-php\src\Aws\Common\Exception\NamespaceExceptionFactory.php 91
+ERROR - 2020-09-25 17:10:56 --> 404 Page Not Found: Docs/155741539.jpg
+ERROR - 2020-09-25 17:10:56 --> 404 Page Not Found: Docs/112974108.jpg
+ERROR - 2020-09-25 17:10:56 --> 404 Page Not Found: Docs/182948314.jpg
+ERROR - 2020-09-25 17:10:56 --> 404 Page Not Found: Docs/83667582.jpg
+ERROR - 2020-09-25 17:10:56 --> 404 Page Not Found: Docs/129577140.jpg
+ERROR - 2020-09-25 17:10:56 --> 404 Page Not Found: Docs/54938487.jpg
+ERROR - 2020-09-25 17:57:25 --> 404 Page Not Found: Docs/155741539.jpg
+ERROR - 2020-09-25 17:57:25 --> 404 Page Not Found: Docs/112974108.jpg
+ERROR - 2020-09-25 17:57:25 --> 404 Page Not Found: Docs/129577140.jpg
+ERROR - 2020-09-25 17:57:25 --> 404 Page Not Found: Docs/54938487.jpg
+ERROR - 2020-09-25 17:57:25 --> 404 Page Not Found: Docs/182948314.jpg
+ERROR - 2020-09-25 17:57:25 --> 404 Page Not Found: Docs/83667582.jpg
+ERROR - 2020-09-25 17:59:56 --> 404 Page Not Found: Docs/155741539.jpg
+ERROR - 2020-09-25 17:59:56 --> 404 Page Not Found: Docs/112974108.jpg
+ERROR - 2020-09-25 17:59:56 --> 404 Page Not Found: Docs/54938487.jpg
+ERROR - 2020-09-25 17:59:56 --> 404 Page Not Found: Docs/129577140.jpg
+ERROR - 2020-09-25 17:59:56 --> 404 Page Not Found: Docs/83667582.jpg
+ERROR - 2020-09-25 17:59:56 --> 404 Page Not Found: Docs/182948314.jpg
+ERROR - 2020-09-25 18:15:21 --> Severity: Error --> Call to undefined method Settings_model::update_user() C:\xampp\htdocs\crm\application\controllers\my\Profile.php 64

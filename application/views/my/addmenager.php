@@ -118,6 +118,7 @@
     var baseurl = "<?php echo base_url('my/addmenager/update_password/');?>"
     var baseurlediting = "<?php echo base_url('my/addmenager/update_editing/');?>"
     var baseurlsave = "<?php echo base_url('my/addmenager/update_all/');?>"
+    
     async function setAllChanges(obj) {
         let idThis = obj.getAttribute("forID");
         let parol = document.getElementById("newparol"+idThis);

@@ -132,7 +132,7 @@ class Contact extends MY_Controller
 
             if ($email_template->status) {
                 $messages = $email_template->message;
-                $email_variables = array('[NAME]', '[AGE]', '[CITY]', '[PHONE]',);
+                $email_variables = array('[NAME]', '[AGE]', '[CITY]', '[PHONE]');
                 $code_variable = array($first_name, $age, $city, $phone);
                 $replace = str_replace($email_variables, $code_variable, $messages);
                 $this->sms->send_email($this->settings->email, $email_template->name, $replace);
@@ -1066,8 +1066,8 @@ class Contact extends MY_Controller
         if ($email_template->status) {
 
             $messages = $email_template->message;
-            $email_variables = array('[NAME]');
-            $code_variable = array($order->name);
+            $email_variables = array('[NAME]', '[PHONE]');
+            $code_variable = array($order->name, $order->phone);
             $replace = str_replace($email_variables, $code_variable, $messages);
             $this->sms->send_email($this->settings->email, $email_template->name, $replace);
 

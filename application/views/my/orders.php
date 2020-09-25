@@ -28,11 +28,11 @@
                                         Обработать
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" onclick = "AcceptAll()">Принять</a>
-                                        <a class="dropdown-item" onclick = "UncorrectAll()">Исправить фото</a>
-                                        <a class="dropdown-item" onclick = "DenyAll()">Отказать</a>
+                                        <a class="dropdown-item" onclick = "AcceptAll()" style="cursor: pointer">Принять</a>
+                                        <a class="dropdown-item" onclick = "UncorrectAll()" style="cursor: pointer">Исправить фото</a>
+                                        <a class="dropdown-item" onclick = "DenyAll()" style="cursor: pointer">Отказать</a>
                                         <?php if ($this->user->ismanager==0): ?>
-                                            <a class="dropdown-item text-danger" onclick = "RemoveAll()">Удалить</a>
+                                            <a class="dropdown-item text-danger" onclick = "RemoveAll()" style="cursor: pointer">Удалить</a>
                                         <?php endif;?>
 
                                     </div>

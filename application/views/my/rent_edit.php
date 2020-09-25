@@ -29,7 +29,7 @@
                         <a class="dropdown-item text-danger"
                            href="<?php echo base_url('my/rent/delete/' . $rent->id . '/' . $from); ?>">Удалить</a>
                     <?php endif; ?>
-                    <a class="dropdown-item" onclick="onClickDownload()" >Скачать архив</a>
+                    <a style="cursor: pointer" class="dropdown-item pointer" onclick="onClickDownload()" style="cursor: pointer">Скачать архив</a>
                 </div>
             </div>
         <?php else : ?>
@@ -40,9 +40,8 @@
                     Обработать
                 </button>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                    <a href="<?php echo base_url('my/orders/delete_rent/' . $rent->id . '/' . $from); ?>"
-                       class="btn btn-outline-danger btn-sm">Удалить</a>
-                    <a class="dropdown-item" onclick="onClickDownload()">Скачать архив</a>
+                    <a href="<?php echo base_url('my/orders/delete_rent/' . $rent->id . '/' . $from); ?>" class="btn btn-outline-danger btn-sm">Удалить</a>
+                    <a class="dropdown-item" onclick="onClickDownload()" style="cursor: pointer">Скачать архив</a>
                 </div>
             </div>
         <?php endif; ?>

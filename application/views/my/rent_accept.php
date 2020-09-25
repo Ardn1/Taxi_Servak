@@ -27,7 +27,7 @@
 										</button>
 										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                                             <?php if ($this->user->ismanager==0): ?>
-											<a class="dropdown-item text-danger" onclick = "RemoveAll()">Удалить</a>
+											<a class="dropdown-item text-danger" onclick = "RemoveAll()" style="cursor: pointer">Удалить</a>
                                             <?php endif;?>
 											
 									</div>
@@ -196,57 +196,57 @@
 		}
 	}
 
-	function RentAll() {  
+	async function RentAll() {  
 		for(var i = 0; i < all.length; i++) 
 		{ 
 			if (all[i].checked == true)
-				rentOne(all[i].getAttribute("IDAPI"));
+				await rentOne(all[i].getAttribute("IDAPI"));
 		}
 		location.reload();
 	}
-	function DenyAll() {  
+	async function DenyAll() {  
 		for(var i = 0; i < all.length; i++) 
 		{ 
 			if (all[i].checked == true)
-				denyOne(all[i].getAttribute("IDAPI"));
+				await denyOne(all[i].getAttribute("IDAPI"));
 		}
 		location.reload();
 	}
-	function RemoveAll() {  
+	async function RemoveAll() {  
 		for(var i = 0; i < all.length; i++) 
 		{ 
 			if (all[i].checked == true)
-				removeOne(all[i].getAttribute("IDAPI"));
+				await removeOne(all[i].getAttribute("IDAPI"));
 		}
 		location.reload();
 	}
-	function UncorrectAll() {  
+	async function UncorrectAll() {  
 		for(var i = 0; i < all.length; i++) 
 		{ 
 			if (all[i].checked == true)
-				uncorrectOne(all[i].getAttribute("IDAPI"));
+				await uncorrectOne(all[i].getAttribute("IDAPI"));
 		}
 		location.reload();
 	}
 
-	function rentOne(id)
+	async function rentOne(id)
 	{
-		$.get(urlSuccsess + id, {
+		await $.get(urlSuccsess + id + '/-1', {
 			}, onAjaxSuccess);
 	}
-	function denyOne(id)
+	async function denyOne(id)
 	{
-		$.get(urlReject + id, {
+		await $.get(urlReject + id + '/-1', {
 			}, onAjaxSuccess);
 	}
-	function removeOne(id)
+	async function removeOne(id)
 	{
-		$.get(urlDelete + id + '/0', {
+		await $.get(urlDelete + id + '/-1', {
 			}, onAjaxSuccess);
 	}
-	function uncorrectOne(id)
+	async function uncorrectOne(id)
 	{
-		$.get(urlUncorrect + id, {
+		await $.get(urlUncorrect + id + '/-1', {
 			}, onAjaxSuccess);
 	}
 

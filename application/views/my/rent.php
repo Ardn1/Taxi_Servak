@@ -26,11 +26,11 @@
 								    	Обработать
 								  	</button>
 								  	<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-								    	<a class="dropdown-item" onclick = "RentAll()">Направить на аренду</a>
-										<a class="dropdown-item" onclick = "DenyAll()">Отказать</a>
-										<a class="dropdown-item" onclick = "UncorrectAll()">Исправить фото</a>
+								    	<a class="dropdown-item" onclick = "RentAll()" style="cursor: pointer">Направить на аренду</a>
+										<a class="dropdown-item" onclick = "DenyAll()" style="cursor: pointer">Отказать</a>
+										<a class="dropdown-item" onclick = "UncorrectAll()" style="cursor: pointer">Исправить фото</a>
                                         <?php if ($this->user->ismanager==0): ?>
-                                            <a class="dropdown-item text-danger" onclick = "RemoveAll()">Удалить</a>
+                                            <a class="dropdown-item text-danger" onclick = "RemoveAll()" style="cursor: pointer">Удалить</a>
                                         <?php endif;?>
 										
 								</div>
@@ -235,22 +235,22 @@
 
 	async function rentOne(id)
 	{
-		await $.get(urlSuccsess + id + '/1', {
+		await $.get(urlSuccsess + id + '/-1', {
 			}, onAjaxSuccess);
 	}
 	async function denyOne(id)
 	{
-		await $.get(urlReject + id + '/1', {
+		await $.get(urlReject + id + '/-1', {
 			}, onAjaxSuccess);
 	}
 	async function removeOne(id)
 	{
-		await $.get(urlDelete + id + '/0', {
+		await $.get(urlDelete + id + '/-1', {
 			}, onAjaxSuccess);
 	}
 	async function uncorrectOne(id)
 	{
-		await $.get(urlUncorrect + id + '/1', {
+		await $.get(urlUncorrect + id + '/-1', {
 			}, onAjaxSuccess);
 	}
 

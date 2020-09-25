@@ -35,3 +35,36 @@
             <?php echo form_close(); ?>
         </div>
     </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <?php echo form_open(site_url("my/profile/update_profileINFO")) ?>
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Имя</label>
+                                <input type="name" class="form-control form-control-sm" name="name" value="<?php echo $this->user->name; ?>">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Телефон</label>
+                                <input type="phone" class="form-control form-control-sm" name="phone" value="<?php echo $this->user->phone; ?>">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-right">
+                    <button type="submit" class="btn btn-primary btn-sm">Сохранить</button>
+                </div>
+            </div>
+            <?php echo form_close(); ?>
+        </div>
+    </div>
+
+
+
+    

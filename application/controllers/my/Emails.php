@@ -28,6 +28,9 @@ class Emails extends Admin_Controller
 		$this->form_validation->set_rules('sender', 'Email отправителя', 'trim|required|max_length[60]|valid_email');
 		$this->form_validation->set_rules('port', 'SMTP порт', 'trim|numeric');
 
+		$this->form_validation->set_rules('email', 'Телефон администратора', 'trim|required|max_length[60]');
+		$this->form_validation->set_rules('sender', 'Имя отправителя', 'trim|required|max_length[60]');
+
 		if ($this->form_validation->run() == true) {
 
 			$method = $this->input->post("method", true);

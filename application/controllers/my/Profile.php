@@ -49,4 +49,33 @@ class Profile extends Admin_Controller
 		}
 	}
 
+	
+	
+	public function update_profileINFO()
+	{
+		$this->form_validation->set_rules('phone', 'Телефон администратора', 'trim|required|max_length[60]');
+		$this->form_validation->set_rules('name', 'Имя отправителя', 'trim|required|max_length[60]');
+
+		if ($this->form_validation->run() == true) {
+
+			$phone = $this->input->post("phone", true);
+			$name = $this->input->post("name", true);
+
+			$this->users_model->update_user(1, array(
+                "phone"  		=>  $phone,
+                "name"  		=>  $name
+                )
+            );
+
+            $this->session->set_flashdata('success', "Успешно обновлено!");
+			redirect(site_url('my/profile'));
+
+		} else {
+
+			$this->session->set_flashdata('error', validation_errors());
+			redirect(site_url('my/profile'));
+
+		}
+	}
+
 }

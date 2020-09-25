@@ -210,11 +210,10 @@ class Rent extends Admin_Controller
         $sms = $this->sms->send_sms($rent->phone, 4);
 
         $this->session->set_flashdata('success', 'Статус запрос успешно изменен!<br>Статус SMS: ' . $sms);
-        if ($isRed == 0)
-            redirect(site_url('my/rent'));
-        else{
-            $this->redirecter($isRed);
-        }
+
+        echo $isRed;
+
+        $this->redirecter($isRed);
     }
 
     public function successGet($id, $isRed = 0)
@@ -265,11 +264,7 @@ class Rent extends Admin_Controller
         $sms = $this->sms->send_sms($rent->phone, 5);
 
         $this->session->set_flashdata('success', 'Статус запрос успешно изменен!<br>Статус SMS: ' . $sms);
-        if ($isRed == 0)
-            redirect(site_url('my/rent'));
-        else{
-            $this->redirecter($isRed);
-        }
+        $this->redirecter($isRed);
     }
 
     public function delete($id, $isRed=0)
@@ -287,6 +282,7 @@ class Rent extends Admin_Controller
         $this->content_model->del_rent($id);
 
         $this->session->set_flashdata('success', 'Заявка успешно удалена!');
+
         $this->redirecter($isRed);
     }
 
@@ -311,10 +307,6 @@ class Rent extends Admin_Controller
         $sms = $this->sms->send_sms($rent->phone, 10);
 
         $this->session->set_flashdata('success', 'Статус исправить фото успешно установлен!<br>Статус SMS: ' . $sms);
-        if ($isRed == 0)
-            redirect(site_url('my/rent'));
-        else{
-            $this->redirecter($isRed);
-        }
+        $this->redirecter($isRed);
     }
 }
