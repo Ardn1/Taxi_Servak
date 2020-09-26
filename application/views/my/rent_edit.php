@@ -34,9 +34,7 @@
             </div>
         <?php else : ?>
             <div class="dropdown">
-                <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
-                        id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Обработать
                 </button>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">

@@ -374,7 +374,7 @@ class Orders extends Admin_Controller
             $code_variable = array($manager->name, $parkname, $manager->phone);
             $replace = str_replace($sms_variables, $code_variable, $messages);
 
-            $this->sms->send_sms_text($order->phone, $replace);
+            $sms = $this->sms->send_sms_text($order->phone, $replace);
         }
 
         $this->content_model->update_order($id, array(
@@ -412,7 +412,7 @@ class Orders extends Admin_Controller
         $this->session->set_flashdata('success', 'Заявка удалена!');
         if($isRed==0)
             redirect(site_url('my/orders'));
-        else{
+        else {
             $this->redirecter($isRed);
         }
 

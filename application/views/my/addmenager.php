@@ -30,9 +30,9 @@
                                 <input type="phone" class="form-control form-control-sm" name="phone">
                             </div>
                         </div>    
-                        <div class="column" style="width:50%; margin-left: 3%">
-                            <label>Разрешить отправку сообщений </label>
-                            <input width="3%" type="checkbox" name = "ismessegesallow" style="width = 5%" unchecked value = "Yes"/>
+                        <div class="column" style="width:50%; margin-left: 3%; margin-top: 1%">
+                            <input width="5%" type="checkbox" name = "ismessegesallow" unchecked value = "Yes"/>
+                            <label style="margin-left: 2%"> Разрешить отправку сообщений </label>
                         </div>
                     </div>
                 </div>
