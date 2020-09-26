@@ -105,7 +105,11 @@ class Contact extends MY_Controller
             $last_name = $this->input->post("last_name", true);
             $phone = $this->input->post("phone", true);
             $pass1 = $this->uploaderS3Rent($_POST['imagebase1']);
+            $pass2="";
+            if(!empty($_POST['imagebase2'])){
             $pass2 = $this->uploaderS3Rent($_POST['imagebase2']);
+            }
+
             $vu1 = $this->uploaderS3Rent($_POST['imagebase3']);
             $vu2 = $this->uploaderS3Rent($_POST['imagebase4']);
             $this->content_model->add_rent(array(

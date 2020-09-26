@@ -52,16 +52,35 @@ class Mailing extends Admin_Controller
 	public function addphone()
 	{
 		$this->form_validation->set_rules('phone', 'Телефон', 'trim|required|min_length[8]');//|valid_email');
-
+        $msg="Неверный формат для номера:";
+        $isShow=false;
 		if ($this->form_validation->run() == true) {
 
 			$phone = $this->input->post("phone", true);
-			
-			$this->db->query(
-				"INSERT into phones(phone) VALUES('".$phone."')"
-			);
 
-            $this->session->set_flashdata('success', "Телефон для рассылки добавлен!");
+            $phone=str_replace(' ', '', $phone);
+            $phones = explode (',',$phone );
+
+            for($i =0;$i<count($phones);$i+=1){
+               if($phones[$i][0]=='8') {
+                   $phones[$i]='7'.substr($phones[$i],1);
+               }
+               if ($phones[$i][0]=='+'){
+                   $phones[$i]=substr($phones[$i],1);
+               }
+                if ($phones[$i][0]=='9'){
+                    $phones[$i]='7'.$phones[$i];
+                }
+                if(strlen($phones[$i])!=11){
+                    $msg=$msg.' '.$phones[$i];
+                    $isShow=true;
+                }
+                else $this->db->query(
+                    "INSERT into phones(phone) VALUES('".$phones[$i]."')"
+                );
+            }
+            if($isShow) $this->session->set_flashdata('success', $msg);
+            else $this->session->set_flashdata('success', 'Успешно добавлено!');
 			redirect(site_url('my/mailing'));
 
 		} else {

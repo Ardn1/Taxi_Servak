@@ -68,14 +68,27 @@ class Addmenager extends Admin_Controller
 				"ismanager"  =>  1,
                 )
 			);*/
-			
 
-			$this->db->query(
-				"INSERT into users(email,password,ismanager,name,phone) VALUES('".$email."', '".$stamp_pass."',".$check.",'".$name."', '".$phone."')"
-			);
+            if($phone[0]=='8') {
+                $phone[0]='+7'.substr($phone,1);
+            }
+            if ($phone=='9'){
+                $phone='+7'.$phone;
+            }
 
-            $this->session->set_flashdata('success', "Менеджер добавлен");
-			redirect(site_url('my/addmenager'));
+            if(strlen($phone)!=12){
+                $this->session->set_flashdata('error', "Неверно заполнена форма!");
+                redirect(site_url('my/addmenager'));
+                return;
+            } else {
+
+                $this->db->query(
+                    "INSERT into users(email,password,ismanager,name,phone) VALUES('" . $email . "', '" . $stamp_pass . "'," . $check . ",'" . $name . "', '" . $phone . "')"
+                );
+
+                $this->session->set_flashdata('success', "Менеджер добавлен");
+                redirect(site_url('my/addmenager'));
+            }
 
 		} else {
 
@@ -132,6 +145,22 @@ class Addmenager extends Admin_Controller
 		$phone=$_GET['phone'];
 		//$ismanager=$_GET['ismanager'];
 
+        if ($phone[0]=='9'){
+            $phone='+7'.$phone;
+        }
+        if ($phone[0]=='7'){
+            $phone='+'.$phone;
+        }
+        if($phone[0]=='8') {
+            $phone="+7".substr($phone,1);
+        }
+
+        if(strlen($phone)!=12){
+            $this->session->set_flashdata('error', "Неверно заполнена форма!");
+            echo 'Неверный номер!'.$phone;
+            return;
+        }
+
 
         if($_GET['id']==1){
             echo 'НЕВОЗМОЖНО ИЗМЕНИТЬ ПАРОЛЬ АДМИНИСТРАТОРА!';
@@ -139,7 +168,7 @@ class Addmenager extends Admin_Controller
         }
 
         if(strlen($password) < 8 && strlen($password) != 0) {
-            echo 'Пароль должен состоять не менее чем из 8 символов ' + $password;
+            echo 'Пароль должен состоять не менее чем из 8 символов '.$password;
             return;
         }
 
