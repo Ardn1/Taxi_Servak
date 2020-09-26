@@ -83,7 +83,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                                         <a class="dropdown-item" 
                                          forID="<?php echo $data->id;?>" 
-                                         onclick="setAllChanges(this)">Сохранить изменения</a>
+                                         onclick="setAllChanges(this)" style="cursor: pointer">Сохранить изменения</a>
                                         <a class="dropdown-item text-danger"
                                            href="<?php echo base_url('my/addmenager/delete/' . $data->id); ?>">Удалить</a>
                                     </div>
