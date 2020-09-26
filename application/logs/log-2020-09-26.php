@@ -51,3 +51,13 @@ ERROR - 2020-09-26 14:33:47 --> 404 Page Not Found: Docs/68346346524323.jpg
 ERROR - 2020-09-26 14:33:47 --> 404 Page Not Found: Docs/84329961850321.jpg
 ERROR - 2020-09-26 14:33:47 --> 404 Page Not Found: Docs/50451619051066.jpg
 >>>>>>> 6ebf1384b483b93137cb5ed8b99e72e51081cd3f
+ERROR - 2020-09-26 17:25:13 --> Severity: Notice --> Undefined index: ismessegesallow C:\xampp\htdocs\crm\application\controllers\my\Addmenager.php 61
+ERROR - 2020-09-26 17:25:25 --> Severity: Notice --> Undefined index: ismessegesallow C:\xampp\htdocs\crm\application\controllers\my\Addmenager.php 61
+ERROR - 2020-09-26 17:25:56 --> Severity: Notice --> Undefined index: ismessegesallow C:\xampp\htdocs\crm\application\controllers\my\Addmenager.php 61
+ERROR - 2020-09-26 17:26:48 --> Severity: Notice --> Undefined index: ismessegesallow C:\xampp\htdocs\crm\application\controllers\my\Addmenager.php 61
+ERROR - 2020-09-26 17:27:01 --> Severity: Notice --> Undefined index: ismessegesallow C:\xampp\htdocs\crm\application\controllers\my\Addmenager.php 61
+ERROR - 2020-09-26 17:39:01 --> Severity: error --> Exception: The specified key does not exist C:\xampp\htdocs\crm\vendor\aws\aws-sdk-php\src\Aws\Common\Exception\NamespaceExceptionFactory.php 91
+ERROR - 2020-09-26 17:56:58 --> Severity: Notice --> Undefined index: ismessegesallow C:\xampp\htdocs\crm\application\controllers\my\Addmenager.php 61
+ERROR - 2020-09-26 17:57:31 --> Severity: Notice --> Undefined index: ismessegesallow C:\xampp\htdocs\crm\application\controllers\my\Addmenager.php 61
+ERROR - 2020-09-26 17:58:52 --> Severity: Notice --> Undefined index: ismessegesallow C:\xampp\htdocs\crm\application\controllers\my\Addmenager.php 61
+ERROR - 2020-09-26 17:59:12 --> Severity: Notice --> Undefined index: ismessegesallow C:\xampp\htdocs\crm\application\controllers\my\Addmenager.php 61

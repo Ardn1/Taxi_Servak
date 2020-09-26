@@ -69,11 +69,14 @@ class Addmenager extends Admin_Controller
                 )
 			);*/
 
-            if($phone[0]=='8') {
-                $phone[0]='+7'.substr($phone,1);
-            }
-            if ($phone=='9'){
+            if ($phone[0]=='9'){
                 $phone='+7'.$phone;
+            }
+            if ($phone[0]=='7'){
+                $phone='+'.$phone;
+            }
+            if($phone[0]=='8') {
+                $phone="+7".substr($phone,1);
             }
 
             if(strlen($phone)!=12){
