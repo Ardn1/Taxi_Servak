@@ -130,10 +130,61 @@ class Contact extends MY_Controller
 
             $email_template = $this->settings_model->get_template(6);
 
+
+            $cityName = "";
+
+  
+            if ($city == 1) 
+                $cityName = "Москва";
+            if ($city == 2) 
+                $cityName = "Санкт-Петербург";
+            if ($city == 3) 
+                $cityName = "Волгоград";
+            if ($city == 4) 
+                $cityName = "Воронеж";
+            if ($city == 5) 
+                $cityName = "Екатеринбург";
+            if ($city == 6) 
+                $cityName = "Казань";
+            if ($city == 7) 
+                $cityName = "Краснодар";
+            if ($city == 8) 
+                $cityName = "Красноярск";
+            if ($city == 9) 
+                $cityName = "Нижний Новгород";
+            if ($city == 10) 
+                $cityName = "Новосибирск";
+            if ($city == 11) 
+                $cityName = "Омск";
+            if ($city == 12) 
+                $cityName = "Пермь";
+            if ($city == 13) 
+                $cityName = "Ростов-на-Дону";
+            if ($city == 14) 
+                $cityName = "Самара";
+            if ($city == 15) 
+                $cityName = "Саратов";
+            if ($city == 16) 
+                $cityName = "Тольятти";
+            if ($city == 17) 
+                $cityName = "Тюмень";
+            if ($city == 18) 
+                $cityName = "Ульяновск";
+            if ($city == 19) 
+                $cityName = "Уфа";
+            if ($city == 20) 
+                $cityName = "Челябинск";
+            if ($city == 21) 
+                $cityName = "Энгельс";
+            if ($city == 22) 
+                $cityName = "Ярославль";
+            if ($city == 23) 
+                $cityName = "Другой";
+
             if ($email_template->status) {
                 $messages = $email_template->message;
                 $email_variables = array('[NAME]', '[AGE]', '[CITY]', '[PHONE]');
-                $code_variable = array($first_name, $age, $city, $phone);
+                $code_variable = array($first_name, $age, $cityName, $phone);
                 $replace = str_replace($email_variables, $code_variable, $messages);
                 $this->sms->send_email($this->settings->email, $email_template->name, $replace);
             }

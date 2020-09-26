@@ -146,7 +146,7 @@
 			    				<?php endif; ?>
 							</td>
 							<td class="text-right">
-			    				<a href="<?php echo base_url('my/rent/edit/'.$data->id).'/4';?>" class="btn btn-outline-secondary btn-sm">Смотреть</a>
+			    				<a href="<?php echo base_url('my/rent/edit/'.$data->id).'/3';?>" class="btn btn-outline-secondary btn-sm">Смотреть</a>
 			    			</td>
 			    		</tr>
 			    		<?php endforeach; ?>
