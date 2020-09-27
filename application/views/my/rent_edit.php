@@ -123,19 +123,17 @@
                 <div class="col-md-1">
                     <span data-feather="flag" class="text-success"></span>
                 </div>
-                <div class="col-md-11">
+                <div class="col-md-10">
                     <p class="mb-1"><strong>Статус заявки</strong></p>
                 </div>
-                <div class="col-md-1">
 
-                </div>
                 <div class="col-md-11">
                     <?php if (!$rent->status) : ?>
                         <p class="text-primary">Новая</p>
                     <?php elseif ($rent->status == 1) : ?>
-                        <p class="text-success">Принятая</p>
+                        <p class="text-success">Принято</p>
                     <?php elseif ($rent->status == 2) : ?>
-                        <p class="text-danger">Отказаная</p>
+                        <p class="text-danger">Отказано</p>
                     <?php elseif ($rent->status == 3) : ?>
                         <p class="text-danger">Исправить фото</p>
                     <?php endif; ?>

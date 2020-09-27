@@ -65,7 +65,7 @@ class Contact extends MY_Controller
         $uid = rand(11111111111111, 99999999999999);
         $newname = $uid . '.jpg';
         $this->aws->sendFile($newname, $base64);
-        return "m:".$newname;
+        return $newname;
     }
 
     public function rent()
@@ -277,7 +277,7 @@ class Contact extends MY_Controller
         $newname = $uid . '.jpg';
         $this->aws->sendFile($newname, $base64);
         $this->content_model->update_order($_GET["order"], array(
-                $field => 'm:' . $newname
+                $field => $newname
             )
         );
         $response = array('event' => 'success');

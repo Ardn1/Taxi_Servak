@@ -149,7 +149,8 @@ class Rent extends Admin_Controller
 
     public function zamena(&$order,$what)
     {
-        $order->{$what}=$this->aws->getFile(substr($order->{$what},2));
+        if(!empty($order->{$what}))
+        $order->{$what}=$this->aws->getFile((string) $order->{$what});
     }
 
     public function edit($id, $from=0)
@@ -169,9 +170,8 @@ class Rent extends Admin_Controller
         }
         
         ///
-        $propertyes = array("vu1", "vu2", "pass1", "pass2");
+        $propertyes = array("vu1","vu2", "pass1","pass2");
         foreach ($propertyes as &$value) {
-            if(strpos($rent->{$value},"m:")!==false)
                 $this->zamena($rent,$value);
         }
         ///

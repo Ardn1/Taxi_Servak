@@ -211,7 +211,8 @@ class Orders extends Admin_Controller
 
     //
     public function zamena(&$order,$what){
-        $order->{$what}=$this->aws->getFile(substr($order->{$what},2));
+        if(!empty($order->{$what}))
+        $order->{$what}=$this->aws->getFile(substr($order->{$what},0));
     }
     //
 
@@ -236,7 +237,6 @@ class Orders extends Admin_Controller
             "doc_sts_2","doc_pass_1","doc_pass_2","doc_auto_1","doc_auto_2","doc_auto_3","doc_auto_4","doc_license_1","doc_license_2",
             "doc_face");
         foreach ($propertyes as &$value) {
-            if(strpos($order->{$value},"m:")!==false)
                 $this->zamena($order,$value);
         }
         ///

@@ -56,19 +56,23 @@ class aws
     }
 
     public function getFile($filename){
-        $result = $this->S3->getObject([
-            'Bucket' => 'photos23',
-            'Key'    => $filename
-        ]);
+        try {
+            $result = $this->S3->getObject([
+                'Bucket' => 'photos23',
+                'Key' => $filename
+            ]);
 
-        $uid = rand(11111111111111, 99999999999999);
-        $newname = $uid . '.jpg';
+            $uid = rand(11111111111111, 99999999999999);
+            $newname = $uid . '.jpg';
 
-        file_put_contents ($newname, (string) $result['Body']);
-        $imagedata = file_get_contents($newname);
-        $base64 = base64_encode($imagedata);
-        unlink($newname);
-        return $base64;
+            file_put_contents($newname, (string)$result['Body']);
+            $imagedata = file_get_contents($newname);
+            $base64 = base64_encode($imagedata);
+            unlink($newname);
+            return $base64;
+        } catch (Exception $exception){
+            return "";
+        }
     }
 
 }
