@@ -1,6 +1,7 @@
 	<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h4">Детали сообщения ID <?php echo $message->id;?></h1>
         <div class="btn-toolbar mb-2 mb-md-0">
+            <?php if (!($this->user->ismanager!=0 &&($message->status==1))): ?>
         	<div class="dropdown">
 			  	<button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			    	Обработать
@@ -14,6 +15,7 @@
                     <?php endif;?>
 			  	</div>
 			</div>
+            <?php endif;?>
         </div>
     </div>
 
@@ -30,12 +32,15 @@
         		<div class="col-md-1">
         			<span data-feather="flag" class="text-success"></span>
         		</div>
-        		<div class="col-md-11">
+        		<div class="col-md-10">
         			<p class="mb-1"><strong>Статус сообщения</strong></p>
         		</div>
         		<div class="col-md-1">
-        			
+
         		</div>
+                <div class="col-md-1">
+
+                </div>
         		<div class="col-md-11">
         			<?php if (!$message->status) : ?>
         			<p>Новое</p>
@@ -48,12 +53,11 @@
         		<div class="col-md-1">
         			<span data-feather="calendar" class="text-success"></span>
         		</div>
-        		<div class="col-md-11">
+        		<div class="col-md-10">
         			<p class="mb-1"><strong>Дата получения</strong></p>
         		</div>
-        		<div class="col-md-1">
-        			
-        		</div>
+        		<div class="col-md-1"></div>
+                <div class="col-md-1"></div>
         		<div class="col-md-11">
         			<p><?php echo $message->created;?></p>
         		</div>
@@ -62,9 +66,10 @@
         		<div class="col-md-1">
         			<span data-feather="user" class="text-success"></span>
         		</div>
-        		<div class="col-md-11">
+        		<div class="col-md-10">
         			<p class="mb-1"><strong>Имя клиента</strong></p>
         		</div>
+                <div class="col-md-1"></div>
         		<div class="col-md-1">
         			
         		</div>
@@ -76,9 +81,10 @@
         		<div class="col-md-1">
         			<span data-feather="phone" class="text-success"></span>
         		</div>
-        		<div class="col-md-11">
+        		<div class="col-md-10">
         			<p class="mb-1"><strong>Телефон клиента</strong></p>
         		</div>
+                <div class="col-md-1"></div>
         		<div class="col-md-1">
         			
         		</div>

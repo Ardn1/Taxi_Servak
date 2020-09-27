@@ -126,7 +126,8 @@
                 <div class="col-md-10">
                     <p class="mb-1"><strong>Статус заявки</strong></p>
                 </div>
-
+                <div class="col-md-1"></div>
+                <div class="col-md-1"></div>
                 <div class="col-md-11">
                     <?php if (!$rent->status) : ?>
                         <p class="text-primary">Новая</p>
@@ -143,12 +144,13 @@
                 <div class="col-md-1">
                     <span data-feather="calendar" class="text-success"></span>
                 </div>
-                <div class="col-md-11">
+                <div class="col-md-10">
                     <p class="mb-1"><strong>Дата получения</strong></p>
                 </div>
                 <div class="col-md-1">
 
                 </div>
+                <div class="col-md-1"></div>
                 <div class="col-md-11">
                     <p><?php echo $rent->created; ?></p>
                 </div>
@@ -157,12 +159,13 @@
                 <div class="col-md-1">
                     <span data-feather="user" class="text-success"></span>
                 </div>
-                <div class="col-md-11">
+                <div class="col-md-10">
                     <p class="mb-1"><strong>Имя клиента</strong></p>
                 </div>
                 <div class="col-md-1">
 
                 </div>
+                <div class="col-md-1"></div>
                 <div class="col-md-11">
                     <p><?php echo $rent->first_name . ' ' . $rent->last_name; ?></p>
                 </div>
@@ -171,12 +174,13 @@
                 <div class="col-md-1">
                     <span data-feather="phone" class="text-success"></span>
                 </div>
-                <div class="col-md-11">
+                <div class="col-md-10">
                     <p class="mb-1"><strong>Телефон клиента</strong></p>
                 </div>
                 <div class="col-md-1">
 
                 </div>
+                <div class="col-md-1"></div>
                 <div class="col-md-11">
                     <p>+<?php echo $rent->phone; ?></p>
                 </div>
@@ -185,12 +189,13 @@
                 <div class="col-md-1">
                     <span data-feather="smartphone" class="text-success"></span>
                 </div>
-                <div class="col-md-11">
+                <div class="col-md-10">
                     <p class="mb-1"><strong>Источник</strong></p>
                 </div>
                 <div class="col-md-1">
 
                 </div>
+                <div class="col-md-1"></div>
                 <div class="col-md-11">
                                 <?php if ($rent->api == 0) : ?>
 			    					APP 1

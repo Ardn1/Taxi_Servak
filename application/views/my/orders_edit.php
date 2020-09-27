@@ -242,12 +242,13 @@
                 <div class="col-md-1">
                     <span data-feather="flag" class="text-success"></span>
                 </div>
-                <div class="col-md-11">
+                <div class="col-md-10">
                     <p class="mb-1"><strong>Статус заявки</strong></p>
                 </div>
                 <div class="col-md-1">
 
                 </div>
+                <div class="col-md-1"></div>
                 <div class="col-md-11">
                     <?php if (!$order->status) : ?>
                         <p class="text-primary">Новая</p>
@@ -268,12 +269,13 @@
                 <div class="col-md-1">
                     <span data-feather="calendar" class="text-success"></span>
                 </div>
-                <div class="col-md-11">
+                <div class="col-md-10">
                     <p class="mb-1"><strong>Дата получения</strong></p>
                 </div>
                 <div class="col-md-1">
 
                 </div>
+                <div class="col-md-1"></div>
                 <div class="col-md-11">
                     <p><?php echo $order->created; ?></p>
                 </div>
@@ -282,12 +284,13 @@
                 <div class="col-md-1">
                     <span data-feather="user" class="text-success"></span>
                 </div>
-                <div class="col-md-11">
+                <div class="col-md-10">
                     <p class="mb-1"><strong>Имя клиента</strong></p>
                 </div>
                 <div class="col-md-1">
 
                 </div>
+                <div class="col-md-1"></div>
                 <div class="col-md-11">
                     <p><?php echo $order->name; ?></p>
                 </div>
@@ -296,12 +299,13 @@
                 <div class="col-md-1">
                     <span data-feather="phone" class="text-success"></span>
                 </div>
-                <div class="col-md-11">
+                <div class="col-md-10">
                     <p class="mb-1"><strong>Телефон клиента</strong></p>
                 </div>
                 <div class="col-md-1">
 
                 </div>
+                <div class="col-md-1"></div>
                 <div class="col-md-11">
                     <p>+<?php echo $order->phone; ?></p>
                 </div>
@@ -310,12 +314,13 @@
                 <div class="col-md-1">
                     <span data-feather="navigation" class="text-success"></span>
                 </div>
-                <div class="col-md-11">
+                <div class="col-md-10">
                     <p class="mb-1"><strong>Город работы</strong></p>
                 </div>
                 <div class="col-md-1">
 
                 </div>
+                <div class="col-md-1"></div>
                 <div class="col-md-11">
                     <?php if ($order->cityjob == 1) : ?>
                         Москва и МО
@@ -369,13 +374,14 @@
                 <div class="col-md-1">
                     <span data-feather="map-pin" class="text-success"></span>
                 </div>
-                <div class="col-md-11">
+                <div class="col-md-10">
 
                     <p class="mb-1"><strong>Гражданство</strong></p>
                 </div>
                 <div class="col-md-1">
 
                 </div>
+                <div class="col-md-1"></div>
                 <div class="col-md-11">
                     <?php if ($order->registration == 1) : ?>
                         <p>Россия</p>
