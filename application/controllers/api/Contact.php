@@ -97,7 +97,10 @@ class Contact extends MY_Controller
                 echo json_encode($response);
                 return;
             }
-
+            $api = 0;
+            if(!empty($_POST["api"])){
+                $api=$_POST["api"];
+            }
             $citizenship = $this->input->post("citizenship", true);
             $city = $this->input->post("city", true);
             $age = $this->input->post("age", true);
@@ -124,7 +127,8 @@ class Contact extends MY_Controller
                     "pass1"=>$pass1,
                     "pass2"=>$pass2,
                     "vu1"=>$vu1,
-                    "vu2"=>$vu2
+                    "vu2"=>$vu2,
+                    "api"=>$api
                 )
             );
 
