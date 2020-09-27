@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$config['per_page']             = 20;
+$config['per_page']             = 100;
 $config['reuse_query_string']   = TRUE;
 
 $config['attributes']           = array('class' => 'page-link');

@@ -121,7 +121,7 @@
 		for(var i = 0; i < all.length; i++) 
 		{ 
 			if (all[i].checked == true)
-				sendOne(obj.getAttribute("baseURL"), input.value, all[i].getAttribute("phoneForAPI"));
+				sendOne(obj.getAttribute("baseURL"), input.value, all[i].getAttribute("phoneForAPI").replace("+",""));
 		}
 		input.value = "";
 	}
