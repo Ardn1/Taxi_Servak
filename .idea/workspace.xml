@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d80b845-4a99-4ade-8da9-b52b72002ffb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsdpn7hq28ac48d5egemt4r28mildt2t1a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/libraries/Aws.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/libraries/Aws.php" afterDir="false" />
     </list>
@@ -91,6 +92,13 @@
       <workItem from="1600775538585" duration="7773000" />
       <workItem from="1600877321890" duration="17181000" />
       <workItem from="1600936434164" duration="5706000" />
+      <workItem from="1601031286956" duration="600000" />
+      <workItem from="1601048798453" duration="3114000" />
+      <workItem from="1601122318496" duration="8089000" />
+      <workItem from="1601133779827" duration="1364000" />
+      <workItem from="1601200112597" duration="12952000" />
+      <workItem from="1601225981951" duration="1331000" />
+      <workItem from="1601294278617" duration="99000" />
     </task>
     <servers />
   </component>
