@@ -68,6 +68,82 @@ class Contact extends MY_Controller
         return $newname;
     }
 
+
+    public function uploaderRentS3($base64, $field)
+    {
+        if (empty($_GET["rent"])) {
+            $response = array('event' => 'fail', 'message' => 'Не получен ID заявки! Создайте новую заявку');
+            echo json_encode($response);
+            return;
+        }
+
+        $uid = rand(11111111111111, 99999999999999);
+        $newname = $uid . '.jpg';
+        $this->aws->sendFile($newname, $base64);
+        $this->content_model->update_rent($_GET["rent"], array(
+                $field => $newname
+            )
+        );
+        $response = array('event' => 'success');
+
+        echo json_encode($response);
+        return;
+    }
+
+
+    public function upload_rent_pass1()
+    {
+        header('Access-Control-Allow-Origin: *');
+
+        if (!empty($_POST['imagebase'])) {
+            $this->uploaderRentS3($_POST['imagebase'], "pass1");
+            return;
+        }
+    }
+
+    public function upload_rent_pass2()
+    {
+        header('Access-Control-Allow-Origin: *');
+
+        if (!empty($_POST['imagebase'])) {
+            $this->uploaderRentS3($_POST['imagebase'], "pass2");
+            return;
+        }
+    }
+
+    public function upload_rent_vu1()
+    {
+        header('Access-Control-Allow-Origin: *');
+
+        if (!empty($_POST['imagebase'])) {
+            $this->uploaderRentS3($_POST['imagebase'], "vu1");
+            return;
+        }
+    }
+
+    public function upload_rent_vu2()
+    {
+        header('Access-Control-Allow-Origin: *');
+
+        if (!empty($_POST['imagebase'])) {
+            $this->uploaderRentS3($_POST['imagebase'], "vu2");
+            return;
+        }
+    }
+
+    public function rentonestep(){
+        header('Access-Control-Allow-Origin: *');
+        $id = $this->content_model->add_rent(array(
+                "status" => -1,
+                "created" => date('Y-m-d H:i:s'),
+                "first_name" => "",
+                "last_name" => "",
+            )
+        );
+        $response = array('event' => 'success', 'rent' => $id);
+        echo json_encode($response);
+    }
+
     public function rent()
     {
         header('Access-Control-Allow-Origin: *');
@@ -86,18 +162,55 @@ class Contact extends MY_Controller
             echo json_encode($response);
 
         } else {
-            $this->form_validation->set_rules('imagebase1', "фотография паспорта (основной разворот)", 'trim|required');
+
+            $rent = $this->content_model->get_rent($_GET["rent"]);
+
+            if (!$rent->pass1) {
+
+                $response = array('event' => 'fail', 'message' => 'Добавьте фотографию паспорта (основной разворот)');
+    
+                echo json_encode($response);
+                return false;
+            }
+            if($_POST['citizenship']==1) {
+                if (!$rent->pass2) {
+    
+                    $response = array('event' => 'fail', 'message' => 'Добавьте фотографию паспорта (страница с пропиской)');
+        
+                    echo json_encode($response);
+                    return false;
+                }
+            }
+
+            if (!$rent->vu1) {
+    
+                $response = array('event' => 'fail', 'message' => 'Добавьте фотографию водительского удостоверения (внешняя сторона)');
+    
+                echo json_encode($response);
+                return false;
+            }
+
+            if (!$rent->vu2) {
+    
+                $response = array('event' => 'fail', 'message' => 'Добавьте фотографию водительского удостоверения (обратная сторона)');
+    
+                echo json_encode($response);
+                return false;
+            }
+
+        /*    $this->form_validation->set_rules('imagebase1', "фотография паспорта (основной разворот)", 'trim|required');
             
             if($_POST['citizenship']==1) {
                 $this->form_validation->set_rules('imagebase2', "фотография паспорта (страница с пропиской)", 'trim|required');
             }
             $this->form_validation->set_rules('imagebase3', "фотография водительского удостоверения (внешняя сторона)", 'trim|required');
-            $this->form_validation->set_rules('imagebase4', "фотография водительского удостоверения (обратная сторона)", 'trim|required');
-            if ($this->form_validation->run() == false) {
+            $this->form_validation->set_rules('imagebase4', "фотография водительского удостоверения (обратная сторона)", 'trim|required');*/
+
+           /* if ($this->form_validation->run() == false) {
                 $response = array('event' => 'fail', 'message' => validation_errors());
                 echo json_encode($response);
                 return;
-            }
+            }*/
             $api = 0;
             if(!empty($_POST["api"])){
                 $api=$_POST["api"];
@@ -108,14 +221,14 @@ class Contact extends MY_Controller
             $first_name = $this->input->post("first_name", true);
             $last_name = $this->input->post("last_name", true);
             $phone = $this->input->post("phone", true);
-            $pass1 = $this->uploaderS3Rent($_POST['imagebase1']);
-            $pass2="";
-            if(!empty($_POST['imagebase2'])){
-            $pass2 = $this->uploaderS3Rent($_POST['imagebase2']);
-            }
+       //     $pass1 = $this->uploaderS3Rent($_POST['imagebase1']);
+         //   $pass2="";
+        //    if(!empty($_POST['imagebase2'])){
+       //     $pass2 = $this->uploaderS3Rent($_POST['imagebase2']);
+        //    }
 
-            $vu1 = $this->uploaderS3Rent($_POST['imagebase3']);
-            $vu2 = $this->uploaderS3Rent($_POST['imagebase4']);
+        //    $vu1 = $this->uploaderS3Rent($_POST['imagebase3']);
+        //    $vu2 = $this->uploaderS3Rent($_POST['imagebase4']);
             $this->content_model->add_rent(array(
                     "status" => 0,
                     "created" => date('Y-m-d H:i:s'),
@@ -125,10 +238,10 @@ class Contact extends MY_Controller
                     "city" => $city,
                     "age" => $age,
                     "phone" => $phone,
-                    "pass1"=>$pass1,
-                    "pass2"=>$pass2,
-                    "vu1"=>$vu1,
-                    "vu2"=>$vu2,
+                 //   "pass1"=>$pass1,
+                //    "pass2"=>$pass2,
+                 //   "vu1"=>$vu1,
+                //    "vu2"=>$vu2,
                     "api"=>$api
                 )
             );
