@@ -200,6 +200,18 @@ class Contact extends MY_Controller
         }
     }
 
+    public function rentonestep(){
+        header('Access-Control-Allow-Origin: *');
+        $id = $this->content_model->add_rent(array(
+                "status" => -1,
+                "created" => date('Y-m-d H:i:s'),
+                "first_name" => "",
+                "last_name" => "",
+            )
+        );
+        $response = array('event' => 'success', 'rent' => $id);
+        echo json_encode($response);
+    }
 
     public function registeronestep()
     {

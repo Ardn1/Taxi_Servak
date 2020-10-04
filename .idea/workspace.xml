@@ -20,9 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d80b845-4a99-4ade-8da9-b52b72002ffb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsdpn7hq28ac48d5egemt4r28mildt2t1a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionsh94shf9dgridvank8h2fe2k2sjhivmrk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/sessions/city_sessionstktkq8t4ivmgnhh3i4bgjn2f15tdkvmr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm.7z" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/libraries/Aws.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/libraries/Aws.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Sign.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Sign.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/api/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/api/Contact.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +77,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -99,6 +104,10 @@
       <workItem from="1601200112597" duration="12952000" />
       <workItem from="1601225981951" duration="1331000" />
       <workItem from="1601294278617" duration="99000" />
+      <workItem from="1601394476842" duration="1601000" />
+      <workItem from="1601758256263" duration="713000" />
+      <workItem from="1601759523278" duration="55000" />
+      <workItem from="1601814842300" duration="1552000" />
     </task>
     <servers />
   </component>
@@ -141,6 +150,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600889736936" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1601759576271">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601759576271" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1600453124960">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
