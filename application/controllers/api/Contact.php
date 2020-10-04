@@ -87,6 +87,7 @@ class Contact extends MY_Controller
 
         } else {
             $this->form_validation->set_rules('imagebase1', "фотография паспорта (основной разворот)", 'trim|required');
+            
             if($_POST['citizenship']==1) {
                 $this->form_validation->set_rules('imagebase2', "фотография паспорта (страница с пропиской)", 'trim|required');
             }
