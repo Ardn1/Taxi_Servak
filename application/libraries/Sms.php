@@ -92,7 +92,7 @@ class Sms
 
 		    $CI->email->send();
 
-		} else { // SMTP
+		} else {
 
 			$config = array(
 		        'protocol'   => 'smtp',

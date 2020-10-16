@@ -245,9 +245,8 @@
                 <div class="col-md-10">
                     <p class="mb-1"><strong>Статус заявки</strong></p>
                 </div>
-                <div class="col-md-1">
-
-                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-1"></div>
                 <div class="col-md-11">
                     <?php if (!$order->status) : ?>
                         <p class="text-primary">Новая</p>
@@ -271,9 +270,7 @@
                 <div class="col-md-10">
                     <p class="mb-1"><strong>Дата получения</strong></p>
                 </div>
-                <div class="col-md-1">
-
-                </div>
+                <div class="col-md-1"></div>
                 <div class="col-md-1"></div>
                 <div class="col-md-11">
                     <p><?php echo $order->created; ?></p>
