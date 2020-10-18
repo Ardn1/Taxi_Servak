@@ -71,7 +71,7 @@ class Contact extends MY_Controller
 
     public function uploaderRentS3($base64, $field)
     {
-        if (empty($_GET["rent"])) {
+        if (empty($_POST["rent"])) {
             $response = array('event' => 'fail', 'message' => 'Не получен ID заявки! Создайте новую заявку');
             echo json_encode($response);
             return;
@@ -80,7 +80,7 @@ class Contact extends MY_Controller
         $uid = rand(11111111111111, 99999999999999);
         $newname = $uid . '.jpg';
         $this->aws->sendFile($newname, $base64);
-        $this->content_model->update_rent($_GET["rent"], array(
+        $this->content_model->update_rent($_POST["rent"], array(
                 $field => $newname
             )
         );
@@ -144,6 +144,8 @@ class Contact extends MY_Controller
         echo json_encode($response);
     }
 
+
+
     public function rent()
     {
         header('Access-Control-Allow-Origin: *');
@@ -162,8 +164,140 @@ class Contact extends MY_Controller
             echo json_encode($response);
 
         } else {
+            $this->form_validation->set_rules('imagebase1', "фотография паспорта (основной разворот)", 'trim|required');
+            if($_POST['citizenship']==1) {
+                $this->form_validation->set_rules('imagebase2', "фотография паспорта (страница с пропиской)", 'trim|required');
+            }
+            $this->form_validation->set_rules('imagebase3', "фотография водительского удостоверения (внешняя сторона)", 'trim|required');
+            $this->form_validation->set_rules('imagebase4', "фотография водительского удостоверения (обратная сторона)", 'trim|required');
+            if ($this->form_validation->run() == false) {
+                $response = array('event' => 'fail', 'message' => validation_errors());
+                echo json_encode($response);
+                return;
+            }
+            $api = 0;
+            if(!empty($_POST["api"])){
+                $api=$_POST["api"];
+            }
+            $citizenship = $this->input->post("citizenship", true);
+            $city = $this->input->post("city", true);
+            $age = $this->input->post("age", true);
+            $first_name = $this->input->post("first_name", true);
+            $last_name = $this->input->post("last_name", true);
+            $phone = $this->input->post("phone", true);
+            $pass1 = $this->uploaderS3Rent($_POST['imagebase1']);
+            $pass2="";
+            if(!empty($_POST['imagebase2'])){
+                $pass2 = $this->uploaderS3Rent($_POST['imagebase2']);
+            }
 
-            $rent = $this->content_model->get_rent($_GET["rent"]);
+            $vu1 = $this->uploaderS3Rent($_POST['imagebase3']);
+            $vu2 = $this->uploaderS3Rent($_POST['imagebase4']);
+            $this->content_model->add_rent(array(
+                    "status" => 0,
+                    "created" => date('Y-m-d H:i:s'),
+                    "first_name" => $first_name,
+                    "last_name" => $last_name,
+                    "citizenship" => $citizenship,
+                    "city" => $city,
+                    "age" => $age,
+                    "phone" => $phone,
+                    "pass1"=>$pass1,
+                    "pass2"=>$pass2,
+                    "vu1"=>$vu1,
+                    "vu2"=>$vu2,
+                    "api"=>$api
+                )
+            );
+
+            $response = array('event' => 'success');
+
+            echo json_encode($response,JSON_UNESCAPED_UNICODE);
+
+            $email_template = $this->settings_model->get_template(6);
+
+
+            $cityName = "";
+
+
+            if ($city == 1)
+                $cityName = "Москва";
+            if ($city == 2)
+                $cityName = "Санкт-Петербург";
+            if ($city == 3)
+                $cityName = "Волгоград";
+            if ($city == 4)
+                $cityName = "Воронеж";
+            if ($city == 5)
+                $cityName = "Екатеринбург";
+            if ($city == 6)
+                $cityName = "Казань";
+            if ($city == 7)
+                $cityName = "Краснодар";
+            if ($city == 8)
+                $cityName = "Красноярск";
+            if ($city == 9)
+                $cityName = "Нижний Новгород";
+            if ($city == 10)
+                $cityName = "Новосибирск";
+            if ($city == 11)
+                $cityName = "Омск";
+            if ($city == 12)
+                $cityName = "Пермь";
+            if ($city == 13)
+                $cityName = "Ростов-на-Дону";
+            if ($city == 14)
+                $cityName = "Самара";
+            if ($city == 15)
+                $cityName = "Саратов";
+            if ($city == 16)
+                $cityName = "Тольятти";
+            if ($city == 17)
+                $cityName = "Тюмень";
+            if ($city == 18)
+                $cityName = "Ульяновск";
+            if ($city == 19)
+                $cityName = "Уфа";
+            if ($city == 20)
+                $cityName = "Челябинск";
+            if ($city == 21)
+                $cityName = "Энгельс";
+            if ($city == 22)
+                $cityName = "Ярославль";
+            if ($city == 23)
+                $cityName = "Другой";
+
+            if ($email_template->status) {
+                $messages = $email_template->message;
+                $email_variables = array('[NAME]', '[AGE]', '[CITY]', '[PHONE]');
+                $code_variable = array($first_name, $age, $cityName, $phone);
+                $replace = str_replace($email_variables, $code_variable, $messages);
+                $this->sms->send_email($this->settings->email, $email_template->name, $replace);
+            }
+
+        }
+    }
+
+    public function rent2()
+    {
+        header('Access-Control-Allow-Origin: *');
+
+        $this->form_validation->set_rules('citizenship', "Гражданство", 'trim|required|numeric|greater_than[0]');
+        $this->form_validation->set_rules('city', "Город", 'trim|required|numeric|greater_than[0]');
+        $this->form_validation->set_rules('age', "Возраст", 'trim|required|numeric|greater_than[20]');
+        $this->form_validation->set_rules('first_name', "Имя", 'trim|required|max_length[150]|min_length[3]');
+        $this->form_validation->set_rules('last_name', "Фамилия", 'trim|required|max_length[150]|min_length[3]');
+        $this->form_validation->set_rules('phone', "Номер телефона", 'trim|required|numeric|max_length[11]|min_length[11]');
+
+        if ($this->form_validation->run() == false) {
+
+            $response = array('event' => 'fail', 'message' => validation_errors());
+
+            echo json_encode($response);
+
+        } else {
+
+            $rent = $this->content_model->get_rent($_POST["rent"]);
 
             if (!$rent->pass1) {
 
@@ -229,7 +363,7 @@ class Contact extends MY_Controller
 
         //    $vu1 = $this->uploaderS3Rent($_POST['imagebase3']);
         //    $vu2 = $this->uploaderS3Rent($_POST['imagebase4']);
-            $this->content_model->add_rent(array(
+            $this->content_model->update_rent($_POST["rent"],array(
                     "status" => 0,
                     "created" => date('Y-m-d H:i:s'),
                     "first_name" => $first_name,
@@ -314,18 +448,6 @@ class Contact extends MY_Controller
         }
     }
 
-    public function rentonestep(){
-        header('Access-Control-Allow-Origin: *');
-        $id = $this->content_model->add_rent(array(
-                "status" => -1,
-                "created" => date('Y-m-d H:i:s'),
-                "first_name" => "",
-                "last_name" => "",
-            )
-        );
-        $response = array('event' => 'success', 'rent' => $id);
-        echo json_encode($response);
-    }
 
     public function registeronestep()
     {
