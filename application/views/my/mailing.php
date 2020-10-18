@@ -49,6 +49,11 @@
 			    	<thead>
 			    		<tr>
 							<th><input type="checkbox" id ="all"></th>
+							<th>
+							<?php if ($this->user->ismanager==0): ?>
+                                            <a class="btn btn-outline-secondary btn-sm" onclick = "RemoveAll()" style="cursor: pointer">Удалить</a>
+                                        <?php endif;?>
+							</th>
 							<th>Номер телефона</th>
 			    			<th class="text-right text-success">Всего: <?php echo $total_records;?></th>
 			    		</tr>
@@ -56,8 +61,9 @@
 			    	<tbody>
 			    		<?php foreach ($phones as $data) : ?>
 			    		<tr>
-							<td width="3%"><input type="checkbox" id = "one_ch" phoneForAPI = "<?php echo $data->phone;?>" style="width =5%" unchecked/></td>
-							<td width="75%"><?php echo $data->phone;?></td> 
+							<td width="3%"><input type="checkbox" id = "one_ch" phoneForAPI = "<?php echo $data->phone;?>" IDForAPI = "<?php echo $data->id;?>" style="width =5%" unchecked/></td>
+							<td width="7%"></td>
+							<td width="68%"><?php echo $data->phone;?></td> 
 							
 			    			<td class="text-right">
 			    				<div class="dropdown">
@@ -96,6 +102,7 @@
 <script>
 	var main = document.querySelector("#all");
 	var all = document.querySelectorAll("#one_ch");
+	var urlDelete = "<?php echo base_url('my/mailing/delete/');?>"	
 
 	for(var i=0; i<all.length; i++) {  // 1 и 2 пункт задачи
 		all[i].onclick = function() {
@@ -138,13 +145,30 @@
 		);
 	}
 
+
+	async function RemoveAll() {  
+		for(var i = 0; i < all.length; i++) 
+		{ 
+			if (all[i].checked == true)
+				await removeOne(all[i].getAttribute("IDForAPI"));
+		}
+		location.reload();
+		//swal ( "Телефон" ,  "Успешно удален!" ,  "success" )
+	}
+
+	async function removeOne(id)
+	{
+		await $.get(urlDelete + id + '/-1', {
+			}, onAjaxSuccess);
+	}
+
 	function onAjaxSuccess(data)
 	{
-		if(data==="Отправлено"){
-            swal ( "Уведомление" ,  "Успешно разослано" ,  "success" )
-        } else {
-            swal ( "Уведомление" ,  data ,  "error" )
-        }
+	//	if (data==="Отправлено"){
+     //       swal ( "Сообщение" ,  "Успешно разослано" ,  "success" )
+     //   } else {
+      //      swal ( "Сообщение" ,  data ,  "error" )
+     //   }
 	}
 
 </script>

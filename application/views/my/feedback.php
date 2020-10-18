@@ -15,6 +15,12 @@
 			  	<table class="table table-hover">
 			    	<thead>
 			    		<tr>
+							<th><input type="checkbox" id ="all"></th>
+							<th>
+							<?php if ($this->user->ismanager==0): ?>
+                                <a class="btn btn-outline-secondary btn-sm" onclick = "RemoveAll()" style="cursor: pointer">Удалить</a>
+                            <?php endif;?>
+							</th>
 			    			<th>Получено</th>
 			    			<th>Клиент</th>
 			    			<th>Телефон</th>
@@ -24,6 +30,8 @@
 			    	<tbody>
 			    		<?php foreach ($messages as $data) : ?>
 			    		<tr>
+							<td width="3%"><input type="checkbox" id = "one_ch" IDForAPI = "<?php echo $data->id;?>" style="width =5%" unchecked/></td>
+							<td width="7%"></td>
 			    			<td width="20%"><?php echo $data->created;?></td>
 			    			<td><?php echo $data->name;?></td>
 			    			<td><?php echo $data->phone;?></td>
@@ -52,3 +60,54 @@
 	        </div>
 	    </div>
 	<?php endif; ?>
+
+<script>
+	var main = document.querySelector("#all");
+	var all = document.querySelectorAll("#one_ch");
+	var urlDelete = "<?php echo base_url('my/feedback/delete_message/');?>"	
+
+	for(var i=0; i<all.length; i++) {  // 1 и 2 пункт задачи
+		all[i].onclick = function() {
+			var sum = 0;
+			for(var i = 0; i < all.length; i++) { 
+				if (all[i].checked == true)
+					sum++;
+			}
+			main.checked = sum == all.length;
+			main.indeterminate = sum > 0 && sum < all.length;
+		}
+	}
+
+	main.onclick = function() {  // 3
+		for(var i=0; i<all.length; i++) {
+			all[i].checked = this.checked;
+		}
+	}
+
+
+	async function RemoveAll() {  
+		for(var i = 0; i < all.length; i++) 
+		{ 
+			if (all[i].checked == true)
+				await removeOne(all[i].getAttribute("IDForAPI"));
+		}
+		location.reload();
+		//swal ( "Телефон" ,  "Успешно удален!" ,  "success" )
+	}
+
+	async function removeOne(id)
+	{
+		await $.get(urlDelete + id + '/-1', {
+			}, onAjaxSuccess);
+	}
+
+	function onAjaxSuccess(data)
+	{
+	//	if (data==="Отправлено"){
+     //       swal ( "Сообщение" ,  "Успешно разослано" ,  "success" )
+     //   } else {
+      //      swal ( "Сообщение" ,  data ,  "error" )
+     //   }
+	}
+
+</script>

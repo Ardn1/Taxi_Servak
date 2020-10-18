@@ -129,7 +129,7 @@ class Feedback extends Admin_Controller
 
 	}
 
-	public function delete_message($id)
+	public function delete_message($id, $isRed=0)
 	{
 		if (is_null($id) OR ! is_numeric($id)) {
 
@@ -140,16 +140,18 @@ class Feedback extends Admin_Controller
 	    $message = $this->content_model->get_message($id);
 
 	    if (!$message) {
-
-	    	redirect(site_url('my/feedback'));
-
+			if ($isRed==0)
+        	{
+			redirect(site_url('my/feedback'));
+			}
 	    } else {
 
 	    	$this->content_model->del_message($id);
-
-	    	$this->session->set_flashdata('success', "Успешно удалено!");
-			redirect(site_url('my/feedback'));
-
+			if ($isRed==0)
+			{
+	    		$this->session->set_flashdata('success', "Успешно удалено!");
+				redirect(site_url('my/feedback'));
+			}
 	    }
 
 	}

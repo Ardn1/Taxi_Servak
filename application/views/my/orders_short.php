@@ -93,6 +93,21 @@
 			    					Ярославль
 			    				<?php endif; ?>
                                 <?php if ($data->cityjob == 15) : ?>
+			    					Воронеж
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 16) : ?>
+			    					Нижний Новгород
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 17) : ?>
+			    					Ростов-на-Дону
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 18) : ?>
+			    					Тольятти
+			    				<?php endif; ?>
+                                <?php if ($data->cityjob == 19) : ?>
+			    					Тюмень
+                                <?php endif; ?>
+                                <?php if ($data->cityjob == 20) : ?>
 			    					Другой
 			    				<?php endif; ?>
 			    			</td>

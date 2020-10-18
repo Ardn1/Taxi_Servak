@@ -91,7 +91,7 @@ class Mailing extends Admin_Controller
     }
 
 
-    public function delete($id)
+    public function delete($id, $isRed=0)
     {
         if (is_null($id) or !is_numeric($id)) {
 
@@ -106,8 +106,11 @@ class Mailing extends Admin_Controller
 
         $this->content_model->del_phone($id);
 
-        $this->session->set_flashdata('success', 'Телефон успешно удален!');
-        redirect(site_url('my/mailing'));
+        if ($isRed==0)
+        {
+            $this->session->set_flashdata('success', 'Телефон успешно удален!');
+            redirect(site_url('my/mailing'));
+        }
     }
 
 }
