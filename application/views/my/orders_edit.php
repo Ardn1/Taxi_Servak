@@ -318,64 +318,64 @@
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-11">
-                <?php if ($data->cityjob == 1) : ?>
+                <?php if ($order->cityjob == 1) : ?>
 			    					Москва и МО
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 2) : ?>
+                                <?php if ($order->cityjob == 2) : ?>
 			    					Московская область
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 3) : ?>
+                                <?php if ($order->cityjob == 3) : ?>
 			    					Санкт-Петербург
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 4) : ?>
+                                <?php if ($order->cityjob == 4) : ?>
 			    					Екатеринбург
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 5) : ?>
+                                <?php if ($order->cityjob == 5) : ?>
 			    					Казань
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 6) : ?>
+                                <?php if ($order->cityjob == 6) : ?>
 			    					Краснодар
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 7) : ?>
+                                <?php if ($order->cityjob == 7) : ?>
 			    					Красноярск
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 8) : ?>
+                                <?php if ($order->cityjob == 8) : ?>
 			    					Новосибирск
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 9) : ?>
+                                <?php if ($order->cityjob == 9) : ?>
 			    					Омск
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 10) : ?>
+                                <?php if ($order->cityjob == 10) : ?>
 			    					Пермь
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 11) : ?>
+                                <?php if ($order->cityjob == 11) : ?>
 			    					Самара
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 12) : ?>
+                                <?php if ($order->cityjob == 12) : ?>
 			    					Саратов
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 13) : ?>
+                                <?php if ($order->cityjob == 13) : ?>
 			    					Ульяновск
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 14) : ?>
+                                <?php if ($order->cityjob == 14) : ?>
 			    					Ярославль
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 15) : ?>
+                                <?php if ($order->cityjob == 15) : ?>
 			    					Воронеж
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 16) : ?>
+                                <?php if ($order->cityjob == 16) : ?>
 			    					Нижний Новгород
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 17) : ?>
+                                <?php if ($order->cityjob == 17) : ?>
 			    					Ростов-на-Дону
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 18) : ?>
+                                <?php if ($order->cityjob == 18) : ?>
 			    					Тольятти
 			    				<?php endif; ?>
-                                <?php if ($data->cityjob == 19) : ?>
+                                <?php if ($order->cityjob == 19) : ?>
 			    					Тюмень
                                 <?php endif; ?>
-                                <?php if ($data->cityjob == 20) : ?>
+                                <?php if ($order->cityjob == 20) : ?>
 			    					Другой
 			    				<?php endif; ?>
                 </div>

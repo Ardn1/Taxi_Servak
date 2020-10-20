@@ -159,16 +159,20 @@
 	async function removeOne(id)
 	{
 		await $.get(urlDelete + id + '/-1', {
-			}, onAjaxSuccess);
+			}, onAjaxSuccessDel);
 	}
 
+	function onAjaxSuccessDel(data)
+	{
+	}
+	
 	function onAjaxSuccess(data)
 	{
-	//	if (data==="Отправлено"){
-     //       swal ( "Сообщение" ,  "Успешно разослано" ,  "success" )
-     //   } else {
-      //      swal ( "Сообщение" ,  data ,  "error" )
-     //   }
+		if (data==="Отправлено"){
+            swal ( "Сообщение" ,  "Успешно разослано" ,  "success" )
+        } else {
+            swal ( "Сообщение" ,  data ,  "error" )
+        }
 	}
 
 </script>
