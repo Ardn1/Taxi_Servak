@@ -489,13 +489,36 @@ class Contact extends MY_Controller
             if ($jobcity == 13)  $newjobcity = 17;    
             if ($jobcity == 14)  $newjobcity = 11;    
             if ($jobcity == 15) $newjobcity = 12;
+            if ($jobcity == 16)  $newjobcity = 20;
+            if ($jobcity == 17)  $newjobcity = 18;
+            if ($jobcity == 18)  $newjobcity = 19;    
+            if ($jobcity == 19)  $newjobcity = 13;    
+            if ($jobcity == 20)  $newjobcity = 21;    
+            if ($jobcity == 21)  $newjobcity = 14;    
+            if ($jobcity == 22)  $newjobcity = 22;    
+            
+        /*    $newjobcity = -1;
+            if ($jobcity == 1) $newjobcity = 1;
+            if ($jobcity == 2)  $newjobcity = 2;
+            if ($jobcity == 3)  $newjobcity = 3;
+            if ($jobcity == 4)  $newjobcity = 15;    
+            if ($jobcity == 5)  $newjobcity = 4;    
+            if ($jobcity == 6)  $newjobcity = 5;    
+            if ($jobcity == 7)  $newjobcity = 6;    
+            if ($jobcity == 8) $newjobcity = 7;
+            if ($jobcity == 9)  $newjobcity = 16;
+            if ($jobcity == 10)  $newjobcity = 8;
+            if ($jobcity == 11)  $newjobcity = 9;    
+            if ($jobcity == 12)  $newjobcity = 10;    
+            if ($jobcity == 13)  $newjobcity = 17;    
+            if ($jobcity == 14)  $newjobcity = 11;    
+            if ($jobcity == 15) $newjobcity = 12;
             if ($jobcity == 16)  $newjobcity = 18;
             if ($jobcity == 17)  $newjobcity = 19;
             if ($jobcity == 18)  $newjobcity = 16;    
             if ($jobcity == 19)  $newjobcity = 17;    
             if ($jobcity == 20)  $newjobcity = 20;    
-            if ($jobcity == 21)  $newjobcity = 21;    
-
+            if ($jobcity == 21)  $newjobcity = 21;    */
             if ($newjobcity == -1)
                 $newjobcity = $jobcity;
 

@@ -376,6 +376,12 @@
 			    					Тюмень
                                 <?php endif; ?>
                                 <?php if ($order->cityjob == 20) : ?>
+			    					Сочи
+                                <?php endif; ?>
+                                <?php if ($order->cityjob == 21) : ?>
+			    					Челябинск
+                                <?php endif; ?>
+                                <?php if ($order->cityjob == 22) : ?>
 			    					Другой
 			    				<?php endif; ?>
                 </div>
